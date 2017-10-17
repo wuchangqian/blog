@@ -1,0 +1,12 @@
+{
+    "name": "wy/blog.local.com",
+    "require": {
+        "topthink/thinkphp": "~3.2"
+    },
+    "authors": [
+        {
+            "name": "wangyu",
+            "email": "444371889@qq.com"
+        }
+    ]
+}

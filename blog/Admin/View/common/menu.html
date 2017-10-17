@@ -1,0 +1,22 @@
+<div class="menu_dropdown bk_2">
+    <volist name="menus" id="menu">
+        <dl id="menu-article">
+            <dt>
+                <i class="Hui-iconfont">{$menu.icon}</i>
+                {$menu.name}
+                <i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i>
+            </dt>
+            <dd>
+                <ul>
+                    <volist name="menu['menu']" id="vo">
+                        <li>
+                            <a data-href="{:U($vo['url'])}" data-title="{$vo.name}" href="javascript:void(0)">
+                                {$vo.name}
+                            </a>
+                        </li>
+                    </volist>
+                </ul>
+            </dd>
+        </dl>
+    </volist>
+</div>

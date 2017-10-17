@@ -1,0 +1,490 @@
+[ 2017-10-16T17:56:21+08:00 ] ::1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000434s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000490s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000580s ]
+ERR: 1146:Table 'blog.blog_user' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `blog_user`
+ERR: 1146:Table 'blog.blog_user' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `blog_user`
+
+[ 2017-10-16T17:57:13+08:00 ] ::1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000367s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000491s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000587s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0021s ]
+
+[ 2017-10-16T18:02:17+08:00 ] ::1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001061s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000949s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001065s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0028s ]
+SQL: INSERT INTO `blog_users` (`username`,`password`,`salt`,`role`,`lastLogin`,`status`,`updateAt`,`createAt`) VALUES ('wangyu','a174392a5bb1471c20c86de7e45ae680','K4PZvT89','1','0','1','0','1508148137') [ RunTime:0.0054s ]
+
+[ 2017-10-16T18:07:48+08:00 ] ::1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001050s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000814s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000932s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `blog_users` WHERE `username` = 'wangyu' LIMIT 1   [ RunTime:0.0011s ]
+ERR: 1062:Duplicate entry 'wangyu' for key 'username'
+ [ SQL语句 ] : INSERT INTO `blog_users` (`username`,`password`,`salt`,`role`,`lastLogin`,`status`,`updateAt`,`createAt`) VALUES ('wangyu','a24ff42a4d0dccb1be13e8fbed78cdef','zOj1cy9G','1','0','1','0','1508148468')
+ERR: 1062:Duplicate entry 'wangyu' for key 'username'
+ [ SQL语句 ] : INSERT INTO `blog_users` (`username`,`password`,`salt`,`role`,`lastLogin`,`status`,`updateAt`,`createAt`) VALUES ('wangyu','a24ff42a4d0dccb1be13e8fbed78cdef','zOj1cy9G','1','0','1','0','1508148468')
+
+[ 2017-10-16T18:08:12+08:00 ] ::1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000385s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000470s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000557s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `blog_users` WHERE `username` = 'wangyu' LIMIT 1   [ RunTime:0.0004s ]
+ERR: 1062:Duplicate entry 'wangyu' for key 'username'
+ [ SQL语句 ] : INSERT INTO `blog_users` (`username`,`password`,`salt`,`role`,`lastLogin`,`status`,`updateAt`,`createAt`) VALUES ('wangyu','a13b9f1ac5d7184f6c0f1adfd056e03e','zKaAzb6X','1','0','1','0','1508148492')
+ERR: 1062:Duplicate entry 'wangyu' for key 'username'
+ [ SQL语句 ] : INSERT INTO `blog_users` (`username`,`password`,`salt`,`role`,`lastLogin`,`status`,`updateAt`,`createAt`) VALUES ('wangyu','a13b9f1ac5d7184f6c0f1adfd056e03e','zKaAzb6X','1','0','1','0','1508148492')
+
+[ 2017-10-16T18:08:13+08:00 ] ::1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000357s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000407s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000486s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `blog_users` WHERE `username` = 'wangyu' LIMIT 1   [ RunTime:0.0003s ]
+ERR: 1062:Duplicate entry 'wangyu' for key 'username'
+ [ SQL语句 ] : INSERT INTO `blog_users` (`username`,`password`,`salt`,`role`,`lastLogin`,`status`,`updateAt`,`createAt`) VALUES ('wangyu','98d4d845880136416011835caf7469ef','f661JL6d','1','0','1','0','1508148493')
+ERR: 1062:Duplicate entry 'wangyu' for key 'username'
+ [ SQL语句 ] : INSERT INTO `blog_users` (`username`,`password`,`salt`,`role`,`lastLogin`,`status`,`updateAt`,`createAt`) VALUES ('wangyu','98d4d845880136416011835caf7469ef','f661JL6d','1','0','1','0','1508148493')
+
+[ 2017-10-16T18:08:13+08:00 ] ::1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000511s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000441s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000555s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `blog_users` WHERE `username` = 'wangyu' LIMIT 1   [ RunTime:0.0007s ]
+ERR: 1062:Duplicate entry 'wangyu' for key 'username'
+ [ SQL语句 ] : INSERT INTO `blog_users` (`username`,`password`,`salt`,`role`,`lastLogin`,`status`,`updateAt`,`createAt`) VALUES ('wangyu','8890bb577afebccbc85b8a87269fca49','2mzr1Rrr','1','0','1','0','1508148493')
+ERR: 1062:Duplicate entry 'wangyu' for key 'username'
+ [ SQL语句 ] : INSERT INTO `blog_users` (`username`,`password`,`salt`,`role`,`lastLogin`,`status`,`updateAt`,`createAt`) VALUES ('wangyu','8890bb577afebccbc85b8a87269fca49','2mzr1Rrr','1','0','1','0','1508148493')
+
+[ 2017-10-16T18:08:14+08:00 ] ::1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000350s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000494s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `blog_users` WHERE `username` = 'wangyu' LIMIT 1   [ RunTime:0.0003s ]
+ERR: 1062:Duplicate entry 'wangyu' for key 'username'
+ [ SQL语句 ] : INSERT INTO `blog_users` (`username`,`password`,`salt`,`role`,`lastLogin`,`status`,`updateAt`,`createAt`) VALUES ('wangyu','4daa6986ea42e509a555dffe3bfd9084','OUa6YeE8','1','0','1','0','1508148494')
+ERR: 1062:Duplicate entry 'wangyu' for key 'username'
+ [ SQL语句 ] : INSERT INTO `blog_users` (`username`,`password`,`salt`,`role`,`lastLogin`,`status`,`updateAt`,`createAt`) VALUES ('wangyu','4daa6986ea42e509a555dffe3bfd9084','OUa6YeE8','1','0','1','0','1508148494')
+
+[ 2017-10-16T18:08:14+08:00 ] ::1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000581s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000514s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000607s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `blog_users` WHERE `username` = 'wangyu' LIMIT 1   [ RunTime:0.0004s ]
+ERR: 1062:Duplicate entry 'wangyu' for key 'username'
+ [ SQL语句 ] : INSERT INTO `blog_users` (`username`,`password`,`salt`,`role`,`lastLogin`,`status`,`updateAt`,`createAt`) VALUES ('wangyu','fb9b7f70b00d481cc5dedff158d4452d','WQd4C5Iq','1','0','1','0','1508148494')
+ERR: 1062:Duplicate entry 'wangyu' for key 'username'
+ [ SQL语句 ] : INSERT INTO `blog_users` (`username`,`password`,`salt`,`role`,`lastLogin`,`status`,`updateAt`,`createAt`) VALUES ('wangyu','fb9b7f70b00d481cc5dedff158d4452d','WQd4C5Iq','1','0','1','0','1508148494')
+
+[ 2017-10-16T18:08:15+08:00 ] ::1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000472s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000830s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000962s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `blog_users` WHERE `username` = 'wangyu' LIMIT 1   [ RunTime:0.0004s ]
+ERR: 1062:Duplicate entry 'wangyu' for key 'username'
+ [ SQL语句 ] : INSERT INTO `blog_users` (`username`,`password`,`salt`,`role`,`lastLogin`,`status`,`updateAt`,`createAt`) VALUES ('wangyu','3fa27323d230eccd81c825b2cbcac57d','hpL5ASsl','1','0','1','0','1508148495')
+ERR: 1062:Duplicate entry 'wangyu' for key 'username'
+ [ SQL语句 ] : INSERT INTO `blog_users` (`username`,`password`,`salt`,`role`,`lastLogin`,`status`,`updateAt`,`createAt`) VALUES ('wangyu','3fa27323d230eccd81c825b2cbcac57d','hpL5ASsl','1','0','1','0','1508148495')
+
+[ 2017-10-16T18:08:15+08:00 ] ::1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000639s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000695s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000858s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `blog_users` WHERE `username` = 'wangyu' LIMIT 1   [ RunTime:0.0004s ]
+ERR: 1062:Duplicate entry 'wangyu' for key 'username'
+ [ SQL语句 ] : INSERT INTO `blog_users` (`username`,`password`,`salt`,`role`,`lastLogin`,`status`,`updateAt`,`createAt`) VALUES ('wangyu','a1ba1ad90f1142b011ded597c17a17a0','XWPFX626','1','0','1','0','1508148495')
+ERR: 1062:Duplicate entry 'wangyu' for key 'username'
+ [ SQL语句 ] : INSERT INTO `blog_users` (`username`,`password`,`salt`,`role`,`lastLogin`,`status`,`updateAt`,`createAt`) VALUES ('wangyu','a1ba1ad90f1142b011ded597c17a17a0','XWPFX626','1','0','1','0','1508148495')
+
+[ 2017-10-16T18:08:16+08:00 ] ::1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000406s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000444s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000521s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `blog_users` WHERE `username` = 'wangyu' LIMIT 1   [ RunTime:0.0004s ]
+ERR: 1062:Duplicate entry 'wangyu' for key 'username'
+ [ SQL语句 ] : INSERT INTO `blog_users` (`username`,`password`,`salt`,`role`,`lastLogin`,`status`,`updateAt`,`createAt`) VALUES ('wangyu','ea1ea069874a0a20d71bb01046191e9b','bUFI3XxF','1','0','1','0','1508148496')
+ERR: 1062:Duplicate entry 'wangyu' for key 'username'
+ [ SQL语句 ] : INSERT INTO `blog_users` (`username`,`password`,`salt`,`role`,`lastLogin`,`status`,`updateAt`,`createAt`) VALUES ('wangyu','ea1ea069874a0a20d71bb01046191e9b','bUFI3XxF','1','0','1','0','1508148496')
+
+[ 2017-10-16T18:08:16+08:00 ] ::1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000656s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000473s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000565s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `blog_users` WHERE `username` = 'wangyu' LIMIT 1   [ RunTime:0.0004s ]
+ERR: 1062:Duplicate entry 'wangyu' for key 'username'
+ [ SQL语句 ] : INSERT INTO `blog_users` (`username`,`password`,`salt`,`role`,`lastLogin`,`status`,`updateAt`,`createAt`) VALUES ('wangyu','b953b636a7e5ec7cd357c7e546bd2eca','tZ62TY64','1','0','1','0','1508148496')
+ERR: 1062:Duplicate entry 'wangyu' for key 'username'
+ [ SQL语句 ] : INSERT INTO `blog_users` (`username`,`password`,`salt`,`role`,`lastLogin`,`status`,`updateAt`,`createAt`) VALUES ('wangyu','b953b636a7e5ec7cd357c7e546bd2eca','tZ62TY64','1','0','1','0','1508148496')
+
+[ 2017-10-16T18:08:17+08:00 ] ::1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000438s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000639s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000779s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `blog_users` WHERE `username` = 'wangyu' LIMIT 1   [ RunTime:0.0003s ]
+ERR: 1062:Duplicate entry 'wangyu' for key 'username'
+ [ SQL语句 ] : INSERT INTO `blog_users` (`username`,`password`,`salt`,`role`,`lastLogin`,`status`,`updateAt`,`createAt`) VALUES ('wangyu','96d342b40c7b37003d15fc01d00653e8','vl0jYnNN','1','0','1','0','1508148497')
+ERR: 1062:Duplicate entry 'wangyu' for key 'username'
+ [ SQL语句 ] : INSERT INTO `blog_users` (`username`,`password`,`salt`,`role`,`lastLogin`,`status`,`updateAt`,`createAt`) VALUES ('wangyu','96d342b40c7b37003d15fc01d00653e8','vl0jYnNN','1','0','1','0','1508148497')
+
+[ 2017-10-16T18:08:17+08:00 ] ::1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000402s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000460s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000546s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `blog_users` WHERE `username` = 'wangyu' LIMIT 1   [ RunTime:0.0005s ]
+ERR: 1062:Duplicate entry 'wangyu' for key 'username'
+ [ SQL语句 ] : INSERT INTO `blog_users` (`username`,`password`,`salt`,`role`,`lastLogin`,`status`,`updateAt`,`createAt`) VALUES ('wangyu','719a27b1de66d3402ff247d5f95f52cc','MCGeY141','1','0','1','0','1508148497')
+ERR: 1062:Duplicate entry 'wangyu' for key 'username'
+ [ SQL语句 ] : INSERT INTO `blog_users` (`username`,`password`,`salt`,`role`,`lastLogin`,`status`,`updateAt`,`createAt`) VALUES ('wangyu','719a27b1de66d3402ff247d5f95f52cc','MCGeY141','1','0','1','0','1508148497')
+
+[ 2017-10-16T18:08:18+08:00 ] ::1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000390s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000439s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000523s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `blog_users` WHERE `username` = 'wangyu' LIMIT 1   [ RunTime:0.0004s ]
+ERR: 1062:Duplicate entry 'wangyu' for key 'username'
+ [ SQL语句 ] : INSERT INTO `blog_users` (`username`,`password`,`salt`,`role`,`lastLogin`,`status`,`updateAt`,`createAt`) VALUES ('wangyu','38c74e68505ada63dc19a3109c7c61f4','6B6Jsi8j','1','0','1','0','1508148498')
+ERR: 1062:Duplicate entry 'wangyu' for key 'username'
+ [ SQL语句 ] : INSERT INTO `blog_users` (`username`,`password`,`salt`,`role`,`lastLogin`,`status`,`updateAt`,`createAt`) VALUES ('wangyu','38c74e68505ada63dc19a3109c7c61f4','6B6Jsi8j','1','0','1','0','1508148498')
+
+[ 2017-10-16T18:08:18+08:00 ] ::1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000458s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000499s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000578s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `blog_users` WHERE `username` = 'wangyu' LIMIT 1   [ RunTime:0.0004s ]
+ERR: 1062:Duplicate entry 'wangyu' for key 'username'
+ [ SQL语句 ] : INSERT INTO `blog_users` (`username`,`password`,`salt`,`role`,`lastLogin`,`status`,`updateAt`,`createAt`) VALUES ('wangyu','18d83747043d49e5c003cc21404a3479','6brh6fDZ','1','0','1','0','1508148498')
+ERR: 1062:Duplicate entry 'wangyu' for key 'username'
+ [ SQL语句 ] : INSERT INTO `blog_users` (`username`,`password`,`salt`,`role`,`lastLogin`,`status`,`updateAt`,`createAt`) VALUES ('wangyu','18d83747043d49e5c003cc21404a3479','6brh6fDZ','1','0','1','0','1508148498')
+
+[ 2017-10-16T18:08:19+08:00 ] ::1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000381s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000761s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000910s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `blog_users` WHERE `username` = 'wangyu' LIMIT 1   [ RunTime:0.0005s ]
+ERR: 1062:Duplicate entry 'wangyu' for key 'username'
+ [ SQL语句 ] : INSERT INTO `blog_users` (`username`,`password`,`salt`,`role`,`lastLogin`,`status`,`updateAt`,`createAt`) VALUES ('wangyu','ae5154c0a9668ae886bc602b38d7861f','JJiHJUj7','1','0','1','0','1508148499')
+ERR: 1062:Duplicate entry 'wangyu' for key 'username'
+ [ SQL语句 ] : INSERT INTO `blog_users` (`username`,`password`,`salt`,`role`,`lastLogin`,`status`,`updateAt`,`createAt`) VALUES ('wangyu','ae5154c0a9668ae886bc602b38d7861f','JJiHJUj7','1','0','1','0','1508148499')
+
+[ 2017-10-16T18:08:20+08:00 ] ::1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000392s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000439s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000518s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `blog_users` WHERE `username` = 'wangyu' LIMIT 1   [ RunTime:0.0005s ]
+ERR: 1062:Duplicate entry 'wangyu' for key 'username'
+ [ SQL语句 ] : INSERT INTO `blog_users` (`username`,`password`,`salt`,`role`,`lastLogin`,`status`,`updateAt`,`createAt`) VALUES ('wangyu','6d00b4d5589762d742325ba2bcb2da12','KST7mF2F','1','0','1','0','1508148500')
+ERR: 1062:Duplicate entry 'wangyu' for key 'username'
+ [ SQL语句 ] : INSERT INTO `blog_users` (`username`,`password`,`salt`,`role`,`lastLogin`,`status`,`updateAt`,`createAt`) VALUES ('wangyu','6d00b4d5589762d742325ba2bcb2da12','KST7mF2F','1','0','1','0','1508148500')
+
+[ 2017-10-16T18:11:03+08:00 ] ::1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000375s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000407s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000485s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0031s ]
+ERR: 1054:Unknown column 'wangyu' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `blog_users` WHERE ( username = wangyu ) LIMIT 1  
+ERR: 1054:Unknown column 'wangyu' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `blog_users` WHERE ( username = wangyu ) LIMIT 1  
+
+[ 2017-10-16T18:11:47+08:00 ] ::1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000472s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000567s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `blog_users` WHERE `username` = 'wangyu' LIMIT 1   [ RunTime:0.0003s ]
+ERR: 1062:Duplicate entry 'wangyu' for key 'username'
+ [ SQL语句 ] : INSERT INTO `blog_users` (`username`,`password`,`salt`,`role`,`lastLogin`,`status`,`updateAt`,`createAt`) VALUES ('wangyu','c34189792cd9405f1699403fd70d2a43','QmalKT41','1','0','1','0','1508148706')
+ERR: 1062:Duplicate entry 'wangyu' for key 'username'
+ [ SQL语句 ] : INSERT INTO `blog_users` (`username`,`password`,`salt`,`role`,`lastLogin`,`status`,`updateAt`,`createAt`) VALUES ('wangyu','c34189792cd9405f1699403fd70d2a43','QmalKT41','1','0','1','0','1508148706')
+
+[ 2017-10-16T18:12:03+08:00 ] ::1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000434s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000498s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000586s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `blog_users` WHERE `username` = 'wangyu' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2017-10-16T18:13:17+08:00 ] ::1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000389s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000453s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000540s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `blog_users` WHERE `username` = 'wangyu' LIMIT 1   [ RunTime:0.0004s ]
+ERR: 用户名重复
+
+[ 2017-10-16T18:13:31+08:00 ] ::1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000402s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000487s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000577s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `blog_users` WHERE `username` = 'wangyu' LIMIT 1   [ RunTime:0.0004s ]
+ERR: 用户名重复
+
+[ 2017-10-16T18:14:09+08:00 ] ::1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000436s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000523s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000200s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009492s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009584s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000629s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000733s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000893s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000989s ]
+
+[ 2017-10-16T18:14:18+08:00 ] ::1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000411s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000499s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000587s ]
+
+[ 2017-10-16T18:14:59+08:00 ] ::1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000532s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000498s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000583s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000175s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005237s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005314s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000162s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000230s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000435s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000507s ]
+
+[ 2017-10-16T18:15:03+08:00 ] ::1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000392s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000448s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000532s ]
+
+[ 2017-10-16T18:15:04+08:00 ] ::1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000385s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000443s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000530s ]
+
+[ 2017-10-16T18:15:04+08:00 ] ::1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000433s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000457s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000543s ]
+
+[ 2017-10-16T18:16:21+08:00 ] ::1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000379s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000567s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000653s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000449s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000533s ]
+
+[ 2017-10-16T18:16:22+08:00 ] ::1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000422s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000567s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000691s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000433s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000509s ]
+
+[ 2017-10-16T18:16:22+08:00 ] ::1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000364s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000447s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000531s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000589s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000745s ]
+
+[ 2017-10-16T18:16:23+08:00 ] ::1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000522s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000706s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000850s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000838s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000988s ]
+
+[ 2017-10-16T18:17:01+08:00 ] ::1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000551s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000616s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000735s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000177s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006323s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006406s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000152s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000224s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000750s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000825s ]
+
+[ 2017-10-16T18:17:07+08:00 ] ::1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000379s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000430s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000511s ]
+
+[ 2017-10-16T18:17:24+08:00 ] ::1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000615s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000506s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000655s ]
+
+[ 2017-10-16T18:17:24+08:00 ] ::1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000475s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000568s ]
+
+[ 2017-10-16T18:17:24+08:00 ] ::1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000553s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000652s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000785s ]
+
+[ 2017-10-16T18:17:25+08:00 ] ::1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000592s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000732s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000871s ]
+

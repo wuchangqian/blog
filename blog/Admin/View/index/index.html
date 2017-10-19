@@ -82,8 +82,13 @@
         });
 
         $('#login').click(function () {
-            var username = $('#username').val() , password = $('#password').data('secret') , verifyCode = $('#verifyCode').val();
-            var data = {'username':username , 'password':password+'[secret]' , 'verifyCode':verifyCode};
+            var username = $('#username').val() , password , verifyCode = $('#verifyCode').val();
+            if ($('#password').data('secret')) {
+                password = $('#password').data('secret')+'[secret]';
+            }else{
+                password = $('#password').val();
+            }
+            var data = {'username':username , 'password':password , 'verifyCode':verifyCode};
             $.ajax({
                 url: '__SELF__',
                 type: 'POST',

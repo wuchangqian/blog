@@ -11334,3 +11334,28 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000771s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000948s ]
 
+[ 2017-10-17T18:01:10+08:00 ] ::1 /index.php/Admin/home/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000369s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000455s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000559s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0006s ]
+SQL: select version() as ver [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000106s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000200s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007488s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007597s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000185s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000544s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000630s ]
+

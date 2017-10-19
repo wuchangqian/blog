@@ -14,7 +14,7 @@ use Think\Controller;
 class CommonController extends Controller
 {
     protected $user;
-    protected $powers;
+    private $powers;
     public function _initialize()
     {
         $this->user = unserialize(session('online'));
@@ -37,6 +37,8 @@ class CommonController extends Controller
         }
 
         $this->buildMenu();
+
+        $this->buildBread();
     }
 
     protected function syncPower()
@@ -129,6 +131,7 @@ class CommonController extends Controller
 
     protected function readDir($dir,$exclude = array(),$type = 'all',$fullPath = true)
     {
+        $files = [];
         if ($dh = opendir($dir)) {
             while (($file = readdir($dh)) !== false) {
                 if($file == '.' || $file == '..'){
@@ -151,7 +154,7 @@ class CommonController extends Controller
             }
             closedir($dh);
         }
-        if($fullPath){
+        if($fullPath && $files){
             foreach($files as $k => $v){
                 $files[$k] = $dir.'/'.$v;
             }
@@ -232,7 +235,9 @@ class CommonController extends Controller
 
     }
 
-
+    /**
+     * 构造用户菜单
+     */
     private function buildMenu()
     {
         $where = ['fid' => 0];
@@ -249,5 +254,42 @@ class CommonController extends Controller
             }
         }
         $this->assign('menus' , $top);
+    }
+
+
+    /**
+     * 构造面包屑
+     */
+    private function buildBread()
+    {
+        $bread = [];
+        $cur = strtolower(CONTROLLER_NAME.'/'.ACTION_NAME);
+        $this->assign('currentPath' , $cur);
+        $where = ['url' => $cur];
+        $curPower = $this->powers->field('name , fid')->where($where)->find();
+        if(!$curPower){
+            $bread['parName'] = '未知';
+        }
+        $bread['curName'] = $curPower['name'];
+        $where = ['id' => $curPower['fid']];
+        $parPower = $this->powers->where($where)->getField('name');
+        if($parPower){
+            $bread['parName'] =  $parPower;
+        }
+
+        $this->assign('bread' , $bread);
+    }
+
+    /**
+     * 构造提示消息
+     * @param string $msg
+     * @return string
+     */
+    protected function buildMsg($msg = '没有找到该数据')
+    {
+        $html = '<div style="width: 100%;text-align: center;font-size: 18px;">';
+        $html .= $msg;
+        $html .= '</div>';
+        return $html;
     }
 }

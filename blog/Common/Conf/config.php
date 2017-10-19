@@ -15,6 +15,7 @@ return array(
     //other
     'SECRET_KEY' => md5('balunwang'),
     'SESSION_EXP' => 3600,
+    'PAGE_LIMIT' => 10,
 
 
 );

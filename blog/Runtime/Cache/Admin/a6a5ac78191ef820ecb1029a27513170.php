@@ -26,7 +26,7 @@
 <div class="loginWraper">
   <div id="loginform" class="loginBox">
     <div class="msg_box">111</div>
-    <form class="form form-horizontal" action="/admin" method="post">
+    <form class="form form-horizontal" action="/index.php/Admin/index/index.html" method="post">
       <div class="row cl">
         <label class="form-label col-xs-3"><i class="Hui-iconfont">&#xe60d;</i></label>
         <div class="formControls col-xs-8">
@@ -85,7 +85,7 @@
             var username = $('#username').val() , password = $('#password').data('secret') , verifyCode = $('#verifyCode').val();
             var data = {'username':username , 'password':password+'[secret]' , 'verifyCode':verifyCode};
             $.ajax({
-                url: '/admin',
+                url: '/index.php/Admin/index/index.html',
                 type: 'POST',
                 data: data,
                 success: function (res) {

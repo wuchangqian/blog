@@ -82,6 +82,7 @@ class SystemController extends CommonController
     public function power()
     {
         $this->syncPower();
+        $this->display();
     }
 
 }

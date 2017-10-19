@@ -1,0 +1,107 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="__PUBLIC__/lib/html5shiv.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/lib/Hui-iconfont/1.0.8/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/h-ui.admin/skin/default/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/h-ui.admin/css/style.css" />
+<!--[if IE 6]>
+<script type="text/javascript" src="__PUBLIC__/lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+<title>权限管理</title>
+</head>
+<body>
+<include file="common:bread" />
+<div class="page-container">
+	<div class="text-c">
+		<form class="Huiform" method="get" action="__SELF__" target="_self">
+			<input type="text" class="input-text" style="width:250px" placeholder="权限名称" value="{$keyword}" name="keyword">
+			<button type="submit" class="btn btn-success" id="" name=""><i class="Hui-iconfont">&#xe665;</i> 搜权限节点</button>
+		</form>
+	</div>
+
+	<div class="cl pd-5  mt-20"></div>
+	<table class="table table-border table-bordered table-bg">
+		<thead>
+			<tr>
+				<th scope="col" colspan="7">权限节点</th>
+			</tr>
+			<tr class="text-c">
+				<th width="40">ID</th>
+				<th width="200">模块</th>
+				<th width="200">动作</th>
+				<th>CODE</th>
+                <th>排序</th>
+				<th width="100">操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<volist name="powers['list']" id="vo">
+				<tr class="text-c">
+					<td>{$vo.id}</td>
+					<td>{$vo.name}</td>
+					<td>  </td>
+					<td>{$vo.url}</td>
+                    <td>{$vo.sort}</td>
+					<td>
+                        <a title="编辑" href="javascript:;" onclick="admin_permission_edit('权限编辑','{:U(\'admin/powers_edit?pid=\'.$vo[\'id\'])}','{$vo.id}','','400')" class="ml-5" style="text-decoration:none">
+                            <i class="Hui-iconfont">&#xe6df;</i>
+                        </a>
+                    </td>
+
+				</tr>
+				<notempty name="vo['sub']">
+					<volist name="vo['sub']" id="sub">
+					<tr class="text-c">
+						<td>{$sub.id}</td>
+						<td> ├ </td>
+						<td>{$sub.name} </td>
+						<td>{$sub.url}</td>
+                        <td>{$sub.sort}</td>
+						<td>
+                            <a title="编辑" href="javascript:;" onclick="admin_permission_edit('权限编辑','{:U(\'admin/powers_edit?pid=\'.$sub[\'id\'])}','{$sub.id}','','400')" class="ml-5" style="text-decoration:none">
+                                <i class="Hui-iconfont">&#xe6df;</i>
+                            </a>
+                        </td>
+					</tr>
+					</volist>
+				</notempty>
+			</volist>
+		</tbody>
+	</table>
+</div>
+<!--_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="__PUBLIC__/lib/jquery/1.9.1/jquery.min.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="__PUBLIC__/h-ui/js/H-ui.min.js"></script> 
+<script type="text/javascript" src="__PUBLIC__/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer 作为公共模版分离出去-->
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="__PUBLIC__/lib/datatables/1.10.0/jquery.dataTables.min.js"></script> 
+<script type="text/javascript">
+
+    function admin_permission_edit(title,url,id,w,h){
+        layer_show(title,url,w,h);
+    }
+
+    function closeHandle() {
+        location.replace(location.href);
+    }
+
+
+
+
+</script>
+</body>
+</html>

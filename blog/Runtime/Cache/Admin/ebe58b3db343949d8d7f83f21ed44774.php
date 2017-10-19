@@ -165,11 +165,11 @@
 	</table>
 </div>
 <footer class="footer mt-20">
-	<div class="container">
-		<p>
-			Copyright &copy;2017 Balun Wang All Rights Reserved.<br>
+    <div class="container">
+        <p>
+            Copyright &copy;2017 Balun Wang All Rights Reserved.<br>
         </p>
-	</div>
+    </div>
 </footer>
 <script type="text/javascript" src="/Public/lib/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript" src="/Public/h-ui/js/H-ui.min.js"></script>

@@ -28,7 +28,17 @@ class HomeController extends CommonController
         $info = json_decode($json , true)['data'];
         $this->assign('addr' , $info['country'].' '.$info['region'] .' '. $info['city'] .' '.$info['isp']);
         $mysql_ver = M('')->query("select version() as ver");
-        $this->assign('mysql_ver' , $mysql_ver['0']['ver']);
+        $this->assign('info' , [
+            'mysql_ver' => $mysql_ver['0']['ver'],
+            'free_disk' => round((disk_free_space(".")/(1024*1024*1024)),2).'G',
+            'uname' => php_uname(),
+            'server_time' => date('Y-m-d H:i:s'),
+            'php_ver' => PHP_VERSION,
+            'out_time' => ini_get('max_execution_time'),
+            'max_upload' => ini_get('upload_max_filesize'),
+            'load_module' => implode(' | ',get_loaded_extensions()),
+
+        ]);
         $this->display();
     }
 }

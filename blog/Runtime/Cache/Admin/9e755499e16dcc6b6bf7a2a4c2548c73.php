@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<?php if (!defined('THINK_PATH')) exit();?>﻿<!DOCTYPE HTML>
 <html>
 <head>
 <meta charset="utf-8">
@@ -11,8 +11,8 @@
 <script type="text/javascript" src="http://libs.useso.com/js/respond.js/1.4.2/respond.min.js"></script>
 <script type="text/javascript" src="http://cdn.bootcss.com/css3pie/2.0beta1/PIE_IE678.js"></script>
 <![endif]-->
-  <link rel="stylesheet" type="text/css" href="__PUBLIC__/h-ui/css/H-ui.min.css" />
-  <link rel="stylesheet" type="text/css" href="__PUBLIC__/h-ui.admin/css/H-ui.admin.css" />
+  <link rel="stylesheet" type="text/css" href="/Public/h-ui/css/H-ui.min.css" />
+  <link rel="stylesheet" type="text/css" href="/Public/h-ui.admin/css/H-ui.admin.css" />
 <!--[if IE 7]>
 <link href="http://www.bootcss.com/p/font-awesome/assets/css/font-awesome-ie7.min.css" rel="stylesheet" type="text/css" />
 <![endif]-->
@@ -34,29 +34,27 @@
         <tr>
           <th class="text-r" width="30%">动作：</th>
           <td>
-              {$power.name}
+              <?php echo ($power["name"]); ?>
           </td>
         </tr>
         <tr>
             <th class="text-r">CODE：</th>
             <td>
-                {$power.url}
+                <?php echo ($power["url"]); ?>
             </td>
         </tr>
         <tr>
             <th class="text-r">菜单显示：</th>
             <td>
-                <eq name="power['HideInMenu']" value="1">
-                    隐藏
-                    <else/>
-                    显示
-                </eq>
+                <?php if(($power['HideInMenu']) == "1"): ?>隐藏
+                    <?php else: ?>
+                    显示<?php endif; ?>
             </td>
         </tr>
         <tr>
           <th class="text-r">排序：</th>
           <td>
-            <input type="text" id="sort" class="input-text"  tabindex="1" value="{$power.sort}">
+            <input type="text" id="sort" class="input-text"  tabindex="1" value="<?php echo ($power["sort"]); ?>">
           </td>
         </tr>
         <tr>
@@ -70,15 +68,18 @@
   </form>
 </div>
 </body>
-<include file="common:base_js" />
+<script type="text/javascript" src="/Public/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="/Public/lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="/Public/h-ui/js/H-ui.min.js"></script>
+<script type="text/javascript" src="/Public/h-ui.admin/js/H-ui.admin.js"></script>
 <script>
     $(document).ready(function(){
-        var pid = '{$power.id}';
+        var pid = '<?php echo ($power["id"]); ?>';
         $('#save').click(function () {
             var sort = $('#sort').val();
             var data = {'sort':sort , 'id':pid};
             $.ajax({
-                url: '__SELF__',
+                url: '/Admin/admin/powers_edit/pid/1.html',
                 type: 'POST',
                 data: data,
                 success: function (res) {

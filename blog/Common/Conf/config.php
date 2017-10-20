@@ -12,6 +12,8 @@ return array(
 
     //url
     'URL_CASE_INSENSITIVE'  =>  true,
+    'URL_MODEL'             =>  2,
+
     //other
     'SECRET_KEY' => md5('balunwang'),
     'SESSION_EXP' => 3600,

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<?php if (!defined('THINK_PATH')) exit();?>﻿<!DOCTYPE HTML>
 <html>
 <head>
 <meta charset="utf-8">
@@ -7,16 +7,16 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
 <!--[if lt IE 9]>
-<script type="text/javascript" src="__PUBLIC__/lib/html5shiv.js"></script>
-<script type="text/javascript" src="__PUBLIC__/lib/respond.min.js"></script>
+<script type="text/javascript" src="/Public/lib/html5shiv.js"></script>
+<script type="text/javascript" src="/Public/lib/respond.min.js"></script>
 <![endif]-->
-<link rel="stylesheet" type="text/css" href="__PUBLIC__/h-ui/css/H-ui.min.css" />
-<link rel="stylesheet" type="text/css" href="__PUBLIC__/h-ui.admin/css/H-ui.admin.css" />
-<link rel="stylesheet" type="text/css" href="__PUBLIC__/lib/Hui-iconfont/1.0.8/iconfont.css" />
-<link rel="stylesheet" type="text/css" href="__PUBLIC__/h-ui.admin/skin/default/skin.css" id="skin" />
-<link rel="stylesheet" type="text/css" href="__PUBLIC__/h-ui.admin/css/style.css" />
+<link rel="stylesheet" type="text/css" href="/Public/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="/Public/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="/Public/lib/Hui-iconfont/1.0.8/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="/Public/h-ui.admin/skin/default/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="/Public/h-ui.admin/css/style.css" />
 <!--[if IE 6]>
-<script type="text/javascript" src="__PUBLIC__/lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script type="text/javascript" src="/Public/lib/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script>
 <![endif]-->
 <title>我的桌面</title>
@@ -24,8 +24,8 @@
 <body>
 <div class="page-container">
 	<p class="f-20 text-success">欢迎使用 [ Balun-wang ] blog cms</p>
-	<p>登录次数：{$user.loginNum} </p>
-	<p>上次登录IP：{$user.lastIp}  上次登录地点：{$addr}  上次登录时间：{$user.lastLogin|date='Y-m-d H:i:s',###}</p>
+	<p>登录次数：<?php echo ($user["loginNum"]); ?> </p>
+	<p>上次登录IP：<?php echo ($user["lastIp"]); ?>  上次登录地点：<?php echo ($addr); ?>  上次登录时间：<?php echo (date('Y-m-d H:i:s',$user["lastLogin"])); ?></p>
 	<table class="table table-border table-bordered table-bg">
 		<thead>
 			<tr>
@@ -92,71 +92,71 @@
 		<tbody>
 			<tr>
 				<th width="30%">服务器名</th>
-				<td><span id="lbServerName">{$Think.server.http_host}</span></td>
+				<td><span id="lbServerName"><?php echo ($_SERVER['HTTP_HOST']); ?></span></td>
 			</tr>
 			<tr>
 				<td>服务器IP地址</td>
-				<td>{$Think.server.SERVER_ADDR}</td>
+				<td><?php echo ($_SERVER['SERVER_ADDR']); ?></td>
 			</tr>
 			<tr>
 				<td>服务器域名</td>
-				<td>{$Think.server.SERVER_NAME}</td>
+				<td><?php echo ($_SERVER['SERVER_NAME']); ?></td>
 			</tr>
 			<tr>
 				<td>服务器端口 </td>
-				<td>{$Think.server.SERVER_PORT}</td>
+				<td><?php echo ($_SERVER['SERVER_PORT']); ?></td>
 			</tr>
 			<tr>
 				<td>运行环境</td>
-				<td>{$Think.server.SERVER_SOFTWARE}</td>
+				<td><?php echo ($_SERVER['SERVER_SOFTWARE']); ?></td>
 			</tr>
 			<tr>
 				<td>系统路径 </td>
-				<td>{$Think.server.DOCUMENT_ROOT}</td>
+				<td><?php echo ($_SERVER['DOCUMENT_ROOT']); ?></td>
 			</tr>
 			<tr>
 				<td>空间剩余 </td>
 				<td>
-                    {$info.free_disk}
+                    <?php echo ($info["free_disk"]); ?>
                 </td>
 			</tr>
 			<tr>
 				<td>服务器操作系统 </td>
 				<td>
-                    {$info.uname}
+                    <?php echo ($info["uname"]); ?>
                 </td>
 			</tr>
 			<tr>
 				<td>当前脚本 </td>
-				<td>{$Think.server.PHP_SELF}</td>
+				<td><?php echo ($_SERVER['PHP_SELF']); ?></td>
 			</tr>
 			<tr>
 				<td>服务器当前时间 </td>
-				<td>{$info.server_time}</td>
+				<td><?php echo ($info["server_time"]); ?></td>
 			</tr>
 
 			<tr>
 				<td>PHP版本 </td>
-				<td>{$info.php_ver}</td>
+				<td><?php echo ($info["php_ver"]); ?></td>
 			</tr>
 			<tr>
 				<td>超时时间 </td>
-				<td>{$info.out_time}S</td>
+				<td><?php echo ($info["out_time"]); ?>S</td>
 			</tr>
 			<tr>
 				<td>最大上传 </td>
-				<td>{$info.max_upload}</td>
+				<td><?php echo ($info["max_upload"]); ?></td>
 			</tr>
 			<tr>
 				<td>已加载模块 </td>
 				<td>
-					{$info.load_module}
+					<?php echo ($info["load_module"]); ?>
 				</td>
 			</tr>
             <tr>
 				<td>数据库 </td>
 				<td>
-					Mysql {$info.mysql_ver}
+					Mysql <?php echo ($info["mysql_ver"]); ?>
 				</td>
 			</tr>
 
@@ -166,9 +166,15 @@
 		</tbody>
 	</table>
 </div>
-<include file="common:foot" />
-<script type="text/javascript" src="__PUBLIC__/lib/jquery/1.9.1/jquery.min.js"></script>
-<script type="text/javascript" src="__PUBLIC__/h-ui/js/H-ui.min.js"></script>
+<footer class="footer mt-20">
+    <div class="container">
+        <p>
+            Copyright &copy;2017 Balun Wang All Rights Reserved.<br>
+        </p>
+    </div>
+</footer>
+<script type="text/javascript" src="/Public/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="/Public/h-ui/js/H-ui.min.js"></script>
 
 </body>
 </html>

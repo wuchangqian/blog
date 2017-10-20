@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<?php if (!defined('THINK_PATH')) exit();?>﻿<!DOCTYPE HTML>
 <html>
 <head>
 <meta charset="utf-8">
@@ -11,74 +11,60 @@
 <script type="text/javascript" src="http://libs.useso.com/js/respond.js/1.4.2/respond.min.js"></script>
 <script type="text/javascript" src="http://cdn.bootcss.com/css3pie/2.0beta1/PIE_IE678.js"></script>
 <![endif]-->
-  <link rel="stylesheet" type="text/css" href="__PUBLIC__/h-ui/css/H-ui.min.css" />
-  <link rel="stylesheet" type="text/css" href="__PUBLIC__/h-ui.admin/css/H-ui.admin.css" />
+  <link rel="stylesheet" type="text/css" href="/Public/h-ui/css/H-ui.min.css" />
+  <link rel="stylesheet" type="text/css" href="/Public/h-ui.admin/css/H-ui.admin.css" />
 <!--[if IE 7]>
 <link href="http://www.bootcss.com/p/font-awesome/assets/css/font-awesome-ie7.min.css" rel="stylesheet" type="text/css" />
 <![endif]-->
-<title>编辑权限</title>
+<title>添加角色</title>
 </head>
 <body>
 <div class="pd-20">
   <form class="Huiform" id="loginform" method="post">
     <table class="table table-border table-bordered table-bg">
-      <thead>
+        <thead>
         <tr>
-          <th colspan="2">
-              编辑权限
-              <span class="r" style="display: none;" id="msgBox"></span>
-          </th>
+            <th colspan="2">
+                添加角色
+                <span class="r" style="display: none;" id="msgBox"></span>
+            </th>
         </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th class="text-r" width="30%">动作：</th>
-          <td>
-              {$power.name}
-          </td>
-        </tr>
-        <tr>
-            <th class="text-r">CODE：</th>
-            <td>
-                {$power.url}
-            </td>
-        </tr>
-        <tr>
-            <th class="text-r">菜单显示：</th>
-            <td>
-                <eq name="power['HideInMenu']" value="1">
-                    隐藏
-                    <else/>
-                    显示
-                </eq>
-            </td>
-        </tr>
-        <tr>
-          <th class="text-r">排序：</th>
-          <td>
-            <input type="text" id="sort" class="input-text"  tabindex="1" value="{$power.sort}">
-          </td>
-        </tr>
-        <tr>
-          <th></th>
-          <td>
-            <button type="button" class="btn btn-success radius" id="save"><i class="icon-ok"></i> 确定</button>
-          </td>
-        </tr>
-      </tbody>
+        </thead>
+        <tbody>
+            <tr>
+              <th class="text-r" width="30%">角色名称：</th>
+              <td>
+                  <input type="text" id="name" class="input-text"  tabindex="1" value="">
+              </td>
+            </tr>
+            <tr>
+                <th class="text-r">角色描述：</th>
+                <td>
+                    <textarea id="description" class="input-text" style="width: 100%;height: 80px;"></textarea>
+                </td>
+            </tr>
+            <tr>
+              <th></th>
+              <td>
+                <button type="button" class="btn btn-success radius" id="save"><i class="icon-ok"></i> 确定</button>
+              </td>
+            </tr>
+        </tbody>
     </table>
   </form>
 </div>
 </body>
-<include file="common:base_js" />
+<script type="text/javascript" src="/Public/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="/Public/lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="/Public/h-ui/js/H-ui.min.js"></script>
+<script type="text/javascript" src="/Public/h-ui.admin/js/H-ui.admin.js"></script>
 <script>
     $(document).ready(function(){
-        var pid = '{$power.id}';
         $('#save').click(function () {
-            var sort = $('#sort').val();
-            var data = {'sort':sort , 'id':pid};
+            var name = $('#name').val() , description = $('#description').val();
+            var data = {'name':name , 'description':description};
             $.ajax({
-                url: '__SELF__',
+                url: '/Admin/admin/roles_add.html',
                 type: 'POST',
                 data: data,
                 success: function (res) {
@@ -90,7 +76,6 @@
                             $('#msgBox').fadeOut("slow");
                         },3000);
                     }else{
-                        $('#msgBox').html('<font color="green">'+ res.msg +'</font>');
                         layer.msg(res.msg,{icon:1,time:2500});
                         setTimeout(function () {
                             close_handle_parent();
@@ -107,5 +92,6 @@
             });
         });
     });
+
 </script>
 </html>

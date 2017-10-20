@@ -8,7 +8,7 @@
 namespace Admin\Controller;
 
 /**
- * @Description:管理员管理
+ * @Description:会员管理
  * @Icon:&#xe60d;
  * @Name: MemberController
  * @Author: wangyu

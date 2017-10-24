@@ -9,16 +9,16 @@
     <link rel="Bookmark" href="/favicon.ico" >
     <link rel="Shortcut Icon" href="/favicon.ico" />
     <!--[if lt IE 9]>
-    <script type="text/javascript" src="/Public/lib/html5shiv.js"></script>
-    <script type="text/javascript" src="/Public/lib/respond.min.js"></script>
+    <script type="text/javascript" src="/blog/Public/lib/html5shiv.js"></script>
+    <script type="text/javascript" src="/blog/Public/lib/respond.min.js"></script>
     <![endif]-->
-    <link rel="stylesheet" type="text/css" href="/Public/h-ui/css/H-ui.min.css" />
-    <link rel="stylesheet" type="text/css" href="/Public/h-ui.admin/css/H-ui.admin.css" />
-    <link rel="stylesheet" type="text/css" href="/Public/lib/Hui-iconfont/1.0.8/iconfont.css" />
-    <link rel="stylesheet" type="text/css" href="/Public/h-ui.admin/skin/default/skin.css" id="skin" />
-    <link rel="stylesheet" type="text/css" href="/Public/h-ui.admin/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/blog/Public/h-ui/css/H-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="/blog/Public/h-ui.admin/css/H-ui.admin.css" />
+    <link rel="stylesheet" type="text/css" href="/blog/Public/lib/Hui-iconfont/1.0.8/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="/blog/Public/h-ui.admin/skin/default/skin.css" id="skin" />
+    <link rel="stylesheet" type="text/css" href="/blog/Public/h-ui.admin/css/style.css" />
     <!--[if IE 6]>
-    <script type="text/javascript" src="/Public/lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script type="text/javascript" src="/blog/Public/lib/DD_belatedPNG_0.0.8a-min.js" ></script>
     <script>DD_belatedPNG.fix('*');</script>
     <![endif]-->
     <title>Balun Wang</title>
@@ -117,13 +117,13 @@
 	</ul>
 </div>
 <!--_footer 作为公共模版分离出去-->
-<script type="text/javascript" src="/Public/lib/jquery/1.9.1/jquery.min.js"></script> 
-<script type="text/javascript" src="/Public/lib/layer/2.4/layer.js"></script>
-<script type="text/javascript" src="/Public/h-ui/js/H-ui.min.js"></script>
-<script type="text/javascript" src="/Public/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="/blog/Public/lib/jquery/1.9.1/jquery.min.js"></script> 
+<script type="text/javascript" src="/blog/Public/lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="/blog/Public/h-ui/js/H-ui.min.js"></script>
+<script type="text/javascript" src="/blog/Public/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer 作为公共模版分离出去-->
 
 <!--请在下方写此页面业务相关的脚本-->
-<script type="text/javascript" src="/Public/lib/jquery.contextmenu/jquery.contextmenu.r2.js"></script>
+<script type="text/javascript" src="/blog/Public/lib/jquery.contextmenu/jquery.contextmenu.r2.js"></script>
 <script type="text/javascript">
 $(function(){
 	/*$("#min_title_list li").contextMenu('Huiadminmenu', {

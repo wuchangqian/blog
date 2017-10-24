@@ -292,4 +292,25 @@ class CommonController extends Controller
         $html .= '</div>';
         return $html;
     }
+
+
+    protected function unlink($dir)
+    {
+        $file = $this->readDir($dir);
+        foreach($file as $v) {
+            if(is_dir($v)){
+                $this->unlink($v);
+            }else{
+                $cs = session('cache');
+                if($cs){
+                    $files = array_merge($cs , array($v));
+                }else{
+                    $files = array($v);
+                }
+                session('cache' , $files);
+                unlink($v);
+            }
+        }
+
+    }
 }

@@ -23,6 +23,9 @@ define('APP_DEBUG', true);
 // 定义应用目录
 define('APP_PATH', './blog/');
 
+//缓存目录
+define('RUNTIME_PATH','./Runtime/');
+
 define('ROOT_PATH' , dirname(__FILE__));
 
 // 引入ThinkPHP入口文件

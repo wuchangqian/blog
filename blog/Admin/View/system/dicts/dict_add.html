@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit();?>﻿<!DOCTYPE HTML>
+﻿<!DOCTYPE HTML>
 <html>
 <head>
 <meta charset="utf-8">
@@ -11,12 +11,12 @@
 <script type="text/javascript" src="http://libs.useso.com/js/respond.js/1.4.2/respond.min.js"></script>
 <script type="text/javascript" src="http://cdn.bootcss.com/css3pie/2.0beta1/PIE_IE678.js"></script>
 <![endif]-->
-  <link rel="stylesheet" type="text/css" href="/Public/h-ui/css/H-ui.min.css" />
-  <link rel="stylesheet" type="text/css" href="/Public/h-ui.admin/css/H-ui.admin.css" />
+  <link rel="stylesheet" type="text/css" href="__PUBLIC__/h-ui/css/H-ui.min.css" />
+  <link rel="stylesheet" type="text/css" href="__PUBLIC__/h-ui.admin/css/H-ui.admin.css" />
 <!--[if IE 7]>
 <link href="http://www.bootcss.com/p/font-awesome/assets/css/font-awesome-ie7.min.css" rel="stylesheet" type="text/css" />
 <![endif]-->
-<title>添加角色</title>
+<title>添加字典</title>
 </head>
 <body>
 <div class="pd-20">
@@ -25,22 +25,29 @@
         <thead>
         <tr>
             <th colspan="2">
-                添加角色
+                添加字典
                 <span class="r" style="display: none;" id="msgBox"></span>
             </th>
         </tr>
         </thead>
         <tbody>
             <tr>
-              <th class="text-r" width="30%">角色名称：</th>
+              <th class="text-r" width="30%">分类：</th>
               <td>
-                  <input type="text" id="name" class="input-text"  tabindex="1" value="">
+                  <span class="select-box inline">
+                      <select class="select" id="category">
+                          <option value="0">根字典</option>
+                          <volist name="cates" id="cate">
+                              <option value="{$cate.id}">{$cate.name}</option>
+                          </volist>
+                      </select>
+                  </span>
               </td>
             </tr>
             <tr>
-                <th class="text-r">角色描述：</th>
+                <th class="text-r" width="30%">名称：</th>
                 <td>
-                    <textarea id="description" class="input-text" style="width: 100%;height: 80px;"></textarea>
+                    <input type="text" id="name" class="input-text"  tabindex="1" value="">
                 </td>
             </tr>
             <tr>
@@ -54,17 +61,14 @@
   </form>
 </div>
 </body>
-<script type="text/javascript" src="/Public/lib/jquery/1.9.1/jquery.min.js"></script>
-<script type="text/javascript" src="/Public/lib/layer/2.4/layer.js"></script>
-<script type="text/javascript" src="/Public/h-ui/js/H-ui.min.js"></script>
-<script type="text/javascript" src="/Public/h-ui.admin/js/H-ui.admin.js"></script>
+<include file="common:base_js" />
 <script>
     $(document).ready(function(){
         $('#save').click(function () {
-            var name = $('#name').val() , description = $('#description').val();
-            var data = {'name':name , 'description':description};
+            var name = $('#name').val() , cateId = $('#category').val();
+            var data = {'name':name , 'cateId':cateId};
             $.ajax({
-                url: '/Admin/admin/roles_add.html',
+                url: '__SELF__',
                 type: 'POST',
                 data: data,
                 success: function (res) {

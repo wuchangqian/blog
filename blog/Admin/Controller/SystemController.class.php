@@ -264,8 +264,30 @@ class SystemController extends CommonController
     {
         $badWords = D('BadWords');
         if(IS_POST){
+            $val = I('post.badWords');
 
+            $total = $badWords->count();
+            if($total > 4){
+                $want = $badWords->field('ver')->order('ver desc')->limit(4)->select();
+                $wantIds = array_column($want , 'ver');
+                $where = ['ver' => ['notin' , $wantIds]];
+                $badWords->where($where)->delete();
+            }
+
+            if($badWords->add(['value' => $val])){
+                $this->ajaxReturn([
+                    'code' => 0,
+                    'msg' => '保存成功'
+                ]);
+            }else{
+                $this->ajaxReturn([
+                    'code' => -2,
+                    'msg' => '更新失败'
+                ]);
+            }
         }
+        $val = $badWords->order('ver desc')->getFIeld('value');
+        $this->assign('badWords' , $val);
         $this->display('system:shield:shield');
     }
 

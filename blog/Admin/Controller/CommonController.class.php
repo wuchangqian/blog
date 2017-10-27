@@ -41,6 +41,9 @@ class CommonController extends Controller
         $this->buildBread();
     }
 
+    /**
+     * 更新权限表
+     */
     protected function syncPower()
     {
         $excludeFile = array(
@@ -129,6 +132,14 @@ class CommonController extends Controller
         }
     }
 
+    /**
+     * 读取目录夹下的文件/文件夹
+     * @param string $dir 文件夹
+     * @param array $exclude 排除文件列表
+     * @param string $type 类型 all所有  dir文件夹  file文件
+     * @param bool $fullPath 是否返回全路径
+     * @return array
+     */
     protected function readDir($dir,$exclude = array(),$type = 'all',$fullPath = true)
     {
         $files = [];
@@ -294,6 +305,10 @@ class CommonController extends Controller
     }
 
 
+    /**
+     * 删除目录下面的文件
+     * @param $dir
+     */
     protected function unlink($dir)
     {
         $file = $this->readDir($dir);
@@ -313,4 +328,5 @@ class CommonController extends Controller
         }
 
     }
+
 }

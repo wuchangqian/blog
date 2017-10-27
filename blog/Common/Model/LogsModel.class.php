@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: wy
- * Date: 2017/10/23
- * Time: 17:02
+ * Date: 2017/10/25
+ * Time: 15:36
  */
 
 namespace Common\Model;
@@ -11,7 +11,7 @@ namespace Common\Model;
 
 use Think\Model;
 
-class BadWords extends Model
+class LogsModel extends Model
 {
 
 }

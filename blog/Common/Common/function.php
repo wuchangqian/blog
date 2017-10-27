@@ -141,14 +141,14 @@ function setOnline(array $user)
     $update = ['lastLogin' => time() , 'lastIp' => $_SERVER['REMOTE_ADDR'] , 'loginNum' => $count];
     $users->where($where)->save($update);
 
-    //dump($update);
-
     $user['express'] = time() + C('SESSION_EXP');
     $user['loginNum'] = $count;
     session('online' , serialize($user));
 }
 
-
+/**
+ * 登出
+ */
 function logout(){
     session(null);
 }

@@ -37,8 +37,7 @@
         <div class="row cl">
             <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>内容：</label>
             <div class="formControls col-xs-8 col-sm-6">
-                <textarea id="content" name="content" cols="" rows="" class="textarea"  placeholder="说点什么..." onKeyUp="$.Huitextarealength(this,100)">{$info.content}</textarea>
-                <p class="textarea-numberbar"><em class="textarea-length">0</em>/100</p>
+                <script id="content" name="content" type="text/plain">{$info.content|htmlspecialchars_decode}</script>
             </div>
         </div>
 
@@ -70,13 +69,37 @@
 <script type="text/javascript" src="__PUBLIC__/h-ui/js/H-ui.min.js"></script>
 <script type="text/javascript" src="__PUBLIC__/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer 作为公共模版分离出去-->
 
+<!--ueditor-->
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/common/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/common/ueditor/ueditor.all.min.js"></script>
+
 <!--请在下方写此页面业务相关的脚本-->
 <script type="text/javascript" src="__PUBLIC__/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+
+</body>
 <script type="text/javascript">
     $(document).ready(function () {
+        var ue = UE.getEditor('content',{
+            initialFrameWidth:500,
+            initialFrameHeight: 400,
+            toolbars: [
+                [
+                    'fullscreen', 'source', '|', 'undo', 'redo', '|',
+                    'bold', 'italic', 'underline', 'fontborder', 'strikethrough', 'superscript', 'subscript', 'removeformat', 'formatmatch', 'autotypeset', '|',
+                    'forecolor', 'backcolor', 'selectall', 'cleardoc', '|',
+                    'customstyle', 'paragraph', 'fontfamily', 'fontsize', '|',
+                    'directionalityltr', 'directionalityrtl', 'indent', '|',
+                    'justifyleft', 'justifycenter', 'justifyright', 'justifyjustify', '|',
+                    'emotion', 'scrawl', 'insertvideo', 'attachment', 'map', 'insertframe', 'insertcode', 'webapp', 'pagebreak', 'template', 'background', '|',
+                    'horizontal', 'date', 'time', 'spechars', '|',
+                    'inserttable', 'deletetable', 'insertparagraphbeforetable', '|',
+                    'preview', 'searchreplace'
+                ]
+            ]
+        });
         var id = '{$info.id}';
         $('#submit_btn').click(function () {
-            var title = $('#title').val(), content = $('#content').val(),
+            var title = $('#title').val(), content = ue.getContent(),
                 status = $('input[name="status"]:checked').val();
             var data = {'id': id, 'title': title, 'content': content, 'status': status};
             $.ajax({
@@ -93,10 +116,13 @@
                         }, 3000);
                     } else {
                         $('#msgBox').html('<font color="green">' + res.msg + '</font>');
-                        $('#msgBox').fadeIn("slow");
-                        parent.window.location.reload();
+                        layer.msg(res.msg,{icon:1,time:2000});
+                        setTimeout(function () {
+                            close_handle_parent();
+                        },1000);
+                        /*parent.window.location.reload();
                         var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
-                        parent.layer.close(index);
+                        parent.layer.close(index);*/
                     }
                 },
                 error: function (res) {
@@ -110,6 +136,4 @@
         });
     });
 </script>
-
-</body>
 </html>

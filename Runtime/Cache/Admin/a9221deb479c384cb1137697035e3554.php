@@ -33,15 +33,22 @@
     <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a>
 </nav>
 <div class="page-container">
+	<div class="text-c">
+		<form class="Huiform" method="get" action="/Admin/system/dict.html" target="_self">
+			<input type="text" class="input-text" style="width:250px" placeholder="名称" value="<?php echo ($keyword); ?>" name="keyword">
+			<button type="submit" class="btn btn-success" id="" name=""><i class="Hui-iconfont">&#xe665;</i> 搜索字典</button>
+		</form>
+	</div>
+	<div class="cl pd-5  mt-20"></div>
 	<div class="cl pd-5 bg-1 bk-gray">
 		<span class="l">
 			<a href="javascript:;" onclick="admin_roles_del()" class="btn btn-danger radius">
 				<i class="Hui-iconfont">&#xe6e2;</i>
 				批量删除
 			</a>
-			<a class="btn btn-primary radius" href="javascript:;" onclick="admin_role_add('添加角色','<?php echo U('admin/roles_add');?>','','400')">
+			<a class="btn btn-primary radius" href="javascript:;" onclick="admin_role_add('添加角色','<?php echo U('system/dict_add');?>','','300')">
 				<i class="Hui-iconfont">&#xe600;</i>
-				添加角色
+				添加字典
 			</a>
 		</span>
 		<span class="r"></span>
@@ -54,48 +61,45 @@
 			<tr class="text-c">
 				<th width="25"><input type="checkbox" value="" name=""></th>
 				<th width="40">ID</th>
-				<th width="200">角色名</th>
-				<th>描述</th>
-				<th width="40">状态</th>
+				<th >根名称</th>
+				<th>名称</th>
+				<th width="200">创建时间</th>
 				<th width="90">操作</th>
 			</tr>
 		</thead>
 		<tbody>
-			<?php if(is_array($role['list'])): $i = 0; $__LIST__ = $role['list'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr class="text-c">
+			<?php if(is_array($data['list'])): $i = 0; $__LIST__ = $data['list'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr class="text-c">
 					<td><input type="checkbox" value="<?php echo ($vo["id"]); ?>" name="ids"></td>
 					<td><?php echo ($vo["id"]); ?></td>
-					<td><?php echo ($vo["name"]); ?></td>
-					<td><?php echo ($vo["description"]); ?></td>
+					<td>  <?php echo ($vo["name"]); ?></td>
+					<td> </td>
+					<td><?php echo (date('Y-m-d H:i:s',$vo["createAt"])); ?></td>
 					<td>
-						<?php if(($vo['status']) == "1"): ?>正常
-							<?php else: ?>
-							禁用<?php endif; ?>
-					</td>
-					<td class="f-14">
-						<a title="启用/禁用" href="javascript:;" onclick="admin_role_status('<?php echo ($vo["id"]); ?>','<?php echo ($vo["status"]); ?>')" style="text-decoration:none">
-							<?php if(($vo['status']) == "1"): ?><i class="Hui-iconfont">&#xe706;</i>
-								<?php else: ?>
-								<i class="Hui-iconfont">&#xe615;</i><?php endif; ?>
-						</a>
-
-						<a title="设置权限" href="javascript:;" onclick="admin_role_power('设置权限','<?php echo U('admin/roles_powers?rid='.$vo['id']);?>','','','600')" class="ml-5" style="text-decoration:none">
-							<i class="Hui-iconfont">&#xe68c;</i>
-						</a>
-
-						<a title="编辑" href="javascript:;" onclick="admin_role_edit('角色编辑','<?php echo U('admin/roles_edit?rid='.$vo['id']);?>','','','400')" class="ml-5" style="text-decoration:none">
+						<a title="编辑" href="javascript:;" onclick="admin_role_edit('编辑字典','<?php echo U('system/dict_edit?did='.$vo['id']);?>','','','300')" class="ml-5" style="text-decoration:none">
 							<i class="Hui-iconfont">&#xe6df;</i>
 						</a>
-
-						<a title="删除" href="javascript:;" onclick="admin_role_del(this,'<?php echo ($vo["id"]); ?>')" class="ml-5" style="text-decoration:none">
+						<a title="删除" href="javascript:;" onclick="admin_role_del(this,'<?php echo ($vo["id"]); ?>')" class="ml-10" style="text-decoration:none">
 							<i class="Hui-iconfont">&#xe6e2;</i>
 						</a>
 					</td>
+					<?php if(!empty($vo['sub'])): if(is_array($vo['sub'])): $i = 0; $__LIST__ = $vo['sub'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$sub): $mod = ($i % 2 );++$i;?><tr class="text-c">
+								<td><input type="checkbox" value="<?php echo ($sub["id"]); ?>" name="ids"></td>
+								<td><?php echo ($sub["id"]); ?></td>
+								<td> ├ </td>
+								<td><?php echo ($sub["name"]); ?> </td>
+								<td><?php echo (date('Y-m-d H:i:s',$vo["createAt"])); ?></td>
+								<td>
+									<a title="编辑" href="javascript:;" onclick="admin_role_edit('编辑字典','<?php echo U('system/dict_edit?did='.$sub['id']);?>','','','300')" class="ml-5" style="text-decoration:none">
+										<i class="Hui-iconfont">&#xe6df;</i>
+									</a>
+									<a title="删除" href="javascript:;" onclick="admin_role_del(this,'<?php echo ($sub["id"]); ?>')" class="ml-10" style="text-decoration:none">
+										<i class="Hui-iconfont">&#xe6e2;</i>
+									</a>
+								</td>
+							</tr><?php endforeach; endif; else: echo "" ;endif; endif; ?>
 				</tr><?php endforeach; endif; else: echo "" ;endif; ?>
 		</tbody>
 	</table>
-	<div class="mt-10">
-		<span class="l">共有数据：<strong><?php echo ($role["total"]); ?></strong> 条</span>
-		<span class="r"><?php echo ($role["page"]); ?></span>
 	</div>
 </div>
 <footer class="footer mt-20">
@@ -123,56 +127,20 @@
         layer_show(title,url,w,h);
     }
 
-    function admin_role_power(title,url,id,w,h){
-        layer_show(title,url,w,h);
-    }
 
-	function admin_role_status(id , status) {
-	    var msg = '' , sta;
-	    if(status == 1){
-	        msg = '禁用后该角色下用户不可访问，确认禁用吗？';
-            sta = 0;
-		}else{
-            msg = '启用后该角色下用户可访问，确认启用吗？';
-            sta = 1;
-		}
-        layer.confirm(msg,function(index){
-            $.ajax({
-                type: 'POST',
-                url: '<?php echo U("admin/roles_edit?act=status");?>',
-                data: {'id':id ,'status':sta},
-                dataType: 'json',
-                success: function(data){
-                    var status = 1;
-                    if(data.code < 0){
-                        status = 0;
-                    }
-                    layer.msg(data.msg,{icon:status,time:2500});
-                    setTimeout(function () {
-                        close_handle_self();
-                    },2500);
-
-
-                },
-                error:function(data) {
-                    console.log(data.msg);
-                },
-            });
-        });
-    }
 	/*管理员-角色-删除*/
 	function admin_role_del(obj,id){
 		layer.confirm('确认要删除吗？',function(index){
 			$.ajax({
 				type: 'POST',
-				url: '<?php echo U("admin/roles_del");?>',
+				url: '<?php echo U("system/dict_del");?>',
 				data: {'id':id},
 				dataType: 'json',
 				success: function(data){
-                    var status = 1;
-                    if(data.code < 0){
-                        status = 0;
-                    }
+				    var status = 1;
+				    if(data.code < 0){
+				        status = 0;
+					}
                     layer.msg(data.msg,{icon:status,time:2500});
                     setTimeout(function () {
                         close_handle_self();
@@ -194,7 +162,7 @@
         layer.confirm('确认要删除吗？',function(index){
             $.ajax({
                 type: 'POST',
-                url: '<?php echo U("admin/roles_del");?>',
+                url: '<?php echo U("system/dict_del");?>',
                 data: {'id':ids},
                 dataType: 'json',
                 success: function(data){

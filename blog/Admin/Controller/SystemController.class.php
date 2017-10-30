@@ -294,7 +294,7 @@ class SystemController extends CommonController
     /**
      * @Name:log
      * @Description:系统日志
-     * @HideInMenu:0
+     * @HideInMenu:1
      * @Author:wangyu
      */
     public function log()

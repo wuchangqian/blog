@@ -74,7 +74,7 @@ class PostController extends CommonController
         $this->assign('posts' , $articles);
         $this->assign('cate' , $cate);
         $this->assign('tag' , $tag);
-        $this->display('index:index');
+        $this->display('Index:index');
     }
 
     public function tag()

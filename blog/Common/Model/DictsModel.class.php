@@ -11,6 +11,8 @@ namespace Common\Model;
 
 use Think\Model;
 
+use Overtrue\Pinyin\Pinyin;
+
 class DictsModel extends Model
 {
     protected $_validate = [
@@ -19,6 +21,20 @@ class DictsModel extends Model
 
     protected $_auto = [
         ['createAt' , 'time' , 1 , 'function'],
-        ['updateAt' , 'time' , 2 , 'function']
+        ['updateAt' , 'time' , 2 , 'function'],
+        ['url' , 'getPinYin' , 3 , 'callback']
     ];
+
+    /**
+     * 获取标题拼音为seo
+     * @return string
+     */
+    protected function getPinYin()
+    {
+        include_once('vendor/autoload.php');
+
+        $pinyin = new Pinyin();
+
+        return $pinyin->permalink($_POST['name'], '');
+    }
 }

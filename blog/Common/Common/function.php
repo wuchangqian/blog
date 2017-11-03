@@ -122,6 +122,16 @@ function authcode($string, $operation = 'DECODE', $key = '', $expiry = 0)
 }
 
 /**
+ * 获取当前在线用户id
+ * @return mixed
+ */
+function get_uid()
+{
+    $user = unserialize(session('online'));
+    return $user['id'];
+}
+
+/**
  * 用户设置在线并更新对应记录
  * @param array $user
  */
@@ -152,4 +162,5 @@ function setOnline(array $user)
 function logout(){
     session(null);
 }
+
 

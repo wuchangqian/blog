@@ -1,0 +1,1326 @@
+[ 2017-11-01T10:15:40+08:00 ] ::1 /admin.php/posts/lists.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000530s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000970s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001252s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/lists' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0017s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_posts` WHERE `status` IN ('0','1') LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `blog_posts` WHERE `status` IN ('0','1') ORDER BY updatetime desc,id desc LIMIT 0,10   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`username` FROM `blog_users` WHERE `status` = 1  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000212s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010862s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010957s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000183s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000260s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000545s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000665s ]
+
+[ 2017-11-01T10:15:44+08:00 ] ::1 /admin.php/posts/edit/id/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000385s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000484s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000578s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/edit' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `blog_posts` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blog_dicts` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 4  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 7  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000178s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000318s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010817s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010905s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000164s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000520s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000653s ]
+
+[ 2017-11-01T10:15:51+08:00 ] ::1 /admin.php/posts/edit/id/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000362s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000506s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/edit' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0014s ]
+SQL: UPDATE `blog_posts` SET `title`='30分钟正则入门',`tags`='|8|',`content`='####1，元字符
+    .  匹配除换行符以外的任意字符
+    \\w 匹配字母或数字或下划线或汉字
+    \\s 匹配任意空白符
+    \\d 匹配数字
+    \\b 匹配单词的开始或结束
+    ^  匹配字符串的开始
+    $  匹配字符串的结束
+
+####2，重复
+
+    *       重复零次或更多次
+    +       重复一次或更多次
+    ?       重复零次或一次
+    \\{n\\}   重复 n 次
+    \\{n,\\}  重复 n 次或更多次
+    \\{n,m\\} 重复 n 次到 m 次
+
+####3，常用的反义
+
+    \\W       匹配任意不是字母，数字，下划线，汉字的字符 
+    \\S       匹配任意不是空白符的字符
+    \\D       匹配任意非数字的字符
+    \\B       匹配不是单词开头或结束的位置
+    [^x]     匹配除了x以外的任意字符
+    [^aeiou] 匹配除了aeiou这几个字母以外的任意字符
+
+#####练习1 验证$eamil的合法性
+
+
+    $email = array(\'444371889@qq.com\',\'1212121212.com\',\'hahahaha\',\'Asw@zj.gov.cn\',\'Asw@zj.info\');
+
+    $pattern = \'/^[a-z0-9_]+@(?:[a-z0-9_-]+\\.)+(?:com|cn)/i\'; // （exp）匹配并捕获 （?:exp）匹配
+
+    foreach ($email as $key =&gt; $value) {
+        if(preg_match($pattern, $value)){
+            echo $value , \' pass\' , PHP_EOL;
+        }else{
+            echo $value , \' fail\' , PHP_EOL;
+        }
+        //preg_match($pattern, $value , $RESULT[$key]);
+    }
+    var_dump($RESULT);
+
+输出：
+
+    444371889@qq.com pass
+    1212121212.com fail
+    hahahaha fail
+    Asw@zj.gov.cn pass
+    Asw@zj.info fail
+
+#####练习2 匹配出正确的时间
+
+    $str = &quot;
+    13:00
+    212:36w ww22:48kl
+    4:32  这样的时间应该是正确的
+    22:00
+    23:59
+    22:61
+    1112:13 非法
+    43:33 非法
+    12:60
+    12:33
+    000:34
+    00:00
+    23:59
+    24:59 显然没有这样的时间
+    24:00
+    30
+    &quot;;
+
+    $pattern = \'/[0-2]{1}[0-3]{1}:[0-5]{1}[0-9]{1}/\';
+
+    preg_match_all($pattern, $str , $res);
+
+    var_dump($res);
+
+输出：
+
+    array(1) {
+    [0]=&gt;
+        array(10) {
+        [0]=&gt;
+        string(5) &quot;13:00&quot;
+        [1]=&gt;
+        string(5) &quot;12:36&quot;
+        [2]=&gt;
+        string(5) &quot;22:48&quot;
+        [3]=&gt;
+        string(5) &quot;22:00&quot;
+        [4]=&gt;
+        string(5) &quot;23:59&quot;
+        [5]=&gt;
+        string(5) &quot;12:13&quot;
+        [6]=&gt;
+        string(5) &quot;12:33&quot;
+        [7]=&gt;
+        string(5) &quot;00:34&quot;
+        [8]=&gt;
+        string(5) &quot;00:00&quot;
+        [9]=&gt;
+        string(5) &quot;23:59&quot;
+        }
+    }
+
+可是我们并没有 &quot;4:32  这样的时间应该是正确的&quot; 这个正确的时间
+
+是时候用到分支了
+
+    $pattern = \'/[0-2]{1}[0-9]{1}:[0-5]{1}[0-9]{1}|[0-9]{1}:[0-5]{1}[0-9]{1}/\';
+
+注意 匹配分枝条件时，将会从左到右地测试每个条件，如果满足了某个分枝的话，就不会去再管其它的条件了。
+举例：
+
+    \\d{5}-\\d{4}|\\d{5} //匹配类似 23843-3234 或 21234 美国邮编格式 
+    //美国邮编的规则是5位数字，或者用连字号间隔的9位数字
+
+如果你把它改成\\d{5}|\\d{5}-\\d{4}的话，那么就只会匹配5位的邮编(以及9位邮编的前5位)。
+
+####取反义 
+
+    &lt;a[^&gt;]+&gt;
+
+匹配用尖括号括起来的以a开头的字符串。
+匹配以 除 a 标签以外的标签
+
+    #匹配以 除 a 标签以外的元素
+    $str = \'&lt;a&gt;baidu&lt;/a&gt; 
+        &lt;a href=&quot;http://baidu.com&quot;&gt;&lt;/a&gt; 
+        &lt;a href=&quot;baidu.com&quot;&gt;&lt;/a&gt; 
+        &lt;span&gt;baidu&lt;/span&gt; 
+        &lt;div&gt;hahahaha&lt;/div&gt; 
+        &lt;font color=&quot;red&quot;&gt;121&lt;/font&gt;\';
+
+    $pattern = \'/&lt;[^a\\/].*/i\';
+    preg_match_all($pattern, $str, $matches);
+
+    var_dump($matches);
+
+输出：
+
+    array(1) {
+    [0]=&gt;
+        array(3) {
+            [0]=&gt;
+            string(19) &quot;&lt;span&gt;baidu&lt;/span&gt; &quot;
+            [1]=&gt;
+            string(20) &quot;&lt;div&gt;hahahaha&lt;/div&gt; &quot;
+            [2]=&gt;
+            string(28) &quot;&lt;font color=&quot;red&quot;&gt;121&lt;/font&gt;&quot;
+        }
+    }
+
+
+####后向引用
+后向引用用于重复搜索前面某个分组匹配的文本。例如，\\1代表分组1匹配的文本，举例：
+
+从字符串中找出重复出现的单词
+
+    $str = \'hello kit kit , let`s go to play basketball , go go go\';
+
+    $pattern = \'/\\b(\\w+)\\b\\s+\\1\\b/i\';
+
+    preg_match_all($pattern, $str, $matches);
+
+    var_dump($matches);
+
+输出：
+
+    array(2) {
+    [0]=&gt;
+        array(2) {
+        [0]=&gt;
+        string(7) &quot;kit kit&quot;
+        [1]=&gt;
+        string(5) &quot;go go&quot;
+    }
+    [1]=&gt;
+        array(2) {
+        [0]=&gt;
+        string(3) &quot;kit&quot;
+        [1]=&gt;
+        string(2) &quot;go&quot;
+    }
+    }
+
+
+####常用分组语法
+
+    捕获 (exp) 匹配exp,并捕获文本到自动命名的组里
+
+    捕获 (?&lt;name&gt;exp) 匹配exp,并捕获文本到名称为name的组里，也可以写成(?\'name\'exp)
+
+    捕获 (?:exp) 匹配exp,不捕获匹配的文本，也不给此分组分配组号',`status`='1',`url`='30-fen-zhong-zheng-ze-ru-men',`updatetime`='1509502551' WHERE `id` = 4 [ RunTime:0.0018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000169s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005511s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005603s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000183s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000509s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000587s ]
+
+[ 2017-11-01T10:15:52+08:00 ] ::1 /admin.php/posts/lists.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000487s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000488s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000622s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/lists' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0015s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_posts` WHERE `status` IN ('0','1') LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_posts` WHERE `status` IN ('0','1') ORDER BY updatetime desc,id desc LIMIT 0,10   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`username` FROM `blog_users` WHERE `status` = 1  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000118s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000218s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010862s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010942s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000155s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000221s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000531s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000616s ]
+
+[ 2017-11-01T10:16:10+08:00 ] ::1 /admin.php/posts/edit/id/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000508s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000449s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000536s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/edit' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `blog_posts` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `blog_dicts` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 4  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 7  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000221s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000345s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009552s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009648s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000197s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000284s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000641s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000783s ]
+
+[ 2017-11-01T10:16:15+08:00 ] ::1 /admin.php/posts/edit/id/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000466s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000458s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000547s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/edit' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0014s ]
+SQL: UPDATE `blog_posts` SET `title`='30分钟正则入门',`tags`='|8|',`content`='####1，元字符
+    .  匹配除换行符以外的任意字符
+    \\w 匹配字母或数字或下划线或汉字
+    \\s 匹配任意空白符
+    \\d 匹配数字
+    \\b 匹配单词的开始或结束
+    ^  匹配字符串的开始
+    $  匹配字符串的结束
+
+####2，重复
+
+    *       重复零次或更多次
+    +       重复一次或更多次
+    ?       重复零次或一次
+    \\{n\\}   重复 n 次
+    \\{n,\\}  重复 n 次或更多次
+    \\{n,m\\} 重复 n 次到 m 次
+
+####3，常用的反义
+
+    \\W       匹配任意不是字母，数字，下划线，汉字的字符 
+    \\S       匹配任意不是空白符的字符
+    \\D       匹配任意非数字的字符
+    \\B       匹配不是单词开头或结束的位置
+    [^x]     匹配除了x以外的任意字符
+    [^aeiou] 匹配除了aeiou这几个字母以外的任意字符
+
+#####练习1 验证$eamil的合法性
+
+
+    $email = array(\'444371889@qq.com\',\'1212121212.com\',\'hahahaha\',\'Asw@zj.gov.cn\',\'Asw@zj.info\');
+
+    $pattern = \'/^[a-z0-9_]+@(?:[a-z0-9_-]+\\.)+(?:com|cn)/i\'; // （exp）匹配并捕获 （?:exp）匹配
+
+    foreach ($email as $key =&gt; $value) {
+        if(preg_match($pattern, $value)){
+            echo $value , \' pass\' , PHP_EOL;
+        }else{
+            echo $value , \' fail\' , PHP_EOL;
+        }
+        //preg_match($pattern, $value , $RESULT[$key]);
+    }
+    var_dump($RESULT);
+
+输出：
+
+    444371889@qq.com pass
+    1212121212.com fail
+    hahahaha fail
+    Asw@zj.gov.cn pass
+    Asw@zj.info fail
+
+#####练习2 匹配出正确的时间
+
+    $str = &quot;
+    13:00
+    212:36w ww22:48kl
+    4:32  这样的时间应该是正确的
+    22:00
+    23:59
+    22:61
+    1112:13 非法
+    43:33 非法
+    12:60
+    12:33
+    000:34
+    00:00
+    23:59
+    24:59 显然没有这样的时间
+    24:00
+    30
+    &quot;;
+
+    $pattern = \'/[0-2]{1}[0-3]{1}:[0-5]{1}[0-9]{1}/\';
+
+    preg_match_all($pattern, $str , $res);
+
+    var_dump($res);
+
+输出：
+
+    array(1) {
+    [0]=&gt;
+        array(10) {
+        [0]=&gt;
+        string(5) &quot;13:00&quot;
+        [1]=&gt;
+        string(5) &quot;12:36&quot;
+        [2]=&gt;
+        string(5) &quot;22:48&quot;
+        [3]=&gt;
+        string(5) &quot;22:00&quot;
+        [4]=&gt;
+        string(5) &quot;23:59&quot;
+        [5]=&gt;
+        string(5) &quot;12:13&quot;
+        [6]=&gt;
+        string(5) &quot;12:33&quot;
+        [7]=&gt;
+        string(5) &quot;00:34&quot;
+        [8]=&gt;
+        string(5) &quot;00:00&quot;
+        [9]=&gt;
+        string(5) &quot;23:59&quot;
+        }
+    }
+
+可是我们并没有 &quot;4:32  这样的时间应该是正确的&quot; 这个正确的时间
+
+是时候用到分支了
+
+    $pattern = \'/[0-2]{1}[0-9]{1}:[0-5]{1}[0-9]{1}|[0-9]{1}:[0-5]{1}[0-9]{1}/\';
+
+注意 匹配分枝条件时，将会从左到右地测试每个条件，如果满足了某个分枝的话，就不会去再管其它的条件了。
+举例：
+
+    \\d{5}-\\d{4}|\\d{5} //匹配类似 23843-3234 或 21234 美国邮编格式 
+    //美国邮编的规则是5位数字，或者用连字号间隔的9位数字
+
+如果你把它改成\\d{5}|\\d{5}-\\d{4}的话，那么就只会匹配5位的邮编(以及9位邮编的前5位)。
+
+####取反义 
+
+    &lt;a[^&gt;]+&gt;
+
+匹配用尖括号括起来的以a开头的字符串。
+匹配以 除 a 标签以外的标签
+
+    #匹配以 除 a 标签以外的元素
+    $str = \'&lt;a&gt;baidu&lt;/a&gt; 
+        &lt;a href=&quot;http://baidu.com&quot;&gt;&lt;/a&gt; 
+        &lt;a href=&quot;baidu.com&quot;&gt;&lt;/a&gt; 
+        &lt;span&gt;baidu&lt;/span&gt; 
+        &lt;div&gt;hahahaha&lt;/div&gt; 
+        &lt;font color=&quot;red&quot;&gt;121&lt;/font&gt;\';
+
+    $pattern = \'/&lt;[^a\\/].*/i\';
+    preg_match_all($pattern, $str, $matches);
+
+    var_dump($matches);
+
+输出：
+
+    array(1) {
+    [0]=&gt;
+        array(3) {
+            [0]=&gt;
+            string(19) &quot;&lt;span&gt;baidu&lt;/span&gt; &quot;
+            [1]=&gt;
+            string(20) &quot;&lt;div&gt;hahahaha&lt;/div&gt; &quot;
+            [2]=&gt;
+            string(28) &quot;&lt;font color=&quot;red&quot;&gt;121&lt;/font&gt;&quot;
+        }
+    }
+
+
+####后向引用
+后向引用用于重复搜索前面某个分组匹配的文本。例如，\\1代表分组1匹配的文本，举例：
+
+从字符串中找出重复出现的单词
+
+    $str = \'hello kit kit , let`s go to play basketball , go go go\';
+
+    $pattern = \'/\\b(\\w+)\\b\\s+\\1\\b/i\';
+
+    preg_match_all($pattern, $str, $matches);
+
+    var_dump($matches);
+
+输出：
+
+    array(2) {
+    [0]=&gt;
+        array(2) {
+        [0]=&gt;
+        string(7) &quot;kit kit&quot;
+        [1]=&gt;
+        string(5) &quot;go go&quot;
+    }
+    [1]=&gt;
+        array(2) {
+        [0]=&gt;
+        string(3) &quot;kit&quot;
+        [1]=&gt;
+        string(2) &quot;go&quot;
+    }
+    }
+
+
+####常用分组语法
+
+    捕获 (exp) 匹配exp,并捕获文本到自动命名的组里
+
+    捕获 (?&lt;name&gt;exp) 匹配exp,并捕获文本到名称为name的组里，也可以写成(?\'name\'exp)
+
+    捕获 (?:exp) 匹配exp,不捕获匹配的文本，也不给此分组分配组号',`status`='1',`url`='30-fen-zhong-zheng-ze-ru-men',`updatetime`='1509502575' WHERE `id` = 4 [ RunTime:0.0014s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000167s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005175s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005266s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000167s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000521s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000597s ]
+
+[ 2017-11-01T10:16:16+08:00 ] ::1 /admin.php/posts/lists.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000404s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000426s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000510s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/lists' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0015s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_posts` WHERE `status` IN ('0','1') LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_posts` WHERE `status` IN ('0','1') ORDER BY updatetime desc,id desc LIMIT 0,10   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`username` FROM `blog_users` WHERE `status` = 1  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000194s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009813s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009917s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000167s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000504s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000633s ]
+
+[ 2017-11-01T10:16:19+08:00 ] ::1 /admin.php/posts/edit/id/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000389s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000527s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000612s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/edit' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `blog_posts` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blog_dicts` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 4  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 7  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000137s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000224s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009069s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009156s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000163s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000269s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000534s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000659s ]
+
+[ 2017-11-01T10:17:23+08:00 ] ::1 /admin.php/posts/edit/id/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000371s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000532s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000622s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0005s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/edit' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `blog_posts` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blog_dicts` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 4  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 7  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000142s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000229s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009341s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009435s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000166s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000239s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000614s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000705s ]
+
+[ 2017-11-01T10:17:27+08:00 ] ::1 /admin.php/posts/edit/id/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000421s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000472s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000562s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/edit' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0015s ]
+SQL: UPDATE `blog_posts` SET `title`='30分钟正则入门',`cate`='5',`tags`='|8|',`content`='####1，元字符
+    .  匹配除换行符以外的任意字符
+    \\w 匹配字母或数字或下划线或汉字
+    \\s 匹配任意空白符
+    \\d 匹配数字
+    \\b 匹配单词的开始或结束
+    ^  匹配字符串的开始
+    $  匹配字符串的结束
+
+####2，重复
+
+    *       重复零次或更多次
+    +       重复一次或更多次
+    ?       重复零次或一次
+    \\{n\\}   重复 n 次
+    \\{n,\\}  重复 n 次或更多次
+    \\{n,m\\} 重复 n 次到 m 次
+
+####3，常用的反义
+
+    \\W       匹配任意不是字母，数字，下划线，汉字的字符 
+    \\S       匹配任意不是空白符的字符
+    \\D       匹配任意非数字的字符
+    \\B       匹配不是单词开头或结束的位置
+    [^x]     匹配除了x以外的任意字符
+    [^aeiou] 匹配除了aeiou这几个字母以外的任意字符
+
+#####练习1 验证$eamil的合法性
+
+
+    $email = array(\'444371889@qq.com\',\'1212121212.com\',\'hahahaha\',\'Asw@zj.gov.cn\',\'Asw@zj.info\');
+
+    $pattern = \'/^[a-z0-9_]+@(?:[a-z0-9_-]+\\.)+(?:com|cn)/i\'; // （exp）匹配并捕获 （?:exp）匹配
+
+    foreach ($email as $key =&gt; $value) {
+        if(preg_match($pattern, $value)){
+            echo $value , \' pass\' , PHP_EOL;
+        }else{
+            echo $value , \' fail\' , PHP_EOL;
+        }
+        //preg_match($pattern, $value , $RESULT[$key]);
+    }
+    var_dump($RESULT);
+
+输出：
+
+    444371889@qq.com pass
+    1212121212.com fail
+    hahahaha fail
+    Asw@zj.gov.cn pass
+    Asw@zj.info fail
+
+#####练习2 匹配出正确的时间
+
+    $str = &quot;
+    13:00
+    212:36w ww22:48kl
+    4:32  这样的时间应该是正确的
+    22:00
+    23:59
+    22:61
+    1112:13 非法
+    43:33 非法
+    12:60
+    12:33
+    000:34
+    00:00
+    23:59
+    24:59 显然没有这样的时间
+    24:00
+    30
+    &quot;;
+
+    $pattern = \'/[0-2]{1}[0-3]{1}:[0-5]{1}[0-9]{1}/\';
+
+    preg_match_all($pattern, $str , $res);
+
+    var_dump($res);
+
+输出：
+
+    array(1) {
+    [0]=&gt;
+        array(10) {
+        [0]=&gt;
+        string(5) &quot;13:00&quot;
+        [1]=&gt;
+        string(5) &quot;12:36&quot;
+        [2]=&gt;
+        string(5) &quot;22:48&quot;
+        [3]=&gt;
+        string(5) &quot;22:00&quot;
+        [4]=&gt;
+        string(5) &quot;23:59&quot;
+        [5]=&gt;
+        string(5) &quot;12:13&quot;
+        [6]=&gt;
+        string(5) &quot;12:33&quot;
+        [7]=&gt;
+        string(5) &quot;00:34&quot;
+        [8]=&gt;
+        string(5) &quot;00:00&quot;
+        [9]=&gt;
+        string(5) &quot;23:59&quot;
+        }
+    }
+
+可是我们并没有 &quot;4:32  这样的时间应该是正确的&quot; 这个正确的时间
+
+是时候用到分支了
+
+    $pattern = \'/[0-2]{1}[0-9]{1}:[0-5]{1}[0-9]{1}|[0-9]{1}:[0-5]{1}[0-9]{1}/\';
+
+注意 匹配分枝条件时，将会从左到右地测试每个条件，如果满足了某个分枝的话，就不会去再管其它的条件了。
+举例：
+
+    \\d{5}-\\d{4}|\\d{5} //匹配类似 23843-3234 或 21234 美国邮编格式 
+    //美国邮编的规则是5位数字，或者用连字号间隔的9位数字
+
+如果你把它改成\\d{5}|\\d{5}-\\d{4}的话，那么就只会匹配5位的邮编(以及9位邮编的前5位)。
+
+####取反义 
+
+    &lt;a[^&gt;]+&gt;
+
+匹配用尖括号括起来的以a开头的字符串。
+匹配以 除 a 标签以外的标签
+
+    #匹配以 除 a 标签以外的元素
+    $str = \'&lt;a&gt;baidu&lt;/a&gt; 
+        &lt;a href=&quot;http://baidu.com&quot;&gt;&lt;/a&gt; 
+        &lt;a href=&quot;baidu.com&quot;&gt;&lt;/a&gt; 
+        &lt;span&gt;baidu&lt;/span&gt; 
+        &lt;div&gt;hahahaha&lt;/div&gt; 
+        &lt;font color=&quot;red&quot;&gt;121&lt;/font&gt;\';
+
+    $pattern = \'/&lt;[^a\\/].*/i\';
+    preg_match_all($pattern, $str, $matches);
+
+    var_dump($matches);
+
+输出：
+
+    array(1) {
+    [0]=&gt;
+        array(3) {
+            [0]=&gt;
+            string(19) &quot;&lt;span&gt;baidu&lt;/span&gt; &quot;
+            [1]=&gt;
+            string(20) &quot;&lt;div&gt;hahahaha&lt;/div&gt; &quot;
+            [2]=&gt;
+            string(28) &quot;&lt;font color=&quot;red&quot;&gt;121&lt;/font&gt;&quot;
+        }
+    }
+
+
+####后向引用
+后向引用用于重复搜索前面某个分组匹配的文本。例如，\\1代表分组1匹配的文本，举例：
+
+从字符串中找出重复出现的单词
+
+    $str = \'hello kit kit , let`s go to play basketball , go go go\';
+
+    $pattern = \'/\\b(\\w+)\\b\\s+\\1\\b/i\';
+
+    preg_match_all($pattern, $str, $matches);
+
+    var_dump($matches);
+
+输出：
+
+    array(2) {
+    [0]=&gt;
+        array(2) {
+        [0]=&gt;
+        string(7) &quot;kit kit&quot;
+        [1]=&gt;
+        string(5) &quot;go go&quot;
+    }
+    [1]=&gt;
+        array(2) {
+        [0]=&gt;
+        string(3) &quot;kit&quot;
+        [1]=&gt;
+        string(2) &quot;go&quot;
+    }
+    }
+
+
+####常用分组语法
+
+    捕获 (exp) 匹配exp,并捕获文本到自动命名的组里
+
+    捕获 (?&lt;name&gt;exp) 匹配exp,并捕获文本到名称为name的组里，也可以写成(?\'name\'exp)
+
+    捕获 (?:exp) 匹配exp,不捕获匹配的文本，也不给此分组分配组号',`status`='1',`url`='30-fen-zhong-zheng-ze-ru-men',`updatetime`='1509502647' WHERE `id` = 4 [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000160s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005324s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005422s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000187s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000514s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000594s ]
+
+[ 2017-11-01T10:17:28+08:00 ] ::1 /admin.php/posts/lists.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000370s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000407s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000486s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/lists' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0016s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_posts` WHERE `status` IN ('0','1') LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_posts` WHERE `status` IN ('0','1') ORDER BY updatetime desc,id desc LIMIT 0,10   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`username` FROM `blog_users` WHERE `status` = 1  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000143s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000256s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010499s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010578s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000161s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000496s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000584s ]
+
+[ 2017-11-01T10:17:30+08:00 ] ::1 /admin.php/posts/edit/id/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000380s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000472s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000565s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/edit' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `blog_posts` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blog_dicts` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 4  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 7  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000207s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000324s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009652s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009767s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000166s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000239s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000506s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000622s ]
+
+[ 2017-11-01T10:17:31+08:00 ] ::1 /admin.php/posts/edit/id/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000358s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000408s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000489s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/edit' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `blog_posts` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blog_dicts` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 4  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 7  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000137s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000223s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009061s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009160s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000185s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000270s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000507s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000616s ]
+
+[ 2017-11-01T10:41:30+08:00 ] ::1 /admin.php/posts/lists.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000362s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000663s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000764s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/lists' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_posts` WHERE `status` IN ('0','1') LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_posts` WHERE `status` IN ('0','1') ORDER BY updatetime desc,id desc LIMIT 0,10   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`username` FROM `blog_users` WHERE `status` = 1  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000122s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000211s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013370s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013458s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000159s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000507s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000604s ]
+
+[ 2017-11-01T10:41:33+08:00 ] ::1 /admin.php/posts/edit/id/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000436s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000531s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000618s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/edit' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `blog_posts` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blog_dicts` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 4  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 7  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000136s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000222s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009744s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009835s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000161s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000503s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000671s ]
+
+[ 2017-11-01T10:42:20+08:00 ] ::1 /admin.php/posts/edit/id/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000387s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000707s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000805s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/edit' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0014s ]
+SQL: UPDATE `blog_posts` SET `title`='正则基础入门',`cate`='5',`tags`='|8|',`content`='####1，元字符
+    .  匹配除换行符以外的任意字符
+    \\w 匹配字母或数字或下划线或汉字
+    \\s 匹配任意空白符
+    \\d 匹配数字
+    \\b 匹配单词的开始或结束
+    ^  匹配字符串的开始
+    $  匹配字符串的结束
+
+####2，重复
+
+    *       重复零次或更多次
+    +       重复一次或更多次
+    ?       重复零次或一次
+    \\{n\\}   重复 n 次
+    \\{n,\\}  重复 n 次或更多次
+    \\{n,m\\} 重复 n 次到 m 次
+
+####3，常用的反义
+
+    \\W       匹配任意不是字母，数字，下划线，汉字的字符 
+    \\S       匹配任意不是空白符的字符
+    \\D       匹配任意非数字的字符
+    \\B       匹配不是单词开头或结束的位置
+    [^x]     匹配除了x以外的任意字符
+    [^aeiou] 匹配除了aeiou这几个字母以外的任意字符
+
+#####练习1 验证$eamil的合法性
+
+
+    $email = array(\'444371889@qq.com\',\'1212121212.com\',\'hahahaha\',\'Asw@zj.gov.cn\',\'Asw@zj.info\');
+
+    $pattern = \'/^[a-z0-9_]+@(?:[a-z0-9_-]+\\.)+(?:com|cn)/i\'; // （exp）匹配并捕获 （?:exp）匹配
+
+    foreach ($email as $key =&gt; $value) {
+        if(preg_match($pattern, $value)){
+            echo $value , \' pass\' , PHP_EOL;
+        }else{
+            echo $value , \' fail\' , PHP_EOL;
+        }
+        //preg_match($pattern, $value , $RESULT[$key]);
+    }
+    var_dump($RESULT);
+
+输出：
+
+    444371889@qq.com pass
+    1212121212.com fail
+    hahahaha fail
+    Asw@zj.gov.cn pass
+    Asw@zj.info fail
+
+#####练习2 匹配出正确的时间
+
+    $str = &quot;
+    13:00
+    212:36w ww22:48kl
+    4:32  这样的时间应该是正确的
+    22:00
+    23:59
+    22:61
+    1112:13 非法
+    43:33 非法
+    12:60
+    12:33
+    000:34
+    00:00
+    23:59
+    24:59 显然没有这样的时间
+    24:00
+    30
+    &quot;;
+
+    $pattern = \'/[0-2]{1}[0-3]{1}:[0-5]{1}[0-9]{1}/\';
+
+    preg_match_all($pattern, $str , $res);
+
+    var_dump($res);
+
+输出：
+
+    array(1) {
+    [0]=&gt;
+        array(10) {
+        [0]=&gt;
+        string(5) &quot;13:00&quot;
+        [1]=&gt;
+        string(5) &quot;12:36&quot;
+        [2]=&gt;
+        string(5) &quot;22:48&quot;
+        [3]=&gt;
+        string(5) &quot;22:00&quot;
+        [4]=&gt;
+        string(5) &quot;23:59&quot;
+        [5]=&gt;
+        string(5) &quot;12:13&quot;
+        [6]=&gt;
+        string(5) &quot;12:33&quot;
+        [7]=&gt;
+        string(5) &quot;00:34&quot;
+        [8]=&gt;
+        string(5) &quot;00:00&quot;
+        [9]=&gt;
+        string(5) &quot;23:59&quot;
+        }
+    }
+
+可是我们并没有 &quot;4:32  这样的时间应该是正确的&quot; 这个正确的时间
+
+是时候用到分支了
+
+    $pattern = \'/[0-2]{1}[0-9]{1}:[0-5]{1}[0-9]{1}|[0-9]{1}:[0-5]{1}[0-9]{1}/\';
+
+注意 匹配分枝条件时，将会从左到右地测试每个条件，如果满足了某个分枝的话，就不会去再管其它的条件了。
+举例：
+
+    \\d{5}-\\d{4}|\\d{5} //匹配类似 23843-3234 或 21234 美国邮编格式 
+    //美国邮编的规则是5位数字，或者用连字号间隔的9位数字
+
+如果你把它改成\\d{5}|\\d{5}-\\d{4}的话，那么就只会匹配5位的邮编(以及9位邮编的前5位)。
+
+####取反义 
+
+    &lt;a[^&gt;]+&gt;
+
+匹配用尖括号括起来的以a开头的字符串。
+匹配以 除 a 标签以外的标签
+
+    #匹配以 除 a 标签以外的元素
+    $str = \'&lt;a&gt;baidu&lt;/a&gt; 
+        &lt;a href=&quot;http://baidu.com&quot;&gt;&lt;/a&gt; 
+        &lt;a href=&quot;baidu.com&quot;&gt;&lt;/a&gt; 
+        &lt;span&gt;baidu&lt;/span&gt; 
+        &lt;div&gt;hahahaha&lt;/div&gt; 
+        &lt;font color=&quot;red&quot;&gt;121&lt;/font&gt;\';
+
+    $pattern = \'/&lt;[^a\\/].*/i\';
+    preg_match_all($pattern, $str, $matches);
+
+    var_dump($matches);
+
+输出：
+
+    array(1) {
+    [0]=&gt;
+        array(3) {
+            [0]=&gt;
+            string(19) &quot;&lt;span&gt;baidu&lt;/span&gt; &quot;
+            [1]=&gt;
+            string(20) &quot;&lt;div&gt;hahahaha&lt;/div&gt; &quot;
+            [2]=&gt;
+            string(28) &quot;&lt;font color=&quot;red&quot;&gt;121&lt;/font&gt;&quot;
+        }
+    }
+
+
+####后向引用
+后向引用用于重复搜索前面某个分组匹配的文本。例如，\\1代表分组1匹配的文本，举例：
+
+从字符串中找出重复出现的单词
+
+    $str = \'hello kit kit , let`s go to play basketball , go go go\';
+
+    $pattern = \'/\\b(\\w+)\\b\\s+\\1\\b/i\';
+
+    preg_match_all($pattern, $str, $matches);
+
+    var_dump($matches);
+
+输出：
+
+    array(2) {
+    [0]=&gt;
+        array(2) {
+        [0]=&gt;
+        string(7) &quot;kit kit&quot;
+        [1]=&gt;
+        string(5) &quot;go go&quot;
+    }
+    [1]=&gt;
+        array(2) {
+        [0]=&gt;
+        string(3) &quot;kit&quot;
+        [1]=&gt;
+        string(2) &quot;go&quot;
+    }
+    }
+
+
+####常用分组语法
+
+    捕获 (exp) 匹配exp,并捕获文本到自动命名的组里
+
+    捕获 (?&lt;name&gt;exp) 匹配exp,并捕获文本到名称为name的组里，也可以写成(?\'name\'exp)
+
+    捕获 (?:exp) 匹配exp,不捕获匹配的文本，也不给此分组分配组号',`status`='1',`url`='zheng-ze-ji-chu-ru-men',`updatetime`='1509504140' WHERE `id` = 4 [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000172s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005662s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005753s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000171s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000506s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000584s ]
+
+[ 2017-11-01T10:42:21+08:00 ] ::1 /admin.php/posts/lists.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000404s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000526s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/lists' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0017s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_posts` WHERE `status` IN ('0','1') LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_posts` WHERE `status` IN ('0','1') ORDER BY updatetime desc,id desc LIMIT 0,10   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`username` FROM `blog_users` WHERE `status` = 1  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000198s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010023s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010101s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000145s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000213s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000552s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000683s ]
+
+[ 2017-11-01T10:54:20+08:00 ] ::1 /admin.php/posts/lists.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000354s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000709s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0005s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/lists' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0016s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_posts` WHERE `status` IN ('0','1') LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_posts` WHERE `status` IN ('0','1') ORDER BY updatetime desc,id desc LIMIT 0,10   [ RunTime:0.0012s ]
+SQL: SELECT `id`,`username` FROM `blog_users` WHERE `status` = 1  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000143s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000250s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011473s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011564s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000195s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000314s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000737s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000847s ]
+

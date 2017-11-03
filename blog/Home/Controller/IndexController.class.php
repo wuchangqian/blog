@@ -1,20 +1,30 @@
 <?php
 namespace Home\Controller;
 
-use Think\Controller;
 
-class IndexController extends Controller
+class IndexController extends CommonController
 {
+    public function _initialize()
+    {
+        parent::_initialize();
+    }
+
     public function index()
     {
-        $mkParser = new \Org\Util\ParserMarkDown();
-
-        $path = ROOT_PATH.'/posts/2017-09-19-laravel-learn-notes.markdown';
-
-        $mktext = file_get_contents($path);
-
-        $text = $mkParser->text($mktext);
-
-        $this->show($text);
+        $posts = D('Posts');
+        $dicts = D('Dicts');
+        $cates = $dicts->where(['cateId' => 4])->select();
+        $tags = $dicts->where(['cateId' => 7])->select();
+        $where = ['status' => 1];
+        $articles = $posts->where($where)->order('createtime desc')->limit(10)->select();
+        $cate = array_column($cates , 'name' , 'id' );
+        $tag = array_column($tags , 'name' , 'id' );
+        foreach($articles as $k => $v) {
+            $articles[$k]['tags'] = explode('|' , $v['tags']);
+        }
+        $this->assign('posts' , $articles);
+        $this->assign('cate' , $cate);
+        $this->assign('tag' , $tag);
+        $this->display();
     }
 }

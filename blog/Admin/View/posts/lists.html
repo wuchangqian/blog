@@ -1,34 +1,16 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="renderer" content="webkit|ie-comp|ie-stand">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-    <meta http-equiv="Cache-Control" content="no-siteapp" />
-    <!--[if lt IE 9]>
-    <script type="text/javascript" src="__PUBLIC__/lib/html5shiv.js"></script>
-    <script type="text/javascript" src="__PUBLIC__/lib/respond.min.js"></script>
-    <![endif]-->
-    <link rel="stylesheet" type="text/css" href="__PUBLIC__/h-ui/css/H-ui.min.css" />
-    <link rel="stylesheet" type="text/css" href="__PUBLIC__/h-ui.admin/css/H-ui.admin.css" />
-    <link rel="stylesheet" type="text/css" href="__PUBLIC__/lib/Hui-iconfont/1.0.8/iconfont.css" />
-    <link rel="stylesheet" type="text/css" href="__PUBLIC__/h-ui.admin/skin/default/skin.css" id="skin" />
-    <link rel="stylesheet" type="text/css" href="__PUBLIC__/h-ui.admin/css/style.css" />
-    <!--[if IE 6]>
-    <script type="text/javascript" src="__PUBLIC__/lib/DD_belatedPNG_0.0.8a-min.js" ></script>
-    <script>DD_belatedPNG.fix('*');</script>
-    <![endif]-->
-    <title>文章管理</title>
-</head>
+<include file="common:head"/>
 <body>
 <include file="common:bread"/>
 <div class="page-container">
-    <div class="cl pd-5 bg-1 bk-gray"><span class="l">
-        <a href="javascript:;" onclick="batchdelete()" class="btn btn-danger radius">
-            <i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a>
-        <a class="btn btn-primary radius" href="{:U('admin/posts/add')}">
-            <i class="Hui-iconfont">&#xe600;</i> 发布文章</a> </span>
+    <div class="cl pd-5 bg-1 bk-gray">
+        <span class="l mb-5">
+            <a href="javascript:;" onclick="batchdelete()" class="btn btn-danger radius">
+                <i class="Hui-iconfont">&#xe6e2;</i> 批量删除
+            </a>
+            <a class="btn btn-primary radius" data-title="发布文章" data-href="{:U('posts/add')}" onclick="Hui_admin_tab(this)" href="javascript:;">
+                <i class="Hui-iconfont">&#xe600;</i> 发布文章
+            </a>
+         </span>
         <!--<span class="r">共有数据：<strong>{$total}</strong> 条</span></div>-->
         <table class="table table-border table-bordered table-hover table-bg">
             <thead>
@@ -53,7 +35,13 @@
                     <td>{$vo.id}</td>
                     <td>{$vo.title}</td>
                     <td>{$vo.createtime|date="Y-m-d H:i:s",###}</td>
-                    <td>{$vo.updatetime|date="Y-m-d H:i:s",###}</td>
+                    <td>
+                        <notempty name="vo.updatetime">
+                            {$vo.updatetime|date="Y-m-d H:i:s",###}
+                        <else/>
+                            /
+                        </notempty>
+                    </td>
                     <td>{$vo.username}</td>
                     <td class="td-status">
                         <eq name="vo.status" value="1">
@@ -64,12 +52,17 @@
                     </td>
                     <td class="f-14">
                         <a title="<eq name='vo.status' value='1'>停用<else />启用</eq>" href="javascript:;" style="text-decoration:none" onclick="posts_status(this,'{$vo[\'id\']}')">
-                            <i class="Hui-iconfont"></i>
+
+                            <eq name="vo.status" value="1">
+                                <i class="Hui-iconfont">&#xe6dd;</i>
+                            <else/>
+                                <i class="Hui-iconfont">&#xe6e1;</i>
+                            </eq>
                         </a>
-                        <a title="编辑" href="javascript:;" onclick="posts_edit('文章编辑','{:U(\'posts/edit?id=\'.$vo[\'id\'])}','{$vo.id}')"
-                           style="text-decoration:none">
+                        <a class="ml-5" data-title="编辑文章" data-href="{:U('posts/edit?id='.$vo['id'])}" onclick="Hui_admin_tab(this)" href="javascript:;">
                             <i class="Hui-iconfont">&#xe6df;</i>
                         </a>
+
                         <a title="删除" href="javascript:;" onclick="posts_del(this,'{$vo[\'id\']}')" class="ml-5"
                            style="text-decoration:none">
                             <i class="Hui-iconfont">&#xe6e2;</i>
@@ -83,32 +76,13 @@
             <span class="l">共有数据：<strong>{$total}</strong> 条</span>
             <span class="r">{$page}</span>
         </div>
-        <!--<div class="col-xs-6">
-            <div class="dataTables_paginate paging_simple_numbers" id="sample-table-2_paginate">
-                <ul class="pagination">
-                    {$page}
-                </ul>
-            </div>
-        </div>-->
     </div>
 </div>
 <include file="common:foot" />
-<!--_footer 作为公共模版分离出去-->
-<script type="text/javascript" src="__PUBLIC__/lib/jquery/1.9.1/jquery.min.js"></script>
-<script type="text/javascript" src="__PUBLIC__/lib/layer/2.4/layer.js"></script>
-<script type="text/javascript" src="__PUBLIC__/h-ui/js/H-ui.min.js"></script>
-<script type="text/javascript" src="__PUBLIC__/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer 作为公共模版分离出去-->
-
-<!--请在下方写此页面业务相关的脚本-->
-<script type="text/javascript" src="__PUBLIC__/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+<include file="common:base_js" />
 
 </body>
 <script type="text/javascript">
-    /*管理员-文章-编辑*/
-    function posts_edit(title, url, id, w, h) {
-        layer_show(title, url, w, h);
-    }
-
     /*管理员-文章-删除*/
     function posts_del(obj, id) {
         layer.confirm('确认要删除吗？', function (index) {

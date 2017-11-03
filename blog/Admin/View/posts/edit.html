@@ -1,0 +1,133 @@
+<include file="common:head"/>
+<style>
+    blockquote{background-color: #1f0304;color: #fff;padding: 15px;}
+    ol{
+        list-style: disc;
+        padding-left: 20px;
+    }
+</style>
+<body>
+<include file="common:bread"/>
+<article class="page-container">
+    <form action="__SELF__" method="post" class="form form-horizontal" id="form-member-add">
+        <input type="hidden" name="id" value="{$info.id}">
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>标题：</label>
+            <div class="formControls col-xs-8 col-sm-6">
+                <input type="text" class="input-text" name="title" value="{$info.title}" placeholder="请输入文章标题">
+            </div>
+        </div>
+
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>分类：</label>
+            <div class="formControls col-xs-8 col-sm-6">
+                <select name="cate" class="input-text">
+                    <option value="0">请选择</option>
+                    <volist name="dict['cates']" id="cate">
+                        <option value="{$cate.id}" <eq name="info['cate']" value="$cate['id']">selected</eq>>{$cate.name}</option>
+                    </volist>
+                </select>
+            </div>
+        </div>
+
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>标签：</label>
+            <div class="formControls col-xs-8 col-sm-6">
+                <volist name="dict['tags']" id="tag">
+                    <div style="float: left; margin-right: 15px;">
+                        <input type="checkbox" id="{$tag.id}" name="tags[]" value="{$tag.id}" <in name="tag['id']" value="$info['tags']">checked</in>>
+                        <label for="{$tag.id}">{$tag.name}</label>
+                    </div>
+                </volist>
+            </div>
+        </div>
+
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>内容：</label>
+            <div class="formControls col-xs-8 col-sm-6">
+                <div style="border: 1px solid #ccc;border-bottom: none;padding: 5px;">
+                    <button class="btn btn-default radius preview" type="button" data-toggle="modal" data-target=".bs-example-modal-lg">预览</button>
+                </div>
+                <textarea id="text-input" class="textarea" name="content" style="width: 100%;height: 250px;">{$info.content|htmlspecialchars_decode}</textarea>
+            </div>
+        </div>
+
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>状态：</label>
+            <div class="formControls col-xs-8 col-sm-9 skin-minimal">
+                <div class="radio-box">
+                    <input name="status" type="radio" id="sex-1" checked value="1">
+                    <label for="sex-1">启用</label>
+                </div>
+                <div class="radio-box">
+                    <input name="status" type="radio" id="sex-2" value="0">
+                    <label for="sex-2">禁用</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+                <input class="btn btn-primary radius" type="submit" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+            </div>
+        </div>
+    </form>
+</article>
+<div class="modal fade bs-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">内容预览</h4>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+<include file="common:foot" />
+<!--_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="__PUBLIC__/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="__PUBLIC__/h-ui/js/H-ui.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer 作为公共模版分离出去-->
+
+<!--ueditor-->
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/common/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/common/ueditor/ueditor.all.min.js"></script>
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="__PUBLIC__/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+
+</body>
+
+<script src="__PUBLIC__/markdown/markdown.js"></script>
+<script>
+    $(document).ready(function(){
+        $("textarea").on('keydown', function(e) {
+            if (e.keyCode == 9) {
+                e.preventDefault();
+                var indent = '    ';
+                var start = this.selectionStart;
+                var end = this.selectionEnd;
+                var selected = window.getSelection().toString();
+                selected = indent + selected.replace(/\n/g, '\n' + indent);
+                this.value = this.value.substring(0, start) + selected
+                    + this.value.substring(end);
+                this.setSelectionRange(start + indent.length, start
+                    + selected.length);
+            }
+        });
+        $('.preview').click(function(){
+            var input = $('#text-input').val();
+            var html = markdown.toHTML(input);
+            console.log(html);
+            $('.modal-body').html(html);
+        });
+    })
+
+</script>
+</html>

@@ -41,4 +41,10 @@ class HomeController extends CommonController
         ]);
         $this->display();
     }
+
+    public function logout()
+    {
+        logout();
+        $this->success('退出成功',U('index/index'));
+    }
 }

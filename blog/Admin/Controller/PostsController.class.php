@@ -8,6 +8,7 @@
 
 namespace Admin\Controller;
 
+
 /**
  * @Description:文章管理
  * @Icon:&#xe622;
@@ -26,7 +27,7 @@ class PostsController extends CommonController
      */
     public function add()
     {
-        $db = D('Post');
+        $db = D('Posts');
         if (IS_POST) {
             if (!$db->create()) {
                 $this->error($db->getError());
@@ -35,10 +36,14 @@ class PostsController extends CommonController
                 if (!$db->add()) {
                     $this->error('添加失败');
                 } else {
-                    $this->success('添加成功', U('admin/posts/lists'));
+                    $this->success('添加成功', U('posts/lists'));
                 }
             }
         } else {
+            $dicts = D('Dicts');
+            $cates = $dicts->where(['cateId' => 4])->select();
+            $tags = $dicts->where(['cateId' => 7])->select();
+            $this->assign('dict',['cates' => $cates , 'tags' => $tags]);
             $this->display();
         }
     }
@@ -83,24 +88,31 @@ class PostsController extends CommonController
      */
     public function edit()
     {
-        $db = D('Post');
-        if (IS_AJAX) {
+        $db = D('Posts');
+        if (IS_POST) {
             if (!$db->create()) {
-                $this->ajaxReturn(array('code' => -10, 'msg' => $db->getError()));
+                $this->error($db->getError());
             } else {
                 if (!$db->save()) {
-                    $this->ajaxReturn(array('code' => -20, 'msg' => '数据更新失败！'));
+                    $this->error('数据更新失败！');
                 } else {
-                    $this->ajaxReturn(array('code' => 0, 'msg' => '更新成功！'));
+                    $this->success('更新成功！' , U('posts/lists'));
                 }
             }
         } else {
             $id = I('get.id');
-            $info = $db->field('id,title,content,status')->where(array('id' => $id))->find();
+            $info = $db->where(array('id' => $id))->find();
             if (!$info) {
                 $this->error('该数据不存在！');
                 exit();
             }
+            if($info['tags']){
+                $info['tags'] = implode(',',explode('|' , $info['tags']));
+            }
+            $dicts = D('Dicts');
+            $cates = $dicts->where(['cateId' => 4])->select();
+            $tags = $dicts->where(['cateId' => 7])->select();
+            $this->assign('dict',['cates' => $cates , 'tags' => $tags]);
             $this->assign('info', $info);
             $this->display();
         }

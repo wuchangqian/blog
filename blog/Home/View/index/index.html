@@ -1,0 +1,44 @@
+<include file="common:head" />
+<article>
+<div class="container">
+    <ul class="cbp_tmtimeline">
+        <volist name="posts" id="post">
+            <li>
+                <time class="cbp_tmtime"><span>{$post.createtime|date='m-d',###}</span> <span>{$post.createtime|date='Y',###}</span></time>
+                <div class="cbp_tmicon"></div>
+                <div class="cbp_tmlabel" data-scroll-reveal="enter right over 1s" >
+                    <h2>{$post.title}</h2>
+                    <p>
+                        <span class="blogpic">
+                            <a href="/">
+                                <empty name="post['img']">
+                                    <img src="__PUBLIC__/blog/images/t03.jpg">
+                                <else/>
+                                    <img src="{$post.img}">
+                                </empty>
+
+                            </a>
+                        </span>
+                        <div style="max-height: 60px;overflow: hidden">
+                            {$post.content|strip_tags|mb_substr=###,0,180,'utf-8'}
+                        </div>
+
+                    </p>
+                    <a href="/post/{$post['url']}.html" target="_blank" class="readmore">阅读全文&gt;&gt;</a>
+                </div>
+
+            </li>
+        </volist>
+    </ul>
+</div>
+</article>
+<include file="common:foot" />
+<script>
+	if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+		(function(){
+			window.scrollReveal = new scrollReveal({reset: true});
+		})();
+	};
+</script> 
+</body>
+</html>

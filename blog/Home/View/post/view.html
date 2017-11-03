@@ -1,0 +1,57 @@
+<include file="common:head" />
+<link href="__PUBLIC__/blog/css/post.css" rel="stylesheet">
+<article>
+    <div class="content">
+        <div class="title">
+            {$post.title}
+        </div>
+        <div class="nav_bar">
+            <div class="post_bar">
+                post time : {$post.createtime|date='Y-m-d H:i:s',###} &nbsp;&nbsp;
+                category : <a href="category/{$cate[$post['cate']]['url']}.html">{$cate[$post['cate']]['name']}</a>  &nbsp;&nbsp;
+                author : {$author[$post['uid']]}
+            </div>
+        </div>
+        <div class="content_area">{$post.content}</div>
+        <div class="foot_bar">
+            <notempty name="post['tags']">
+                <foreach name="post[tags]" item="tag">
+                    <notempty name="tag">
+                        <span class="tag_item">
+                            <a href="/tag/{$tags[$tag]['url']}.html">{$tags[$tag]['name']}</a>
+                        </span>
+                    </notempty>
+                </foreach>
+            </notempty>
+        </div>
+    </div>
+</article>
+<include file="common:foot" />
+<script>
+	if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+		(function(){
+			window.scrollReveal = new scrollReveal({reset: true});
+		})();
+	};
+
+</script>
+
+<script type="text/javascript" src="__PUBLIC__/lib/jquery/1.9.1/jquery.min.js"></script>
+<script src="__PUBLIC__/markdown/markdown.js"></script>
+<script>
+    $(window).ready(function(){
+        var con = htmlspecialchars_decode($('.content_area').html());
+        console.log(con);
+        var html = markdown.toHTML(con);
+        $('.content_area').html(html);
+    });
+
+    function htmlspecialchars_decode(str)
+    {
+        str = str.replace(/&lt;/g , '<' );
+        str = str.replace(/&gt;/g , '>');
+        return str;
+    }
+</script>
+</body>
+</html>

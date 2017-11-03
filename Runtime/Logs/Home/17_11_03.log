@@ -1,0 +1,29 @@
+[ 2017-11-03T15:33:58+08:00 ] ::1 /category/php.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002120s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000800s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000903s ]
+SQL: SHOW COLUMNS FROM `blog_config` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `blog_config`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `blog_dicts` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 4  [ RunTime:0.0021s ]
+SQL: SELECT `id` FROM `blog_dicts` WHERE `cateId` = 4 AND `url` = 'php' LIMIT 1   [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 4  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 7  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `blog_posts` WHERE `status` = 1 AND `cate` = 5 ORDER BY createtime desc LIMIT 10   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000141s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000235s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023835s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023935s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000447s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000522s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000766s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000846s ]
+

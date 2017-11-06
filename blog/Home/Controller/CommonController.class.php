@@ -29,6 +29,6 @@ class CommonController extends Controller
 
     public function _404()
     {
-        $this->display('common:404');
+        $this->display('Common:404');
     }
 }

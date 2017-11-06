@@ -24,7 +24,7 @@ class PostController extends CommonController
         $where = ['url' => $url , 'status' => 1];
         $article = $posts->where($where)->find();
         if(!$article){
-            $this->_404();
+            $this->_404('Common:404');
             exit();
         }
         $article['tags'] = explode('|' , $article['tags']);

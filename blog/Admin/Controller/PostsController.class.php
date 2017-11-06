@@ -63,7 +63,7 @@ class PostsController extends CommonController
         $count = $db->where($where)->count();
         $page = new \Think\Page($count , C('PAGE_LIMIT'));
         $show = $page->show();
-        $list = $db->where($where)->limit($page->firstRow . ',' . $page->listRows)->order('updatetime desc,id desc')->select();
+        $list = $db->where($where)->limit($page->firstRow . ',' . $page->listRows)->order('createtime desc,id desc')->select();
 
         $userList = $userDb->field('id,username')->where(array('status' => 1))->select();
         foreach ($userList as $key => $value) {
@@ -77,6 +77,11 @@ class PostsController extends CommonController
         $this->assign('total', $count);
         $this->assign('page', $show);
         $this->assign('list', $list);
+
+        $dicts = D('Dicts');
+        $cates = $dicts->where(['cateId' => 4])->select();
+        $cate = array_column($cates,'name' , 'id');
+        $this->assign('cate' , $cate);
         $this->display();
     }
 

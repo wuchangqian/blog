@@ -1,0 +1,31 @@
+<include file="Common:head" />
+<volist name="posts" id="post" key="k">
+	<div id="<php>if($k%2==0){echo 'grey';}else{echo 'white';}</php>">
+	    <div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<h4>{$post.title}</h4>
+					<p>
+						<i>POST IN : </i>
+						<bd><a>{$post.createtime|date='F d ,Y',###}</a></bd>
+						<i>CATEGORY : </i>
+                        <bd><a href="/category/{$cate[$post['cate']]['url']}.html">{$cate[$post['cate']]['name']}</a> </bd>
+                        <notempty name="post['tags']">
+						    <i>TAGS : </i>
+                            <foreach name="post[tags]" item="tag">
+                                <notempty name="tag">
+									<span class="tag_item">
+										<bd><a href="/tag/{$tags[$tag]['url']}.html">{$tags[$tag]['name']}</a></bd>
+									</span>
+                                </notempty>
+                            </foreach>
+                        </notempty>
+					</p>
+					<p>{$post.content|strip_tags|mb_substr=###,0,180,'utf-8'}</p>
+					<p><a href="/post/{$post['url']}.html">继续瞅...</a></p>
+				</div>
+			</div><!-- /row -->
+	    </div> <!-- /container -->
+	</div><!-- /grey -->
+</volist>
+<include file="Common:foot" />

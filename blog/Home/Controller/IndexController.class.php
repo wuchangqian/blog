@@ -17,14 +17,20 @@ class IndexController extends CommonController
         $tags = $dicts->where(['cateId' => 7])->select();
         $where = ['status' => 1];
         $articles = $posts->where($where)->order('createtime desc')->limit(10)->select();
-        $cate = array_column($cates , 'name' , 'id' );
-        $tag = array_column($tags , 'name' , 'id' );
         foreach($articles as $k => $v) {
             $articles[$k]['tags'] = explode('|' , $v['tags']);
         }
         $this->assign('posts' , $articles);
+        $cate = [];
+        foreach($cates as $v) {
+            $cate[$v['id']] = $v;
+        }
+        $tag = [];
+        foreach($tags as $v) {
+            $tag[$v['id']] = $v;
+        }
         $this->assign('cate' , $cate);
-        $this->assign('tag' , $tag);
+        $this->assign('tags' , $tag);
         $this->display();
     }
 }

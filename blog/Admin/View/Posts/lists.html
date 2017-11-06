@@ -15,12 +15,13 @@
         <table class="table table-border table-bordered table-hover table-bg">
             <thead>
             <tr>
-                <th scope="col" colspan="8">文章管理</th>
+                <th scope="col" colspan="9">文章管理</th>
             </tr>
             <tr class="text-c">
                 <th width="20"><input type="checkbox" name="" value=""></th>
                 <th width="25">ID</th>
                 <th>标题</th>
+                <th>归档</th>
                 <th>创建时间</th>
                 <th>更新时间</th>
                 <th>操作人</th>
@@ -34,6 +35,7 @@
                     <td><input type="checkbox" value="{$vo.id}" name="checkbox"></td>
                     <td>{$vo.id}</td>
                     <td>{$vo.title}</td>
+                    <td>{$cate[$vo['cate']]}</td>
                     <td>{$vo.createtime|date="Y-m-d H:i:s",###}</td>
                     <td>
                         <notempty name="vo.updatetime">

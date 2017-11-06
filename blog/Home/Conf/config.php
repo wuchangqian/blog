@@ -6,5 +6,6 @@ return array(
         '/^tag\/([-a-zA-Z0-9_.]+)$/' => 'Home/Post/tag?url=:1',
         '/^post\/([-a-zA-Z0-9_.]+)$/' => 'Home/Post/view?url=:1',
     ),
+    'DEFAULT_THEME'    =>    'tmp2',
 
 );

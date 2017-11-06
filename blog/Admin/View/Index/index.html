@@ -42,7 +42,7 @@
       <div class="row cl">
         <div class="formControls col-xs-8 col-xs-offset-3">
           <input class="input-text size-L" type="text" id="verifyCode" name="verifyCode" placeholder="验证码" onblur="if(this.value==''){this.value='验证码'}" onclick="if(this.value=='验证码'){this.value='';}" value="验证码" style="width:150px;">
-          <img id="verityImg" src="{:U('valid/code')}"> <a id="kanbuq" href="javascript:;">看不清，换一张</a> </div>
+          <img id="verityImg" src="__ROOT__/tool.php/valid/code.html"> <a id="kanbuq" href="javascript:;">看不清，换一张</a> </div>
       </div>
       <div class="row cl">
         <div class="formControls col-xs-8 col-xs-offset-3">
@@ -69,7 +69,7 @@
         });
         
         function refresh() {
-            $('#verityImg').attr('src' , "{:U('valid/code')}");
+            $('#verityImg').attr('src' , "__ROOT__/tool.php/valid/code.html");
         }
 
         var u = '{$user.username}' , p = '{$user.password}';

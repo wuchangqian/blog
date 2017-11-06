@@ -5,6 +5,9 @@
         list-style: disc;
         padding-left: 20px;
     }
+    img{
+        width:80%;
+    }
 </style>
 <body>
 <include file="Common:bread"/>
@@ -42,10 +45,22 @@
         </div>
 
         <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>发布日期：</label>
+            <div class="formControls col-xs-8 col-sm-6">
+                <input type="text" class="input-text" name="createtime" data-beatpicker="true" value="" >
+            </div>
+        </div>
+
+        <div class="row cl">
             <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>内容：</label>
             <div class="formControls col-xs-8 col-sm-6">
                 <div style="border: 1px solid #ccc;border-bottom: none;padding: 5px;">
-                    <button class="btn btn-default radius preview" type="button" data-toggle="modal" data-target=".bs-example-modal-lg">预览</button>
+                    <button class="btn btn-default radius preview" type="button" data-toggle="modal" data-target=".bs-example-modal-lg">
+                        <i class="Hui-iconfont">&#xe720;</i> 预览
+                    </button>
+                    <button class="btn btn-default radius" type="button" data-toggle="modal" data-target="#imgModal">
+                        <i class="Hui-iconfont">&#xe613;</i> 插图
+                    </button>
                 </div>
                 <textarea id="text-input" class="textarea" name="content" style="width: 100%;height: 250px;">请输入文章内容，支持markdown。</textarea>
             </div>
@@ -72,6 +87,7 @@
         </div>
     </form>
 </article>
+<!--预览弹窗-->
 <div class="modal fade bs-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
@@ -79,10 +95,31 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="myModalLabel">内容预览</h4>
             </div>
-            <div class="modal-body">
+            <div class="modal-body preview_con">
 
             </div>
             <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+<!--插图弹窗-->
+<div class="modal fade" id="imgModal" tabindex="-1" role="dialog" aria-labelledby="imgModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="imgModalLabel">图片</h4>
+            </div>
+            <div class="modal-body img-pre">
+                <div>
+                    <span>
+                        <input type="file" id="file_up" class="btn btn-primary radius">
+                    </span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" disabled class="btn btn-primary insert-pic disabled">插入图片</button>
             </div>
         </div>
     </div>
@@ -92,6 +129,8 @@
 
 <!--请在下方写此页面业务相关的脚本-->
 <script type="text/javascript" src="__PUBLIC__/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" href="__PUBLIC__/common/beatPicker/css/BeatPicker.min.css"/>
+<script src="__PUBLIC__/common/BeatPicker/js/BeatPicker.min.js"></script>
 
 </body>
 
@@ -115,8 +154,43 @@
         $('.preview').click(function(){
             var input = $('#text-input').val();
             var html = markdown.toHTML(input);
-            $('.modal-body').html(html);
+            $('.preview_con').html(html);
         });
+
+        //插图
+        $('#file_up').on('change', function () {
+            var data = new FormData(),file = $('#file_up')[0].files[0];
+            data.append('img', file);
+
+            $.ajax({
+                url: '__ROOT__/tool.php/attr/up',
+                type: 'POST',
+                data: data,
+                processData: false,
+                contentType: false,
+                success: function (res) {
+                    if(res.code == 0){
+                        var html = '<img src="__ROOT__'+ res.data.path+'" style="width: 250px;" />';
+                        $('.img-pre').html(html);
+                        $('.insert-pic').attr('disabled' , false);
+                        $('.insert-pic').removeClass('disabled');
+                        $('.insert-pic').attr('data-path' , res.data.path);
+                    }else{
+                        $('.img-pre').fadeIn(100).html('<font color="error">'+ res.msg +'</font>').fadeOut(4000);
+                    }
+                },
+                error: function (res) {
+
+                }
+            });
+        })
+
+        $('.insert-pic').click(function () {
+            var path = $(this).data('path');
+            var html = '\r\n![示例图片]('+ path +' "示例图片")';
+            //console.log(html);
+            $('#text-input').append(html);
+        })
     })
 
 </script>

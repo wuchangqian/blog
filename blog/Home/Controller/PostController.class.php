@@ -66,20 +66,59 @@ class PostController extends CommonController
         $tags = $dicts->where(['cateId' => 7])->select();
         $where = ['status' => 1 , 'cate' => $id];
         $articles = $posts->where($where)->order('createtime desc')->limit(10)->select();
-        $cate = array_column($cates , 'name' , 'id' );
-        $tag = array_column($tags , 'name' , 'id' );
+
         foreach($articles as $k => $v) {
             $articles[$k]['tags'] = explode('|' , $v['tags']);
         }
         $this->assign('posts' , $articles);
+
+        $cate = [];
+        foreach($cates as $v) {
+            $cate[$v['id']] = $v;
+        }
+        $tag = [];
+        foreach($tags as $v) {
+            $tag[$v['id']] = $v;
+        }
         $this->assign('cate' , $cate);
-        $this->assign('tag' , $tag);
+        $this->assign('tags' , $tag);
+
         $this->display('Index:index');
     }
 
     public function tag()
     {
         $url = I('get.url');
-        echo $url;
+        $dicts = D('Dicts');
+        $where = ['cateId' => 7 , 'url' => $url];
+        $id = $dicts->where($where)->getField('id');
+        if(!$id){
+            $this->_404();
+            exit();
+        }
+        $posts = D('Posts');
+        $cates = $dicts->where(['cateId' => 4])->select();
+        $tags = $dicts->where(['cateId' => 7])->select();
+        $where = [];
+        $where['status'] = 1;
+        $where['tags'] = ['like' , '%|'.$id.'|%'];
+        $articles = $posts->where($where)->order('createtime desc')->limit(10)->select();
+
+        foreach($articles as $k => $v) {
+            $articles[$k]['tags'] = explode('|' , $v['tags']);
+        }
+        $this->assign('posts' , $articles);
+
+        $cate = [];
+        foreach($cates as $v) {
+            $cate[$v['id']] = $v;
+        }
+        $tag = [];
+        foreach($tags as $v) {
+            $tag[$v['id']] = $v;
+        }
+        $this->assign('cate' , $cate);
+        $this->assign('tags' , $tag);
+        $this->display('Index:index');
     }
 }

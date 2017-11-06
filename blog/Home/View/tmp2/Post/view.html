@@ -1,0 +1,50 @@
+<include file="Common:head" />
+
+	<!-- +++++ Post +++++ -->
+	<div id="white">
+	    <div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<h2>{$post.title}</h2>
+					<p>
+                        <i>POST IN : </i>
+                        <bd><a>{$post.createtime|date='F d ,Y',###}</a></bd>
+                        <i>CATEGORY : </i>
+                        <bd><a href="/category/{$cate[$post['cate']]['url']}.html">{$cate[$post['cate']]['name']}</a> </bd>
+                        <i>TAGS : </i>
+                        <notempty name="post['tags']">
+                            <foreach name="post[tags]" item="tag">
+                                <notempty name="tag">
+									<span class="tag_item">
+										<bd><a href="/tag/{$tags[$tag]['url']}.html">{$tags[$tag]['name']}</a></bd>
+									</span>
+                                </notempty>
+                            </foreach>
+                        </notempty>
+
+					</p>
+					<div class="content_area">
+						{$post.content}
+					</div>
+				</div>
+
+			</div><!-- /row -->
+	    </div> <!-- /container -->
+	</div><!-- /white -->
+	
+<include file="Common:foot" />
+<script src="__PUBLIC__/markdown/markdown.js"></script>
+<script>
+    $(window).ready(function(){
+        var con = htmlspecialchars_decode($('.content_area').html());
+        var html = markdown.toHTML(con);
+        $('.content_area').html(html);
+    });
+
+    function htmlspecialchars_decode(str)
+    {
+        str = str.replace(/&lt;/g , '<' );
+        str = str.replace(/&gt;/g , '>');
+        return str;
+    }
+</script>

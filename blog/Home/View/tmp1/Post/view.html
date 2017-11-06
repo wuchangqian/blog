@@ -8,7 +8,7 @@
         <div class="nav_bar">
             <div class="post_bar">
                 post time : {$post.createtime|date='Y-m-d H:i:s',###} &nbsp;&nbsp;
-                category : <a href="category/{$cate[$post['cate']]['url']}.html">{$cate[$post['cate']]['name']}</a>  &nbsp;&nbsp;
+                category : <a href="/category/{$cate[$post['cate']]['url']}.html">{$cate[$post['cate']]['name']}</a>  &nbsp;&nbsp;
                 author : {$author[$post['uid']]}
             </div>
         </div>

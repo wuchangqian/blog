@@ -50,12 +50,13 @@
         <table class="table table-border table-bordered table-hover table-bg">
             <thead>
             <tr>
-                <th scope="col" colspan="8">文章管理</th>
+                <th scope="col" colspan="9">文章管理</th>
             </tr>
             <tr class="text-c">
                 <th width="20"><input type="checkbox" name="" value=""></th>
                 <th width="25">ID</th>
                 <th>标题</th>
+                <th>归档</th>
                 <th>创建时间</th>
                 <th>更新时间</th>
                 <th>操作人</th>
@@ -68,6 +69,7 @@
                     <td><input type="checkbox" value="<?php echo ($vo["id"]); ?>" name="checkbox"></td>
                     <td><?php echo ($vo["id"]); ?></td>
                     <td><?php echo ($vo["title"]); ?></td>
+                    <td><?php echo ($cate[$vo['cate']]); ?></td>
                     <td><?php echo (date("Y-m-d H:i:s",$vo["createtime"])); ?></td>
                     <td>
                         <?php if(!empty($vo["updatetime"])): echo (date("Y-m-d H:i:s",$vo["updatetime"])); ?>

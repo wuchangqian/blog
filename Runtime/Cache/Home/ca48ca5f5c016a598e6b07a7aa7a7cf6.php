@@ -33,7 +33,7 @@
         <div class="nav_bar">
             <div class="post_bar">
                 post time : <?php echo (date('Y-m-d H:i:s',$post["createtime"])); ?> &nbsp;&nbsp;
-                category : <a href="category/<?php echo ($cate[$post['cate']]['url']); ?>.html"><?php echo ($cate[$post['cate']]['name']); ?></a>  &nbsp;&nbsp;
+                category : <a href="/category/<?php echo ($cate[$post['cate']]['url']); ?>.html"><?php echo ($cate[$post['cate']]['name']); ?></a>  &nbsp;&nbsp;
                 author : <?php echo ($author[$post['uid']]); ?>
             </div>
         </div>

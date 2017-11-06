@@ -24,7 +24,7 @@ class PostsModel extends Model
         ['uid' , 'getUid' , 1 , 'callback'],
         ['tags' , 'getTags' , 3 , 'callback'],
         ['url' , 'getPinYin' , 3 , 'callback'],
-        ['createtime' , 'time' , 1 , 'function'],
+        ['createtime' , 'formatTime' , 3 , 'callback'],
         ['updatetime' , 'time' , 2 , 'function']
     ];
 
@@ -63,5 +63,16 @@ class PostsModel extends Model
         }
         $value = '|'.implode( '|' , $tags).'|';
         return $value;
+    }
+
+    protected function formatTime()
+    {
+        $date = $_POST['createtime'];
+        if(strlen($date) <= 10){
+            $time = strtotime($date) + strtotime(date('Y-m-d H:i:s')) - strtotime(date('Y-m-d'));
+        }else{
+            $time = strtotime($date);
+        }
+        return $time;
     }
 }

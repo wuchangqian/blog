@@ -31,6 +31,9 @@
         list-style: disc;
         padding-left: 20px;
     }
+    img{
+        width:80%;
+    }
 </style>
 <body>
 <nav class="breadcrumb">
@@ -44,7 +47,7 @@
     <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a>
 </nav>
 <article class="page-container">
-    <form action="/admin.php/posts/edit/id/4.html" method="post" class="form form-horizontal" id="form-member-add">
+    <form action="/admin.php/posts/edit/id/17.html" method="post" class="form form-horizontal" id="form-member-add">
         <input type="hidden" name="id" value="<?php echo ($info["id"]); ?>">
         <div class="row cl">
             <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>标题：</label>
@@ -72,6 +75,14 @@
                     </div><?php endforeach; endif; else: echo "" ;endif; ?>
             </div>
         </div>
+
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>发布日期：</label>
+            <div class="formControls col-xs-8 col-sm-6">
+                <input type="text" class="input-text" name="createtime" data-beatpicker="true" value="<?php echo (date('Y-m-d H:i:s',$info["createtime"])); ?>" >
+            </div>
+        </div>
+
 
         <div class="row cl">
             <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>内容：</label>
@@ -126,19 +137,14 @@
         </p>
     </div>
 </footer>
-<!--_footer 作为公共模版分离出去-->
 <script type="text/javascript" src="/Public/lib/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript" src="/Public/lib/layer/2.4/layer.js"></script>
 <script type="text/javascript" src="/Public/h-ui/js/H-ui.min.js"></script>
-<script type="text/javascript" src="/Public/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer 作为公共模版分离出去-->
-
-<!--ueditor-->
-<script type="text/javascript" charset="utf-8" src="/Public/common/ueditor/ueditor.config.js"></script>
-<script type="text/javascript" charset="utf-8" src="/Public/common/ueditor/ueditor.all.min.js"></script>
-
+<script type="text/javascript" src="/Public/h-ui.admin/js/H-ui.admin.js"></script>
 <!--请在下方写此页面业务相关的脚本-->
 <script type="text/javascript" src="/Public/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
-
+<link rel="stylesheet" href="/Public/common/beatPicker/css/BeatPicker.min.css"/>
+<script src="/Public/common/BeatPicker/js/BeatPicker.min.js"></script>
 </body>
 
 <script src="/Public/markdown/markdown.js"></script>

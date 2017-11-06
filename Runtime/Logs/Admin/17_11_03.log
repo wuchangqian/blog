@@ -1,0 +1,2466 @@
+[ 2017-11-03T15:44:01+08:00 ] ::1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000494s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000608s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000714s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000177s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000275s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015133s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015282s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000223s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000299s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000589s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000664s ]
+
+[ 2017-11-03T15:44:01+08:00 ] ::1 /admin.php/valid/code.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000621s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000711s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000917s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000754s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000908s ]
+
+[ 2017-11-03T15:44:06+08:00 ] ::1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000545s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000485s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000558s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0014s ]
+SQL: SELECT `id`,`username`,`password`,`salt`,`role`,`lastLogin`,`loginNum`,`lastIp` FROM `blog_users` WHERE `username` = 'wangyu' AND `status` = 1 AND `role` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE `blog_users` SET `lastLogin`='1509695046',`lastIp`='::1',`loginNum`='40' WHERE `id` = 1 [ RunTime:0.0074s ]
+
+[ 2017-11-03T15:44:06+08:00 ] ::1 /admin.php/valid/code.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000538s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000598s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000729s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000733s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000875s ]
+
+[ 2017-11-03T15:44:07+08:00 ] ::1 /admin.php/home/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000539s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001193s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001316s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0008s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'home/index' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = null LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000155s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000243s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015034s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015117s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000172s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000685s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000803s ]
+
+[ 2017-11-03T15:44:07+08:00 ] ::1 /admin.php/home/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000525s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000658s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000789s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0006s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'home/welcome' LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = null LIMIT 1   [ RunTime:0.0046s ]
+SQL: select version() as ver [ RunTime:0.0031s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000133s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000265s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011198s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011315s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000254s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000362s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000703s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000826s ]
+
+[ 2017-11-03T15:44:21+08:00 ] ::1 /admin.php/system/dict.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000073s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000898s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000567s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000650s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'system/dict' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 81 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_dicts` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `blog_dicts` ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 4 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 5 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 6 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 7 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 8 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 9 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 10 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 11 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 12 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 14 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 15 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 16 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 17 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 18 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 19 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 20 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 25 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 26 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 27 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000164s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000246s ]
+NOTIC: [8] Undefined variable: keyword /Users/wy/Documents/www/blog.local.com/Runtime/Cache/Admin/a9221deb479c384cb1137697035e3554.php 第 38 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016513s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016604s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000220s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000293s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001125s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001262s ]
+
+[ 2017-11-03T15:44:25+08:00 ] ::1 /admin.php/system/dict_add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000551s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000654s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000788s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0005s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'system/dict_add' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 81 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_dicts` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 0  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000115s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000237s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008108s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008224s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000208s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000310s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000697s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000808s ]
+
+[ 2017-11-03T15:44:35+08:00 ] ::1 /admin.php/system/dict_add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000593s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000472s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000550s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0011s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'system/dict_add' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 81 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_dicts` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `name` = '前端' AND `cateId` = 4 LIMIT 1   [ RunTime:0.0003s ]
+SQL: INSERT INTO `blog_dicts` (`name`,`cateId`,`createAt`,`url`) VALUES ('前端','4','1509695075','qianduan') [ RunTime:0.0025s ]
+
+[ 2017-11-03T15:44:38+08:00 ] ::1 /admin.php/system/dict.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000385s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000580s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'system/dict' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 81 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_dicts` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `blog_dicts` ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 4 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 5 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 6 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 7 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 8 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 9 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 10 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 11 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 12 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 14 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 15 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 16 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 17 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 18 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 19 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 20 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 25 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 26 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 27 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 28 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000138s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000225s ]
+NOTIC: [8] Undefined variable: keyword /Users/wy/Documents/www/blog.local.com/Runtime/Cache/Admin/a9221deb479c384cb1137697035e3554.php 第 38 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015860s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015945s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000215s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000285s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000585s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000681s ]
+
+[ 2017-11-03T15:44:42+08:00 ] ::1 /admin.php/system/dict_add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000501s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000667s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000807s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'system/dict_add' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 81 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_dicts` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 0  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000171s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006392s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006470s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000144s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000211s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000448s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000518s ]
+
+[ 2017-11-03T15:44:49+08:00 ] ::1 /admin.php/system/dict_add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000537s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000525s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000598s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'system/dict_add' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 81 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_dicts` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `name` = '后端' AND `cateId` = 4 LIMIT 1   [ RunTime:0.0003s ]
+SQL: INSERT INTO `blog_dicts` (`name`,`cateId`,`createAt`,`url`) VALUES ('后端','4','1509695089','houduan') [ RunTime:0.0009s ]
+
+[ 2017-11-03T15:44:51+08:00 ] ::1 /admin.php/system/dict.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000640s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000673s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000855s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0005s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'system/dict' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 81 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_dicts` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `blog_dicts` ORDER BY id asc , updateAt desc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 4 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 5 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 6 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 7 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 8 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 9 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 10 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 11 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 12 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 14 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 15 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 16 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 17 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 18 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 19 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 20 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 25 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 26 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 27 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 28 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 29 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000195s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000282s ]
+NOTIC: [8] Undefined variable: keyword /Users/wy/Documents/www/blog.local.com/Runtime/Cache/Admin/a9221deb479c384cb1137697035e3554.php 第 38 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014609s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014693s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000202s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000271s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000624s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000736s ]
+
+[ 2017-11-03T15:45:00+08:00 ] ::1 /admin.php/system/dict_edit/did/5.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000075s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001031s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000777s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000964s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'system/dict_edit' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 81 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_dicts` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 0  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000105s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000195s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011275s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011355s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000154s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000223s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000487s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000562s ]
+
+[ 2017-11-03T15:45:08+08:00 ] ::1 /admin.php/system/dict.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000392s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000497s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'system/dict' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 81 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_dicts` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `blog_dicts` ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 4 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 5 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 6 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 7 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 8 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 9 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 10 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 11 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 12 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 14 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 15 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 16 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 17 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 18 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 19 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 20 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 25 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 26 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 27 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 28 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 29 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000128s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000215s ]
+NOTIC: [8] Undefined variable: keyword /Users/wy/Documents/www/blog.local.com/Runtime/Cache/Admin/a9221deb479c384cb1137697035e3554.php 第 38 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011460s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011545s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000181s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000666s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000788s ]
+
+[ 2017-11-03T15:45:17+08:00 ] ::1 /admin.php/posts/lists.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000542s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000656s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000802s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0005s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/lists' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0021s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_posts` WHERE `status` IN ('0','1') LIMIT 1   [ RunTime:0.0016s ]
+SQL: SELECT * FROM `blog_posts` WHERE `status` IN ('0','1') ORDER BY updatetime desc,id desc LIMIT 0,10   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`username` FROM `blog_users` WHERE `status` = 1  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000122s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000206s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010889s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010978s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000212s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000297s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000917s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001049s ]
+
+[ 2017-11-03T15:45:19+08:00 ] ::1 /admin.php/posts/edit/id/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000445s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000679s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000816s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0005s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/edit' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `blog_posts` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blog_dicts` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 4  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 7  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000136s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000219s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010927s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011016s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000166s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000659s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000772s ]
+
+[ 2017-11-03T15:45:33+08:00 ] ::1 /admin.php/posts/edit/id/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000359s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000423s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000504s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0707s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/edit' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0012s ]
+SQL: UPDATE `blog_posts` SET `title`='正则基础入门',`cate`='29',`tags`='|8|17|',`content`='####1，元字符
+    .  匹配除换行符以外的任意字符
+    \\w 匹配字母或数字或下划线或汉字
+    \\s 匹配任意空白符
+    \\d 匹配数字
+    \\b 匹配单词的开始或结束
+    ^  匹配字符串的开始
+    $  匹配字符串的结束
+
+####2，重复
+
+    *       重复零次或更多次
+    +       重复一次或更多次
+    ?       重复零次或一次
+    \\{n\\}   重复 n 次
+    \\{n,\\}  重复 n 次或更多次
+    \\{n,m\\} 重复 n 次到 m 次
+
+####3，常用的反义
+
+    \\W       匹配任意不是字母，数字，下划线，汉字的字符 
+    \\S       匹配任意不是空白符的字符
+    \\D       匹配任意非数字的字符
+    \\B       匹配不是单词开头或结束的位置
+    [^x]     匹配除了x以外的任意字符
+    [^aeiou] 匹配除了aeiou这几个字母以外的任意字符
+
+#####练习1 验证$eamil的合法性
+
+
+    $email = array(\'444371889@qq.com\',\'1212121212.com\',\'hahahaha\',\'Asw@zj.gov.cn\',\'Asw@zj.info\');
+
+    $pattern = \'/^[a-z0-9_]+@(?:[a-z0-9_-]+\\.)+(?:com|cn)/i\'; // （exp）匹配并捕获 （?:exp）匹配
+
+    foreach ($email as $key =&gt; $value) {
+        if(preg_match($pattern, $value)){
+            echo $value , \' pass\' , PHP_EOL;
+        }else{
+            echo $value , \' fail\' , PHP_EOL;
+        }
+        //preg_match($pattern, $value , $RESULT[$key]);
+    }
+    var_dump($RESULT);
+
+输出：
+
+    444371889@qq.com pass
+    1212121212.com fail
+    hahahaha fail
+    Asw@zj.gov.cn pass
+    Asw@zj.info fail
+
+#####练习2 匹配出正确的时间
+
+    $str = &quot;
+    13:00
+    212:36w ww22:48kl
+    4:32  这样的时间应该是正确的
+    22:00
+    23:59
+    22:61
+    1112:13 非法
+    43:33 非法
+    12:60
+    12:33
+    000:34
+    00:00
+    23:59
+    24:59 显然没有这样的时间
+    24:00
+    30
+    &quot;;
+
+    $pattern = \'/[0-2]{1}[0-3]{1}:[0-5]{1}[0-9]{1}/\';
+
+    preg_match_all($pattern, $str , $res);
+
+    var_dump($res);
+
+输出：
+
+    array(1) {
+    [0]=&gt;
+        array(10) {
+        [0]=&gt;
+        string(5) &quot;13:00&quot;
+        [1]=&gt;
+        string(5) &quot;12:36&quot;
+        [2]=&gt;
+        string(5) &quot;22:48&quot;
+        [3]=&gt;
+        string(5) &quot;22:00&quot;
+        [4]=&gt;
+        string(5) &quot;23:59&quot;
+        [5]=&gt;
+        string(5) &quot;12:13&quot;
+        [6]=&gt;
+        string(5) &quot;12:33&quot;
+        [7]=&gt;
+        string(5) &quot;00:34&quot;
+        [8]=&gt;
+        string(5) &quot;00:00&quot;
+        [9]=&gt;
+        string(5) &quot;23:59&quot;
+        }
+    }
+
+可是我们并没有 &quot;4:32  这样的时间应该是正确的&quot; 这个正确的时间
+
+是时候用到分支了
+
+    $pattern = \'/[0-2]{1}[0-9]{1}:[0-5]{1}[0-9]{1}|[0-9]{1}:[0-5]{1}[0-9]{1}/\';
+
+注意 匹配分枝条件时，将会从左到右地测试每个条件，如果满足了某个分枝的话，就不会去再管其它的条件了。
+举例：
+
+    \\d{5}-\\d{4}|\\d{5} //匹配类似 23843-3234 或 21234 美国邮编格式 
+    //美国邮编的规则是5位数字，或者用连字号间隔的9位数字
+
+如果你把它改成\\d{5}|\\d{5}-\\d{4}的话，那么就只会匹配5位的邮编(以及9位邮编的前5位)。
+
+####取反义 
+
+    &lt;a[^&gt;]+&gt;
+
+匹配用尖括号括起来的以a开头的字符串。
+匹配以 除 a 标签以外的标签
+
+    #匹配以 除 a 标签以外的元素
+    $str = \'&lt;a&gt;baidu&lt;/a&gt; 
+        &lt;a href=&quot;http://baidu.com&quot;&gt;&lt;/a&gt; 
+        &lt;a href=&quot;baidu.com&quot;&gt;&lt;/a&gt; 
+        &lt;span&gt;baidu&lt;/span&gt; 
+        &lt;div&gt;hahahaha&lt;/div&gt; 
+        &lt;font color=&quot;red&quot;&gt;121&lt;/font&gt;\';
+
+    $pattern = \'/&lt;[^a\\/].*/i\';
+    preg_match_all($pattern, $str, $matches);
+
+    var_dump($matches);
+
+输出：
+
+    array(1) {
+    [0]=&gt;
+        array(3) {
+            [0]=&gt;
+            string(19) &quot;&lt;span&gt;baidu&lt;/span&gt; &quot;
+            [1]=&gt;
+            string(20) &quot;&lt;div&gt;hahahaha&lt;/div&gt; &quot;
+            [2]=&gt;
+            string(28) &quot;&lt;font color=&quot;red&quot;&gt;121&lt;/font&gt;&quot;
+        }
+    }
+
+
+####后向引用
+后向引用用于重复搜索前面某个分组匹配的文本。例如，\\1代表分组1匹配的文本，举例：
+
+从字符串中找出重复出现的单词
+
+    $str = \'hello kit kit , let`s go to play basketball , go go go\';
+
+    $pattern = \'/\\b(\\w+)\\b\\s+\\1\\b/i\';
+
+    preg_match_all($pattern, $str, $matches);
+
+    var_dump($matches);
+
+输出：
+
+    array(2) {
+    [0]=&gt;
+        array(2) {
+        [0]=&gt;
+        string(7) &quot;kit kit&quot;
+        [1]=&gt;
+        string(5) &quot;go go&quot;
+    }
+    [1]=&gt;
+        array(2) {
+        [0]=&gt;
+        string(3) &quot;kit&quot;
+        [1]=&gt;
+        string(2) &quot;go&quot;
+    }
+    }
+
+
+####常用分组语法
+
+    捕获 (exp) 匹配exp,并捕获文本到自动命名的组里
+
+    捕获 (?&lt;name&gt;exp) 匹配exp,并捕获文本到名称为name的组里，也可以写成(?\'name\'exp)
+
+    捕获 (?:exp) 匹配exp,不捕获匹配的文本，也不给此分组分配组号',`status`='1',`url`='zheng-ze-ji-chu-ru-men',`updatetime`='1509695133' WHERE `id` = 4 [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000158s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005462s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005543s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000170s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000493s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000566s ]
+
+[ 2017-11-03T15:45:34+08:00 ] ::1 /admin.php/posts/lists.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000350s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000408s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000483s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/lists' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0015s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_posts` WHERE `status` IN ('0','1') LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_posts` WHERE `status` IN ('0','1') ORDER BY updatetime desc,id desc LIMIT 0,10   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`username` FROM `blog_users` WHERE `status` = 1  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000209s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009941s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010025s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000162s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000284s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000605s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000717s ]
+
+[ 2017-11-03T15:45:37+08:00 ] ::1 /admin.php/posts/edit/id/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000409s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000486s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/edit' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `blog_posts` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blog_dicts` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 4  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 7  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000136s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000220s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008848s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008931s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000163s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000687s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000805s ]
+
+[ 2017-11-03T15:45:42+08:00 ] ::1 /admin.php/posts/edit/id/11.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000377s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000415s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000494s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/edit' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `blog_posts` WHERE `id` = 11 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blog_dicts` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 4  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 7  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000171s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000261s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011932s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012013s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000168s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000620s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000712s ]
+
+[ 2017-11-03T15:45:58+08:00 ] ::1 /admin.php/posts/edit/id/11.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000358s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000400s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000478s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/edit' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0014s ]
+SQL: UPDATE `blog_posts` SET `title`='Apache处理http请求的生命周期',`cate`='29',`tags`='|16|17|20|',`content`='####Apache请求处理循环的11个阶段都做了哪些事情呢？
+
+    1.Post-Read-Request阶段: 
+
+    在正常请求处理流程中，这是模块可以插入钩子的第一个阶段。对于那些想很早进入处理请求的模块来说，这个阶段可以被利用。
+
+    2.URI Translation阶段 :  
+
+    Apache在本阶段的主要工作：将请求的URL映射到本地文件系统。模块可以在这阶段插入钩子，执行自己的映射逻辑。mod_alias就是利用这个阶段工作的。
+
+    3.Header Parsing阶段 : 
+
+    Apache在本阶段的主要工作：检查请求的头部。由于模块可以在请求处理流程的任何一个点上执行检查请求头部的任务，因此这个钩子很少被使用。mod_setenvif就是利用这个阶段工作的。
+
+    4.Access Control阶段 :  
+
+    Apache在本阶段的主要工作：根据配置文件检查是否允许访问请求的资源。Apache的标准逻辑实现了允许和拒绝指令。mod_authz_host就是利用这个阶段工作的。
+
+    5.Authentication阶段 :  
+
+    Apache在本阶段的主要工作：按照配置文件设定的策略对用户进行认证，并设定用户名区域。模块可以在这阶段插入钩子，实现一个认证方法。
+
+    6.Authorization阶段 :  
+
+    Apache在本阶段的主要工作：根据配置文件检查是否允许认证过的用户执行请求的操作。模块可以在这阶段插入钩子，实现一个用户权限管理的方法。
+
+    7.MIME Type Checking阶段 :  
+
+    Apache在本阶段的主要工作：根据请求资源的MIME类型的相关规则，判定将要使用的内容处理函数。标准模块mod_negotiation和mod_mime实现了这个钩子。
+
+    8.FixUp阶段 :  
+
+    这是一个通用的阶段，允许模块在内容生成器之前，运行任何必要的处理流程。和Post_Read_Request类似，这是一个能够捕获任何信息的钩子，也是最常使用的钩子。
+
+    9.Response阶段 : 
+
+    Apache在本阶段的主要工作：生成返回客户端的内容，负责给客户端发送一个恰当的回复。这个阶段是整个处理流程的核心部分。
+
+    10.Logging阶段 :  
+
+    Apache在本阶段的主要工作：在回复已经发送给客户端之后记录事务。模块可能修改或者替换Apache的标准日志记录。
+
+    11.CleanUp阶段 : 
+
+    Apache在本阶段的主要工作：清理本次请求事务处理完成之后遗留的环境，比如文件、目录的处理或者Socket的关闭等等，这是Apache一次请求处理的最后一个阶段。',`status`='1',`url`='Apache-chu-li-http-qing-qiu-de-sheng-ming-zhou-qi',`updatetime`='1509695158' WHERE `id` = 11 [ RunTime:0.0016s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000153s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005124s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005203s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000170s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000473s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000548s ]
+
+[ 2017-11-03T15:45:59+08:00 ] ::1 /admin.php/posts/lists.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000362s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000488s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/lists' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0013s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_posts` WHERE `status` IN ('0','1') LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_posts` WHERE `status` IN ('0','1') ORDER BY updatetime desc,id desc LIMIT 0,10   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`username` FROM `blog_users` WHERE `status` = 1  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000166s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000270s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010125s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010204s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000170s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000239s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000600s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000700s ]
+
+[ 2017-11-03T15:46:06+08:00 ] ::1 /admin.php/posts/edit/id/12.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000474s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000423s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000502s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/edit' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `blog_posts` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blog_dicts` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 4  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 7  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000138s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000225s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011543s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011635s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000162s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000623s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000735s ]
+
+[ 2017-11-03T15:46:14+08:00 ] ::1 /admin.php/posts/edit/id/12.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000630s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000496s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000606s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0006s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/edit' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0013s ]
+SQL: UPDATE `blog_posts` SET `title`='html DocType',`cate`='28',`tags`='|27|',`content`='    &lt;!doctype html&gt;
+
+1. 所有浏览器都支持 &lt;!DOCTYPE&gt; 声明。
+2. &lt;!DOCTYPE&gt; 声明必须是 HTML 文档的第一行，位于 &lt;html&gt; 标签之前。
+3. &lt;!DOCTYPE&gt; 声明不是 HTML 标签；它是指示 web 浏览器关于页面使用哪个 HTML 版本进行编写的指令。
+4. 在 HTML 4.01 中，&lt;!DOCTYPE&gt; 声明引用 DTD，因为 HTML 4.01 基于 SGML。
+5. DTD 规定了标记语言的规则，这样浏览器才能正确地呈现内容。
+6. HTML5 不基于 SGML，所以不需要引用 DTD。
+7. &lt;!DOCTYPE&gt; 声明没有结束标签。
+8. &lt;!DOCTYPE&gt; 声明对大小写不敏感。
+
+提示：请始终向 HTML 文档添加 &lt;!DOCTYPE&gt; 声明，这样浏览器才能获知文档类型。
+
+1. HTML        1991
+2. HTML+       1993
+3. HTML 2.0    1995
+4. HTML 3.2    1997
+5. HTML 4.01   1999
+6. XHTML 1.0   2000
+7. HTML5       2012
+8. XHTML5      2013
+
+常用的 DOCTYPE 声明如下
+HTML 5
+
+    &lt;!DOCTYPE html&gt;
+
+### HTML 4.01 Strict
+该 DTD 包含所有 HTML 元素和属性，但不包括展示性的和弃用的元素（比如 font）。不允许框架集（Framesets）。
+
+
+    &lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot; &quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt; 
+
+### HTML 4.01 Transitional
+该 DTD 包含所有 HTML 元素和属性，包括展示性的和弃用的元素（比如 font）。不允许框架集（Framesets）。
+
+    &lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;
+
+### HTML 4.01 Frameset
+该 DTD 等同于 HTML 4.01 Transitional，但允许框架集内容。
+
+    &lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Frameset//EN&quot; &quot;http://www.w3.org/TR/html4/frameset.dtd&quot;&gt;
+
+### XHTML 1.0 Strict
+该 DTD 包含所有 HTML 元素和属性，但不包括展示性的和弃用的元素（比如 font）。不允许框架集（Framesets）。必须以格式正确的 XML 来编写标记。
+
+    &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;
+
+### XHTML 1.0 Transitional
+该 DTD 包含所有 HTML 元素和属性，包括展示性的和弃用的元素（比如 font）。不允许框架集（Framesets）。必须以格式正确的 XML 来编写标记。
+
+    &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+
+### XHTML 1.0 Frameset
+该 DTD 等同于 XHTML 1.0 Transitional，但允许框架集内容。
+
+    &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Frameset//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd&quot;&gt;
+
+### XHTML 1.1
+该 DTD 等同于 XHTML 1.0 Strict，但允许添加模型（例如提供对东亚语系的 ruby 支持）。
+
+    &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.1//EN&quot; &quot;http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd&quot;&gt;',`status`='1',`url`='html-DocType',`updatetime`='1509695174' WHERE `id` = 12 [ RunTime:0.0017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000156s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005132s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005211s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000172s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000478s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000553s ]
+
+[ 2017-11-03T15:46:15+08:00 ] ::1 /admin.php/posts/lists.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000384s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000412s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000490s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/lists' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0013s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_posts` WHERE `status` IN ('0','1') LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_posts` WHERE `status` IN ('0','1') ORDER BY updatetime desc,id desc LIMIT 0,10   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`username` FROM `blog_users` WHERE `status` = 1  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000120s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000230s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010714s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010797s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000167s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000557s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000656s ]
+
+[ 2017-11-03T15:46:22+08:00 ] ::1 /admin.php/posts/edit/id/10.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000372s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000412s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000490s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/edit' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `blog_posts` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blog_dicts` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 4  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 7  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000234s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000449s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011069s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011170s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000171s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000646s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000756s ]
+
+[ 2017-11-03T15:46:37+08:00 ] ::1 /admin.php/system/dict.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000352s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000494s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000610s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'system/dict' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 81 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `blog_dicts` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `blog_dicts` ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 4 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 5 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 6 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 7 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 8 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 9 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 10 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 11 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 12 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 14 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 15 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 16 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 17 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 18 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 19 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 20 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 25 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 26 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 27 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 28 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 29 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000136s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000222s ]
+NOTIC: [8] Undefined variable: keyword /Users/wy/Documents/www/blog.local.com/Runtime/Cache/Admin/a9221deb479c384cb1137697035e3554.php 第 38 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014226s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014308s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000201s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000272s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000814s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000947s ]
+
+[ 2017-11-03T15:46:38+08:00 ] ::1 /admin.php/system/dict_add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000572s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000536s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000616s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0006s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'system/dict_add' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 81 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_dicts` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 0  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000173s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008885s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008964s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000154s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000223s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000479s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000551s ]
+
+[ 2017-11-03T15:46:43+08:00 ] ::1 /admin.php/system/dict_add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000368s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000398s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000469s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'system/dict_add' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 81 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `blog_dicts` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `name` = '服务器' AND `cateId` = 4 LIMIT 1   [ RunTime:0.0002s ]
+SQL: INSERT INTO `blog_dicts` (`name`,`cateId`,`createAt`,`url`) VALUES ('服务器','4','1509695203','fuwuqi') [ RunTime:0.0009s ]
+
+[ 2017-11-03T15:46:45+08:00 ] ::1 /admin.php/system/dict.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000351s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000406s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000485s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'system/dict' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 81 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_dicts` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `blog_dicts` ORDER BY id asc , updateAt desc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 4 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 5 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 6 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 7 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 8 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 9 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 10 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 11 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 12 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 14 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 15 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 16 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 17 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 18 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 19 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 20 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 25 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 26 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 27 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 28 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 29 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 30 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000147s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000237s ]
+NOTIC: [8] Undefined variable: keyword /Users/wy/Documents/www/blog.local.com/Runtime/Cache/Admin/a9221deb479c384cb1137697035e3554.php 第 38 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012094s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012179s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000200s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000271s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000681s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000799s ]
+
+[ 2017-11-03T15:46:49+08:00 ] ::1 /admin.php/posts/lists.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000353s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000404s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000481s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/lists' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0014s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_posts` WHERE `status` IN ('0','1') LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_posts` WHERE `status` IN ('0','1') ORDER BY updatetime desc,id desc LIMIT 0,10   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`username` FROM `blog_users` WHERE `status` = 1  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000121s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000206s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010508s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010586s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000176s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000570s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000673s ]
+
+[ 2017-11-03T15:46:57+08:00 ] ::1 /admin.php/posts/edit/id/11.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000919s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001132s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001294s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/edit' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `blog_posts` WHERE `id` = 11 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `blog_dicts` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 4  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 7  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000140s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000224s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010898s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010978s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000155s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000226s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000692s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000793s ]
+
+[ 2017-11-03T15:47:02+08:00 ] ::1 /admin.php/posts/edit/id/11.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000358s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000398s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000479s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/edit' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0012s ]
+SQL: UPDATE `blog_posts` SET `title`='Apache处理http请求的生命周期',`cate`='30',`tags`='|16|17|20|',`content`='####Apache请求处理循环的11个阶段都做了哪些事情呢？
+
+    1.Post-Read-Request阶段: 
+
+    在正常请求处理流程中，这是模块可以插入钩子的第一个阶段。对于那些想很早进入处理请求的模块来说，这个阶段可以被利用。
+
+    2.URI Translation阶段 :  
+
+    Apache在本阶段的主要工作：将请求的URL映射到本地文件系统。模块可以在这阶段插入钩子，执行自己的映射逻辑。mod_alias就是利用这个阶段工作的。
+
+    3.Header Parsing阶段 : 
+
+    Apache在本阶段的主要工作：检查请求的头部。由于模块可以在请求处理流程的任何一个点上执行检查请求头部的任务，因此这个钩子很少被使用。mod_setenvif就是利用这个阶段工作的。
+
+    4.Access Control阶段 :  
+
+    Apache在本阶段的主要工作：根据配置文件检查是否允许访问请求的资源。Apache的标准逻辑实现了允许和拒绝指令。mod_authz_host就是利用这个阶段工作的。
+
+    5.Authentication阶段 :  
+
+    Apache在本阶段的主要工作：按照配置文件设定的策略对用户进行认证，并设定用户名区域。模块可以在这阶段插入钩子，实现一个认证方法。
+
+    6.Authorization阶段 :  
+
+    Apache在本阶段的主要工作：根据配置文件检查是否允许认证过的用户执行请求的操作。模块可以在这阶段插入钩子，实现一个用户权限管理的方法。
+
+    7.MIME Type Checking阶段 :  
+
+    Apache在本阶段的主要工作：根据请求资源的MIME类型的相关规则，判定将要使用的内容处理函数。标准模块mod_negotiation和mod_mime实现了这个钩子。
+
+    8.FixUp阶段 :  
+
+    这是一个通用的阶段，允许模块在内容生成器之前，运行任何必要的处理流程。和Post_Read_Request类似，这是一个能够捕获任何信息的钩子，也是最常使用的钩子。
+
+    9.Response阶段 : 
+
+    Apache在本阶段的主要工作：生成返回客户端的内容，负责给客户端发送一个恰当的回复。这个阶段是整个处理流程的核心部分。
+
+    10.Logging阶段 :  
+
+    Apache在本阶段的主要工作：在回复已经发送给客户端之后记录事务。模块可能修改或者替换Apache的标准日志记录。
+
+    11.CleanUp阶段 : 
+
+    Apache在本阶段的主要工作：清理本次请求事务处理完成之后遗留的环境，比如文件、目录的处理或者Socket的关闭等等，这是Apache一次请求处理的最后一个阶段。',`status`='1',`url`='Apache-chu-li-http-qing-qiu-de-sheng-ming-zhou-qi',`updatetime`='1509695222' WHERE `id` = 11 [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000171s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006534s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006647s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000263s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000348s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000509s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000582s ]
+
+[ 2017-11-03T15:47:04+08:00 ] ::1 /admin.php/posts/lists.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000409s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000485s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000578s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/lists' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0013s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_posts` WHERE `status` IN ('0','1') LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_posts` WHERE `status` IN ('0','1') ORDER BY updatetime desc,id desc LIMIT 0,10   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`username` FROM `blog_users` WHERE `status` = 1  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000135s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000224s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011187s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011268s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000168s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000625s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000733s ]
+
+[ 2017-11-03T15:47:08+08:00 ] ::1 /admin.php/posts/lists.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000607s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000634s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000779s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/lists' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0013s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_posts` WHERE `status` IN ('0','1') LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_posts` WHERE `status` IN ('0','1') ORDER BY updatetime desc,id desc LIMIT 0,10   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`username` FROM `blog_users` WHERE `status` = 1  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000125s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000209s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010573s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010661s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000170s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000576s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000667s ]
+
+[ 2017-11-03T15:47:12+08:00 ] ::1 /admin.php/posts/edit/id/10.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000450s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000545s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0005s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/edit' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `blog_posts` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blog_dicts` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 4  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 7  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000146s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000250s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010675s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010830s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000231s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000336s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000685s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000805s ]
+
+[ 2017-11-03T15:47:18+08:00 ] ::1 /admin.php/posts/edit/id/10.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000370s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000425s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000508s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/edit' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0013s ]
+SQL: UPDATE `blog_posts` SET `title`='linux命令行技巧',`cate`='30',`tags`='|18|',`content`='##编辑命令
+    * Ctrl + a ：移到命令行首
+    * Ctrl + e ：移到命令行尾
+    * Ctrl + f ：按字符前移（右向）
+    * Ctrl + b ：按字符后移（左向）
+    * Alt + f ：按单词前移（右向）
+    * Alt + b ：按单词后移（左向）
+    * Ctrl + xx：在命令行首和光标之间移动
+    * Ctrl + u ：从光标处删除至命令行首
+    * Ctrl + k ：从光标处删除至命令行尾
+    * Ctrl + w ：从光标处删除至字首
+    * Alt + d ：从光标处删除至字尾
+    * Ctrl + d ：删除光标处的字符
+    * Ctrl + h ：删除光标前的字符
+    * Ctrl + y ：粘贴至光标后
+    * Alt + c ：从光标处更改为首字母大写的单词
+    * Alt + u ：从光标处更改为全部大写的单词
+    * Alt + l ：从光标处更改为全部小写的单词
+    * Ctrl + t ：交换光标处和之前的字符
+    * Alt + t ：交换光标处和之前的单词
+    * Alt + Backspace：与 Ctrl + w 相同类似
+
+##重新执行命令
+    * Ctrl + r：逆向搜索命令历史
+    * Ctrl + g：从历史搜索模式退出
+    * Ctrl + p：历史中的上一条命令
+    * Ctrl + n：历史中的下一条命令
+    * Alt + .：使用上一条命令的最后一个参数
+
+##控制命令
+    * Ctrl + l：清屏
+    * Ctrl + o：执行当前命令，并选择上一条命令
+    * Ctrl + s：阻止屏幕输出
+    * Ctrl + q：允许屏幕输出
+    * Ctrl + c：终止命令
+    * Ctrl + z：挂起命令
+
+##Bang (!) 命令
+    * !!：执行上一条命令
+    * !blah：执行最近的以 blah 开头的命令，如 !ls
+    * !blah:p：仅打印输出，而不执行
+    * !$：上一条命令的最后一个参数，与 Alt + . 相同
+    * !$:p：打印输出 !$ 的内容
+    * !*：上一条命令的所有参数
+    * !*:p：打印输出 !* 的内容
+    * ^blah：删除上一条命令中的 blah
+    * ^blah^foo：将上一条命令中的 blah 替换为 foo
+    * ^blah^foo^：将上一条命令中所有的 blah 都替换为 foo
+
+##注意：
+
+    1. 以上介绍的大多数 Bash 快捷键仅当在 emacs 编辑模式时有效，若你将 Bash 配置为 vi 编辑模式，那将遵循 vi 的按键绑定。Bash 默认为 emacs 编辑模式。如果你的 Bash 不在 emacs 编辑模式，可通过 set -o emacs 设置。
+    2. ^S、^Q、^C、^Z 是由终端设备处理的，可用 stty 命令设置。',`status`='1',`url`='linux-ming-ling-hang-ji-qiao',`updatetime`='1509695238' WHERE `id` = 10 [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000160s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005673s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005779s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000188s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000260s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000480s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000557s ]
+
+[ 2017-11-03T15:47:19+08:00 ] ::1 /admin.php/posts/lists.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000359s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000495s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/lists' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0017s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_posts` WHERE `status` IN ('0','1') LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_posts` WHERE `status` IN ('0','1') ORDER BY updatetime desc,id desc LIMIT 0,10   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`username` FROM `blog_users` WHERE `status` = 1  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000160s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000290s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012251s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012429s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000313s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000422s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000781s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000919s ]
+
+[ 2017-11-03T15:47:25+08:00 ] ::1 /admin.php/posts/edit/id/10.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000358s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000567s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000661s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/edit' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `blog_posts` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blog_dicts` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 4  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 7  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000134s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000215s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008743s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008832s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000168s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000619s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000711s ]
+
+[ 2017-11-03T15:47:34+08:00 ] ::1 /admin.php/posts/edit/id/10.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000484s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000456s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000562s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0005s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/edit' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0045s ]
+SQL: UPDATE `blog_posts` SET `title`='linux命令行技巧',`cate`='10',`tags`='|17|18|',`content`='##编辑命令
+    * Ctrl + a ：移到命令行首
+    * Ctrl + e ：移到命令行尾
+    * Ctrl + f ：按字符前移（右向）
+    * Ctrl + b ：按字符后移（左向）
+    * Alt + f ：按单词前移（右向）
+    * Alt + b ：按单词后移（左向）
+    * Ctrl + xx：在命令行首和光标之间移动
+    * Ctrl + u ：从光标处删除至命令行首
+    * Ctrl + k ：从光标处删除至命令行尾
+    * Ctrl + w ：从光标处删除至字首
+    * Alt + d ：从光标处删除至字尾
+    * Ctrl + d ：删除光标处的字符
+    * Ctrl + h ：删除光标前的字符
+    * Ctrl + y ：粘贴至光标后
+    * Alt + c ：从光标处更改为首字母大写的单词
+    * Alt + u ：从光标处更改为全部大写的单词
+    * Alt + l ：从光标处更改为全部小写的单词
+    * Ctrl + t ：交换光标处和之前的字符
+    * Alt + t ：交换光标处和之前的单词
+    * Alt + Backspace：与 Ctrl + w 相同类似
+
+##重新执行命令
+    * Ctrl + r：逆向搜索命令历史
+    * Ctrl + g：从历史搜索模式退出
+    * Ctrl + p：历史中的上一条命令
+    * Ctrl + n：历史中的下一条命令
+    * Alt + .：使用上一条命令的最后一个参数
+
+##控制命令
+    * Ctrl + l：清屏
+    * Ctrl + o：执行当前命令，并选择上一条命令
+    * Ctrl + s：阻止屏幕输出
+    * Ctrl + q：允许屏幕输出
+    * Ctrl + c：终止命令
+    * Ctrl + z：挂起命令
+
+##Bang (!) 命令
+    * !!：执行上一条命令
+    * !blah：执行最近的以 blah 开头的命令，如 !ls
+    * !blah:p：仅打印输出，而不执行
+    * !$：上一条命令的最后一个参数，与 Alt + . 相同
+    * !$:p：打印输出 !$ 的内容
+    * !*：上一条命令的所有参数
+    * !*:p：打印输出 !* 的内容
+    * ^blah：删除上一条命令中的 blah
+    * ^blah^foo：将上一条命令中的 blah 替换为 foo
+    * ^blah^foo^：将上一条命令中所有的 blah 都替换为 foo
+
+##注意：
+
+    1. 以上介绍的大多数 Bash 快捷键仅当在 emacs 编辑模式时有效，若你将 Bash 配置为 vi 编辑模式，那将遵循 vi 的按键绑定。Bash 默认为 emacs 编辑模式。如果你的 Bash 不在 emacs 编辑模式，可通过 set -o emacs 设置。
+    2. ^S、^Q、^C、^Z 是由终端设备处理的，可用 stty 命令设置。',`status`='1',`url`='linux-ming-ling-hang-ji-qiao',`updatetime`='1509695254' WHERE `id` = 10 [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000154s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005147s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005227s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000167s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000467s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000541s ]
+
+[ 2017-11-03T15:47:35+08:00 ] ::1 /admin.php/posts/lists.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000544s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001077s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001274s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/lists' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0013s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_posts` WHERE `status` IN ('0','1') LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_posts` WHERE `status` IN ('0','1') ORDER BY updatetime desc,id desc LIMIT 0,10   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`username` FROM `blog_users` WHERE `status` = 1  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000210s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010201s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010283s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000166s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000593s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000686s ]
+
+[ 2017-11-03T15:47:41+08:00 ] ::1 /admin.php/posts/edit/id/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000936s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001179s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001381s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0006s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/edit' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `blog_posts` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blog_dicts` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 4  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 7  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000134s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000212s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008730s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008814s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000153s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000223s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000587s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000678s ]
+
+[ 2017-11-03T15:47:46+08:00 ] ::1 /admin.php/posts/edit/id/9.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000291s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002130s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000562s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000743s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/edit' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `blog_posts` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blog_dicts` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 4  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 7  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000161s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000274s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009133s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009302s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000165s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000590s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000683s ]
+
+[ 2017-11-03T15:47:55+08:00 ] ::1 /admin.php/system/dict.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000353s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000487s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'system/dict' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 81 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blog_dicts` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `blog_dicts` ORDER BY id asc , updateAt desc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 4 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 5 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 6 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 7 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 8 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 9 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 10 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 11 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 12 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 14 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 15 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 16 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 17 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 18 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 19 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 20 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 25 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 26 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 27 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 28 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 29 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 30 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000128s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000210s ]
+NOTIC: [8] Undefined variable: keyword /Users/wy/Documents/www/blog.local.com/Runtime/Cache/Admin/a9221deb479c384cb1137697035e3554.php 第 38 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011179s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011260s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000170s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000621s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000730s ]
+
+[ 2017-11-03T15:47:56+08:00 ] ::1 /admin.php/system/dict_add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000521s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000765s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000896s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0005s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'system/dict_add' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 81 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_dicts` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 0  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000108s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000221s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008370s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008450s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000159s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000459s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000533s ]
+
+[ 2017-11-03T15:48:02+08:00 ] ::1 /admin.php/system/dict_add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000493s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000578s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000700s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'system/dict_add' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 81 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_dicts` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `name` = '数据库' AND `cateId` = 4 LIMIT 1   [ RunTime:0.0003s ]
+SQL: INSERT INTO `blog_dicts` (`name`,`cateId`,`createAt`,`url`) VALUES ('数据库','4','1509695282','shujuku') [ RunTime:0.0014s ]
+
+[ 2017-11-03T15:48:04+08:00 ] ::1 /admin.php/system/dict.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000360s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000471s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000559s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'system/dict' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 81 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_dicts` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `blog_dicts` ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 4 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 5 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 6 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 7 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 8 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 9 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 10 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 11 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 12 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 14 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 15 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 16 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 17 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 18 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 19 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 20 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 25 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 26 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 27 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 28 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 29 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 30 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 31 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000130s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000215s ]
+NOTIC: [8] Undefined variable: keyword /Users/wy/Documents/www/blog.local.com/Runtime/Cache/Admin/a9221deb479c384cb1137697035e3554.php 第 38 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011720s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011800s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000165s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000700s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000831s ]
+
+[ 2017-11-03T15:48:07+08:00 ] ::1 /admin.php/posts/lists.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000376s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000406s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000484s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0005s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/lists' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0015s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_posts` WHERE `status` IN ('0','1') LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_posts` WHERE `status` IN ('0','1') ORDER BY updatetime desc,id desc LIMIT 0,10   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`username` FROM `blog_users` WHERE `status` = 1  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000120s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000204s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009778s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009859s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000164s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000633s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000730s ]
+
+[ 2017-11-03T15:48:09+08:00 ] ::1 /admin.php/posts/edit/id/9.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000406s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000512s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0005s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/edit' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `blog_posts` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blog_dicts` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 4  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 7  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000136s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000225s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009659s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009743s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000160s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000578s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000689s ]
+
+[ 2017-11-03T15:48:14+08:00 ] ::1 /admin.php/posts/edit/id/9.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000355s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000639s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000736s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/edit' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0012s ]
+SQL: UPDATE `blog_posts` SET `title`='理解Mysql字符集设置',`cate`='31',`tags`='|15|',`content`='###基本概念
+&gt;字符(Character)是指人类语言中最小的表义符号。例如’A’、’B’等；
+
+&gt;给定一系列字符，对每个字符赋予一个数值，用数值来代表对应的字符，这一数值就是字符的编码(Encoding)例如，我们给字符’A’赋予数值0，给字符’B’赋予数值1，则0就是字符’A’的编码；
+
+&gt;给定一系列字符并赋予对应的编码后，所有这些字符和编码对组成的集合就是字符集(Character Set)。例如，给定字符列表为{’A’,’B’}时，{’A’=&gt;0, ‘B’=&gt;1}就是一个字符集；
+
+&gt;字符序(Collation)是指在同一字符集内字符之间的比较规则；
+
+&gt;确定字符序后，才能在一个字符集上定义什么是等价的字符，以及字符之间的大小关系；
+
+&gt;每个字符序唯一对应一种字符集，但一个字符集可以对应多种字符序，其中有一个是默认字符序(Default Collation)；
+
+&gt;MySQL中的字符序名称遵从命名惯例：以字符序对应的字符集名称开头；以_ci(表示大小写不敏感)、_cs(表示大小写敏感)或_bin(表示按编码值比较)结尾。例如：在字符序“utf8_general_ci”下，字符“a”和“A”是等价的；
+ 
+###MySQL字符集设置
+
+• 系统变量：
+
+    character_set_server：默认的内部操作字符集
+    character_set_client：客户端来源数据使用的字符集
+    character_set_connection：连接层字符集
+    character_set_results：查询结果字符集
+    character_set_database：当前选中数据库的默认字符集
+    character_set_system：系统元数据(字段名等)字符集
+还有以collation_开头的同上面对应的变量，用来描述字符序。
+
+• 用introducer指定文本字符串的字符集：
+
+    格式为：[_charset] ’string’ [COLLATE collation]
+    例如：
+    SELECT _latin1 ’string’;
+    SELECT _utf8 ‘你好’ COLLATE utf8_general_ci;
+    由introducer修饰的文本字符串在请求过程中不经过多余的转码，直接转换为内部字符集处理。
+
+###MySQL中的字符集转换过程
+
+    1. MySQL Server收到请求时将请求数据从character_set_client转换为character_set_connection；
+    2. 进行内部操作前将请求数据从character_set_connection转换为内部操作字符集，其确定方法如下：
+
+        • 使用每个数据字段的CHARACTER SET设定值；
+
+        • 若上述值不存在，则使用对应数据表的DEFAULT CHARACTER SET设定值(MySQL扩展，非SQL标准)；
+
+        • 若上述值不存在，则使用对应数据库的DEFAULT CHARACTER SET设定值；
+
+        • 若上述值不存在，则使用character_set_server设定值。
+
+    3. 将操作结果从内部操作字符集转换为character_set_results。
+
+    ![understand-mysql-charset](/images/understand-mysql-charset-01.jpg)
+
+###常见问题解析
+
+     * 向默认字符集为utf8的数据表插入utf8编码的数据前没有设置连接字符集，查询时设置连接字符集为utf8
+
+     * 插入时根据MySQL服务器的默认设置，character_set_client、character_set_connection和character_set_results均为latin1；
+
+     * 插入操作的数据将经过latin1=&gt;latin1=&gt;utf8的字符集转换过程，这一过程中每个插入的汉字都会从原始的3个字节变成6个字节保存；
+
+     * 查询时的结果将经过utf8=&gt;utf8的字符集转换过程，将保存的6个字节原封不动返回，产生乱码……
+
+    ![understand-mysql-charset](/images/understand-mysql-charset-02.jpg)
+
+     * 向默认字符集为latin1的数据表插入utf8编码的数据前设置了连接字符集为utf8
+
+     * 插入时根据连接字符集设置，character_set_client、character_set_connection和character_set_results均为utf8；
+
+     * 插入数据将经过utf8=&gt;utf8=&gt;latin1的字符集转换，若原始数据中含有\\u0000~\\u00ff范围以外的Unicode字 符，会因为无法在latin1字符集中表示而被转换为“?”(0×3F)符号，以后查询时不管连接字符集设置如何都无法恢复其内容了。
+
+    ![understand-mysql-charset](/images/understand-mysql-charset-02.jpg)
+
+
+###检测字符集问题的一些手段
+
+    * SHOW CHARACTER SET;
+    * SHOW COLLATION;
+    * SHOW VARIABLES LIKE ‘character%’;
+    * SHOW VARIABLES LIKE ‘collation%’;
+    * SQL函数HEX、LENGTH、CHAR_LENGTH
+    * SQL函数CHARSET、COLLATION
+
+###使用MySQL字符集时的建议
+
+    * 建立数据库/表和进行数据库操作时尽量显式指出使用的字符集，而不是依赖于MySQL的默认设置，否则MySQL升级时可能带来很大困扰；
+    * 数据库和连接字符集都使用latin1时虽然大部分情况下都可以解决乱码问题，但缺点是无法以字符为单位来进行SQL操作，一般情况下将数据库和连接字符集都置为utf8是较好的选择；
+    * 使用mysql C API时，初始化数据库句柄后马上用mysql_options设定MYSQL_SET_CHARSET_NAME属性为utf8，这样就不用显式地用 SET NAMES语句指定连接字符集，且用mysql_ping重连断开的长连接时也会把连接字符集重置为utf8；
+    * 对于mysql PHP API，一般页面级的PHP程序总运行时间较短，在连接到数据库以后显式用SET NAMES语句设置一次连接字符集即可；但当使用长连接时，请注意保持连接通畅并在断开重连后用SET NAMES语句显式重置连接字符集。
+
+###其他注意事项
+
+     * my.cnf中的default_character_set设置只影响mysql命令连接服务器时的连接字符集，不会对使用libmysqlclient库的应用程序产生任何作用！
+     * 对字段进行的SQL函数操作通常都是以内部操作字符集进行的，不受连接字符集设置的影响。
+     * SQL语句中的裸字符串会受到连接字符集或introducer设置的影响，对于比较之类的操作可能产生完全不同的结果，需要小心！',`status`='1',`url`='li-jie-Mysql-zi-fu-ji-she-zhi',`updatetime`='1509695294' WHERE `id` = 9 [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000154s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005111s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005192s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000172s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001148s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001227s ]
+
+[ 2017-11-03T15:48:15+08:00 ] ::1 /admin.php/posts/lists.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000487s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000525s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/lists' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0013s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_posts` WHERE `status` IN ('0','1') LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_posts` WHERE `status` IN ('0','1') ORDER BY updatetime desc,id desc LIMIT 0,10   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`username` FROM `blog_users` WHERE `status` = 1  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000134s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000354s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011602s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011692s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000201s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000271s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000575s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000672s ]
+
+[ 2017-11-03T15:48:16+08:00 ] ::1 /admin.php/posts/lists.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000355s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000429s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000512s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/lists' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0012s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_posts` WHERE `status` IN ('0','1') LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_posts` WHERE `status` IN ('0','1') ORDER BY updatetime desc,id desc LIMIT 0,10   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`username` FROM `blog_users` WHERE `status` = 1  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000155s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000293s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013481s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013581s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000257s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000331s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000799s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000925s ]
+
+[ 2017-11-03T15:48:18+08:00 ] ::1 /admin.php/system/dict.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000353s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000439s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000559s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'system/dict' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 81 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_dicts` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `blog_dicts` ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 4 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 5 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 6 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 7 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 8 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 9 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 10 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 11 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 12 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 14 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 15 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 16 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 17 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 18 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 19 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 20 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 25 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 26 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 27 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 28 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 29 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 30 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 31 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000129s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000212s ]
+NOTIC: [8] Undefined variable: keyword /Users/wy/Documents/www/blog.local.com/Runtime/Cache/Admin/a9221deb479c384cb1137697035e3554.php 第 38 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011706s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011785s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000170s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000646s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000762s ]
+
+[ 2017-11-03T15:48:23+08:00 ] ::1 /admin.php/system/dict_del.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000356s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000409s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000479s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'system/dict_del' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 81 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_dicts` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0002s ]
+SQL: DELETE FROM `blog_dicts` WHERE `id` = 5 [ RunTime:0.0012s ]
+
+[ 2017-11-03T15:48:26+08:00 ] ::1 /admin.php/system/dict.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000481s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000447s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000530s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0007s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'system/dict' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 81 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_dicts` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `blog_dicts` ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 4 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 6 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 7 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 8 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 9 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 10 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 11 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 12 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 14 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 15 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 16 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 17 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 18 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 19 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 20 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 25 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 26 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 27 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 28 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 29 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 30 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 31 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000130s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000219s ]
+NOTIC: [8] Undefined variable: keyword /Users/wy/Documents/www/blog.local.com/Runtime/Cache/Admin/a9221deb479c384cb1137697035e3554.php 第 38 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012364s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012460s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000173s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000557s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000663s ]
+
+[ 2017-11-03T15:48:41+08:00 ] ::1 /admin.php/system/dict_del.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000357s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000408s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000479s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'system/dict_del' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 81 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_dicts` [ RunTime:0.0011s ]
+SQL: DELETE FROM `blog_dicts` WHERE `id` IN ('6','11','14','26') [ RunTime:0.0005s ]
+
+[ 2017-11-03T15:48:43+08:00 ] ::1 /admin.php/system/dict.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000357s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000405s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000483s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'system/dict' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 81 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `blog_dicts` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `blog_dicts` ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 4 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 7 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 8 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 9 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 10 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 12 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 15 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 16 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 17 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 18 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 19 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 20 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 25 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 27 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 28 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 29 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 30 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 31 AND `name` LIKE '%%' ORDER BY id asc , updateAt desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000132s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000219s ]
+NOTIC: [8] Undefined variable: keyword /Users/wy/Documents/www/blog.local.com/Runtime/Cache/Admin/a9221deb479c384cb1137697035e3554.php 第 38 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011301s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011385s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000173s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000549s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000655s ]
+
+[ 2017-11-03T15:50:43+08:00 ] ::1 /admin.php/home/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000496s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000579s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000698s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'home/index' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = null LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000120s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000201s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011023s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011109s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000155s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000226s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000596s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000800s ]
+
+[ 2017-11-03T15:50:43+08:00 ] ::1 /admin.php/home/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000868s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000739s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000874s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0011s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0006s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'home/welcome' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = null LIMIT 1   [ RunTime:0.0003s ]
+SQL: select version() as ver [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000196s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000325s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015709s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016122s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000402s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002012s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002142s ]
+
+[ 2017-11-03T15:50:45+08:00 ] ::1 /admin.php/posts/lists.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000416s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000488s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0005s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/lists' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0016s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_posts` WHERE `status` IN ('0','1') LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_posts` WHERE `status` IN ('0','1') ORDER BY updatetime desc,id desc LIMIT 0,10   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`username` FROM `blog_users` WHERE `status` = 1  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000138s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000260s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011686s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011772s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000191s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000575s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000667s ]
+
+[ 2017-11-03T15:55:49+08:00 ] ::1 /admin.php/posts/lists.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000704s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000728s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000812s ]
+SQL: SHOW COLUMNS FROM `blog_powers` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `blog_powers`  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_powers` WHERE `fid` <> 0 AND `HideInMenu` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `name`,`fid` FROM `blog_powers` WHERE `url` = 'posts/lists' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name` FROM `blog_powers` WHERE `id` = 75 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `blog_posts` [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `blog_users` [ RunTime:0.0014s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_posts` WHERE `status` IN ('0','1') LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_posts` WHERE `status` IN ('0','1') ORDER BY updatetime desc,id desc LIMIT 0,10   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`username` FROM `blog_users` WHERE `status` = 1  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `blog_dicts` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `blog_dicts` WHERE `cateId` = 4  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000131s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000215s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012287s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012368s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000451s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000566s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000995s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001099s ]
+

@@ -58,7 +58,7 @@ class PostController extends CommonController
         $where = ['cateId' => 4 , 'url' => $url];
         $id = $dicts->where($where)->getField('id');
         if(!$id){
-            $this->_404();
+            $this->_404('Common:404');
             exit();
         }
         $posts = D('Posts');
@@ -93,7 +93,7 @@ class PostController extends CommonController
         $where = ['cateId' => 7 , 'url' => $url];
         $id = $dicts->where($where)->getField('id');
         if(!$id){
-            $this->_404();
+            $this->_404('Common:404');
             exit();
         }
         $posts = D('Posts');

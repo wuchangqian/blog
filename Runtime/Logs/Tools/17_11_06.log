@@ -422,3 +422,25 @@ NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array
 SQL: SHOW COLUMNS FROM `blog_attrs` [ RunTime:0.0016s ]
 SQL: INSERT INTO `blog_attrs` (`name`,`type`,`path`,`opUser`,`createTime`) VALUES ('htop.gif','0','/Data/2017-11-06/5a000decb95be.gif','1','1509953004') [ RunTime:0.0005s ]
 
+[ 2017-11-06T18:16:33+08:00 ] ::1 /tool.php/valid/code.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000568s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000707s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000848s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000800s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000952s ]
+
+[ 2017-11-06T18:17:34+08:00 ] ::1 /tool.php/valid/code.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000610s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000739s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000868s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000788s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000928s ]
+

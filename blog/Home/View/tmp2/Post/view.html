@@ -26,7 +26,49 @@
 					<div class="content_area">
 						{$post.content}
 					</div>
-				</div>
+
+                    <div class="panel panel-default other-article">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                PREV :
+                                <notempty name="otherArt['prev']">
+                                    <a href="/post/{$otherArt['prev']['url']}.html" title="{$otherArt['prev']['title']}">
+                                        {$otherArt['prev']['title']}
+                                    </a>
+                                <else />
+                                    木有了，亲
+                                </notempty>
+                            </li>
+                            <li class="list-group-item">
+                                NEXT :
+                                <notempty name="otherArt['next']">
+                                    <a href="/post/{$otherArt['next']['url']}.html" title="{$otherArt['next']['title']}">
+                                        {$otherArt['next']['title']}
+                                    </a>
+                                    <else />
+                                    <a>木有了，亲</a>
+                                </notempty>
+
+                            </li>
+                        </ul>
+                        <notempty name="otherArt['like']">
+                            <!-- Default panel contents -->
+                            <div class="panel-heading">其他文章</div>
+                            <!-- List group -->
+                            <ul class="list-group">
+                                <volist name="otherArt['like']" id="like">
+                                    <li class="list-group-item">
+                                        <a href="/post/{$like.url}.html" title="{$like.title}">
+                                            {$like.title}
+                                        </a>
+                                    </li>
+                                </volist>
+                            </ul>
+                        </notempty>
+                    </div>
+
+                </div>
+
 
 			</div><!-- /row -->
 	    </div> <!-- /container -->

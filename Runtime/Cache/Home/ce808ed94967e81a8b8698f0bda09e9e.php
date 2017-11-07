@@ -7,7 +7,7 @@
     <meta name="keywords" content="<?php echo ($conf["keywords"]); ?>" />
     <meta name="description" content="<?php echo ($conf["description"]); ?>" />
     <meta name="author" content="balun wang">
-    <link rel="shortcut icon" href="../../docs-/Public/tmp2/ico/favicon.png">
+    <link rel="shortcut icon" href="/Public/favicon.png">
 
     <title><?php if(!empty($post['title'])): echo ($post['title']); ?> -<?php endif; ?> <?php echo ($conf["webName"]); ?></title>
 
@@ -28,7 +28,7 @@
 </head>
 <body>
 <!-- Static navbar -->
-<div class="navbar navbar-inverse navbar-static-top">
+<div class="navbar navbar-inverse navbar-static-top" id="top">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -45,6 +45,7 @@
         </div><!--/.nav-collapse -->
     </div>
 </div>
+
 
 	<!-- +++++ Post +++++ -->
 	<div id="white">
@@ -66,12 +67,49 @@
 					<div class="content_area">
 						<?php echo ($post["content"]); ?>
 					</div>
-				</div>
+
+                    <div class="panel panel-default other-article">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                PREV :
+                                <?php if(!empty($otherArt['prev'])): ?><a href="/post/<?php echo ($otherArt['prev']['url']); ?>.html" title="<?php echo ($otherArt['prev']['title']); ?>">
+                                        <?php echo ($otherArt['prev']['title']); ?>
+                                    </a>
+                                <?php else: ?>
+                                    木有了，亲<?php endif; ?>
+                            </li>
+                            <li class="list-group-item">
+                                NEXT :
+                                <?php if(!empty($otherArt['next'])): ?><a href="/post/<?php echo ($otherArt['next']['url']); ?>.html" title="<?php echo ($otherArt['next']['title']); ?>">
+                                        <?php echo ($otherArt['next']['title']); ?>
+                                    </a>
+                                    <?php else: ?>
+                                    <a>木有了，亲</a><?php endif; ?>
+
+                            </li>
+                        </ul>
+                        <?php if(!empty($otherArt['like'])): ?><!-- Default panel contents -->
+                            <div class="panel-heading">其他文章</div>
+                            <!-- List group -->
+                            <ul class="list-group">
+                                <?php if(is_array($otherArt['like'])): $i = 0; $__LIST__ = $otherArt['like'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$like): $mod = ($i % 2 );++$i;?><li class="list-group-item">
+                                        <a href="/post/<?php echo ($like["url"]); ?>.html" title="<?php echo ($like["title"]); ?>">
+                                            <?php echo ($like["title"]); ?>
+                                        </a>
+                                    </li><?php endforeach; endif; else: echo "" ;endif; ?>
+                            </ul><?php endif; ?>
+                    </div>
+
+                </div>
+
 
 			</div><!-- /row -->
 	    </div> <!-- /container -->
 	</div><!-- /white -->
 	
+<a class="back-to-top" href="#top">
+    <span class="glyphicon glyphicon-arrow-up"></span>
+</a>
 <div id="footer">
     <div class="container">
         <div class="row">

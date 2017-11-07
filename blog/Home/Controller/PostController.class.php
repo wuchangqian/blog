@@ -27,8 +27,45 @@ class PostController extends CommonController
             $this->_404();
             exit();
         }
+        $notInIds = [];
+        array_push($notInIds,$article['id']);
         $article['tags'] = explode('|' , $article['tags']);
         $this->assign('post',$article);
+
+        //prev
+        $where = [];
+        $where['createtime'] = ['gt' , $article['createtime']];
+        $prev = $posts->where($where)->order('createtime asc')->find();
+        if($prev){
+            array_push($notInIds,$prev['id']);
+        }
+        //next
+        $where = [];
+        $where['createtime'] = ['lt' , $article['createtime']];
+        $next = $posts->where($where)->order('createtime asc')->find();
+        if($next){
+            array_push($notInIds,$next['id']);
+        }
+        //同类或同标签
+        $where = [];
+        $where['cate'] = $article['cate'];
+        foreach($article['tags'] as $v) {
+            if($v && $v > 0){
+                $where['tags'] = ['like' , '%|'.$v.'|%'];
+            }
+        }
+        $where['_logic'] = 'or';
+        $map['_complex'] = $where;
+        $map['id'] = ['not in' , $notInIds];
+
+        $like = $posts->where($map)->order('createtime asc')->limit(5)->select();
+
+        $this->assign('otherArt' , [
+            'prev' => $prev,
+            'next' => $next,
+            'like' => $like
+        ]);
+
         $dicts = D('Dicts');
         $cates = $dicts->where(['cateId' => 4])->select();
         $cate = [];
@@ -42,12 +79,7 @@ class PostController extends CommonController
         }
         $this->assign('cate' , $cate);
         $this->assign('tags' , $tag);
-        $users = D('Users');
-        $filed = 'id , username';
-        $where = ['role' => 1];
-        $authors = $users->field($filed)->where($where)->select();
-        $author = array_column($authors , 'username' , 'id');
-        $this->assign('author' , $author);
+
         $this->display();
     }
 

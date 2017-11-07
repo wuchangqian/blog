@@ -7,7 +7,7 @@
     <meta name="keywords" content="<?php echo ($conf["keywords"]); ?>" />
     <meta name="description" content="<?php echo ($conf["description"]); ?>" />
     <meta name="author" content="balun wang">
-    <link rel="shortcut icon" href="../../docs-/Public/tmp2/ico/favicon.png">
+    <link rel="shortcut icon" href="/Public/favicon.png">
 
     <title><?php if(!empty($post['title'])): echo ($post['title']); ?> -<?php endif; ?> <?php echo ($conf["webName"]); ?></title>
 
@@ -28,8 +28,17 @@
 </head>
 <body>
 <!-- Static navbar -->
-<div class="navbar navbar-inverse navbar-static-top">
+<div class="navbar navbar-inverse navbar-static-top" id="top">
     <div class="container">
+        <div class="btn-group head-nav">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                我的项目 <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="http://lts.yuuuu.wang" target="_blank">简单socket聊天室</a></li>
+                <li><a href="https://github.com/juelite/blog/" target="_blank" rel="nofollow">Thinkphp博客系统</a></li>
+            </ul>
+        </div>
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="icon-bar"></span>
@@ -45,11 +54,12 @@
         </div><!--/.nav-collapse -->
     </div>
 </div>
+
 <?php if(is_array($posts)): $k = 0; $__LIST__ = $posts;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$post): $mod = ($k % 2 );++$k;?><div id="<?php if($k%2==0){echo 'grey';}else{echo 'white';} ?>">
 	    <div class="container">
 			<div class="row">
 				<div class="col-lg-8 col-lg-offset-2">
-					<h4><?php echo ($post["title"]); ?></h4>
+                    <h4><a href="/post/<?php echo ($post['url']); ?>.html"><?php echo ($post["title"]); ?></a></h4>
 					<p>
 						<i>POST IN : </i>
 						<bd><a><?php echo (date('F d ,Y',$post["createtime"])); ?></a></bd>
@@ -66,6 +76,9 @@
 			</div><!-- /row -->
 	    </div> <!-- /container -->
 	</div><!-- /grey --><?php endforeach; endif; else: echo "" ;endif; ?>
+<a class="back-to-top" href="#top">
+    <span class="glyphicon glyphicon-arrow-up"></span>
+</a>
 <div id="footer">
     <div class="container">
         <div class="row">

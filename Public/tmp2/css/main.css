@@ -248,3 +248,35 @@ p i{
 	background: #fff;
 	color: #1dbc9b;
 }
+
+.back-to-top{
+    position:fixed;
+    right:80px;
+    bottom:10px;
+    width:33px;
+    height:31px;
+    border-radius: 5px;
+    background-color:#CCC;
+    cursor:pointer
+}
+
+.back-to-top span{
+    font-size: 30px;
+    color: RGBA(255,255,255,.8);
+}
+.other-article{
+    margin-top: 100px;
+    border: 1px solid #1abc9c;
+}
+.panel-heading{
+    border-radius: 0px;
+}
+p img{
+    width: 100%;
+    margin: auto;
+}
+.head-nav{
+    top:-70px;
+    float: right;
+    right: ;
+}

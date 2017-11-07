@@ -59,7 +59,6 @@
                 <th>归档</th>
                 <th>创建时间</th>
                 <th>更新时间</th>
-                <th>操作人</th>
                 <th>状态</th>
                 <th>操作</th>
             </tr>
@@ -76,7 +75,6 @@
                         <?php else: ?>
                             /<?php endif; ?>
                     </td>
-                    <td><?php echo ($vo["username"]); ?></td>
                     <td class="td-status">
                         <?php if(($vo["status"]) == "1"): ?><span class="label label-success radius">已启用</span>
                             <?php else: ?>

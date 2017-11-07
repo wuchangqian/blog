@@ -6,8 +6,9 @@
                 我的项目 <span class="caret"></span>
             </button>
             <ul class="dropdown-menu">
-                <li><a href="http://lts.yuuuu.wang" target="_blank">简单socket聊天室</a></li>
-                <li><a href="https://github.com/juelite/blog/" target="_blank" rel="nofollow">Thinkphp博客系统</a></li>
+                <volist name="projects" id="project">
+                    <li><a href="{$project.url}" target="_blank">{$project.title}</a></li>
+                </volist>
             </ul>
         </div>
         <div class="navbar-header">

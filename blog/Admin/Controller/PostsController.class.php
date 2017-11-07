@@ -56,23 +56,14 @@ class PostsController extends CommonController
      */
     public function lists()
     {
-        $db = D('Post');
-        $userDb = D('User');
+        $db = D('Posts');
+
         $where = array();
         $where['status'] = array('in', array('0', '1'));
         $count = $db->where($where)->count();
         $page = new \Think\Page($count , C('PAGE_LIMIT'));
         $show = $page->show();
         $list = $db->where($where)->limit($page->firstRow . ',' . $page->listRows)->order('createtime desc,id desc')->select();
-
-        $userList = $userDb->field('id,username')->where(array('status' => 1))->select();
-        foreach ($userList as $key => $value) {
-            $userList[$value['id']] = $value;
-        }
-
-        foreach ($list as $k => $v) {
-            $list[$k]['username'] = $userList[$v['uid']]['username'];
-        }
 
         $this->assign('total', $count);
         $this->assign('page', $show);
@@ -131,7 +122,7 @@ class PostsController extends CommonController
      */
     public function status()
     {
-        $db = D('Post');
+        $db = D('Posts');
         if (IS_AJAX) {
             $id = I('post.id');
             $info = $db->where(array('id' => $id))->find();
@@ -158,7 +149,7 @@ class PostsController extends CommonController
      */
     public function del()
     {
-        $db = D('Post');
+        $db = D('Posts');
         if (IS_AJAX) {
             $id = I('post.id');
             $info = $db->where(array('id' => $id))->find();
@@ -183,7 +174,7 @@ class PostsController extends CommonController
      */
     public function batchdelete()
     {
-        $db = D('Post');
+        $db = D('Posts');
         if (IS_AJAX) {
             $ids = I('post.ids');
             $ids = substr($ids,0,-1);

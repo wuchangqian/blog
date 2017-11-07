@@ -25,6 +25,11 @@ class CommonController extends Controller
             }
         }
         $this->assign('GCate' , $cates);
+
+        $projects = D('Projects');
+        $where = ['status' => 1];
+        $project = $projects->where($where)->select();
+        $this->assign('projects' , $project);
     }
 
     public function _404()

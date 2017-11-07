@@ -47,7 +47,7 @@
     <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a>
 </nav>
 <article class="page-container">
-    <form action="/admin.php/posts/edit/id/4.html" method="post" class="form form-horizontal" id="form-member-add">
+    <form action="/admin.php/posts/edit/id/22.html" method="post" class="form form-horizontal" id="form-member-add">
         <input type="hidden" name="id" value="<?php echo ($info["id"]); ?>">
         <div class="row cl">
             <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>标题：</label>

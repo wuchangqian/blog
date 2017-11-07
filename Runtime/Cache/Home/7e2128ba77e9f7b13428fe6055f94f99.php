@@ -35,8 +35,7 @@
                 我的项目 <span class="caret"></span>
             </button>
             <ul class="dropdown-menu">
-                <li><a href="http://lts.yuuuu.wang" target="_blank">简单socket聊天室</a></li>
-                <li><a href="https://github.com/juelite/blog/" target="_blank" rel="nofollow">Thinkphp博客系统</a></li>
+                <?php if(is_array($projects)): $i = 0; $__LIST__ = $projects;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$project): $mod = ($i % 2 );++$i;?><li><a href="<?php echo ($project["url"]); ?>" target="_blank"><?php echo ($project["title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
             </ul>
         </div>
         <div class="navbar-header">

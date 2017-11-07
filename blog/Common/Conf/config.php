@@ -2,11 +2,11 @@
 return array(
     //db
 	'DB_TYPE' => 'mysqli',
-    'DB_HOST' => '127.0.0.1',
-    'DB_NAME' => 'blog',
-    'DB_USER' => 'root',
-    'DB_PWD' => 'sa',
-    'DB_PORT' => 3306,
+    'DB_HOST' => '47.97.44.191',
+    'DB_NAME' => 'www_yuuuu_wang',
+    'DB_USER' => 'wang',
+    'DB_PWD' => 'sys123',
+    'DB_PORT' => 33061,
     'DB_PREFIX' => 'blog_',
     'DB_CHARSET' => 'utf8',
 
